@@ -1,0 +1,8 @@
+---
+import config from '../../site.config.json';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SelectedPatterns from '../components/SelectedPatterns.astro';
+export function getStaticPaths(){return config.navigation.filter(x=>x.id!=='articles').map(item=>({params:{page:item.id},props:{item}}))}
+const {item}=Astro.props;
+---
+<SiteLayout title={item.label}><section class="interior"><h1>{item.label}</h1><p>這裡尚未填入個人的正式內容，請先完成內容與設計驗收再公開。</p></section><SelectedPatterns page={item.id} /></SiteLayout>

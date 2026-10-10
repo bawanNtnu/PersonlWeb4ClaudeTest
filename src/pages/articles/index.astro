@@ -1,0 +1,9 @@
+---
+import config from '../../../site.config.json';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SelectedPatterns from '../../components/SelectedPatterns.astro';
+import {getCollection} from 'astro:content';
+const articles=(await getCollection('articles',({data})=>!data.draft)).sort((a,b)=>b.data.publishedAt.getTime()-a.data.publishedAt.getTime());
+const base=import.meta.env.BASE_URL;
+---
+<SiteLayout title="文章"><section class="interior"><h1>文章</h1>{articles.length?<div class="links">{articles.map(x=><a href={base+'articles/'+x.id+'/'}>{x.data.title} →</a>)}</div>:<p>目前沒有公開文章。</p>}</section><SelectedPatterns page="articles" /></SiteLayout>

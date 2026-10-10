@@ -1,0 +1,9 @@
+---
+import config from '../../../site.config.json';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import {getCollection,render} from 'astro:content';
+export async function getStaticPaths(){if(!config.navigation.some(x=>x.id==='articles'))return [];return (await getCollection('articles',({data})=>!data.draft)).map(entry=>({params:{slug:entry.id},props:{entry}}))}
+const {entry}=Astro.props;
+const {Content}=await render(entry);
+---
+<SiteLayout title={entry.data.title} description={entry.data.description}><article class="interior prose"><h1>{entry.data.title}</h1><p>{entry.data.description}</p><Content/></article></SiteLayout>

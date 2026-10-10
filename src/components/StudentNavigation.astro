@@ -1,0 +1,29 @@
+---
+import config from '../../site.config.json';
+const base=import.meta.env.BASE_URL;
+const roots=config.navigation.filter(x=>!x.parentId);
+---
+<nav class="student-navigation" aria-label="主要導覽">
+ {roots.map(item=>{
+  const children=config.navigation.filter(x=>x.parentId===item.id);
+  return children.length?<details class="student-navigation__group">
+    <summary>{item.label}<span aria-hidden="true">⌄</span></summary>
+    <div class="student-navigation__submenu">
+      <a href={base+item.id+'/'}>查看全部{item.label}</a>
+      {children.map(child=><a href={base+child.id+'/'}>{child.label}</a>)}
+    </div>
+   </details>:<a href={base+item.id+'/'}>{item.label}</a>
+ })}
+</nav>
+<style>
+.student-navigation{display:flex;align-items:center;gap:4px 12px;flex-wrap:wrap;min-width:0}
+.student-navigation>a,.student-navigation summary{padding:9px 11px;display:flex;align-items:center;gap:8px;cursor:pointer;text-decoration:none;list-style:none;border-radius:6px;min-height:44px}
+.student-navigation summary::-webkit-details-marker{display:none}
+.student-navigation__group{position:relative}
+.student-navigation__submenu{position:absolute;z-index:30;min-width:210px;max-width:320px;top:100%;left:0;display:grid;gap:2px;padding:8px;background:var(--bg,#fff);color:var(--ink,#222);border:1px solid var(--line,#ddd);box-shadow:0 14px 28px rgba(0,0,0,.09);border-radius:10px}
+.student-navigation__group:not([open]) .student-navigation__submenu{display:none}
+.student-navigation__submenu a{display:block;padding:10px 12px;border-radius:6px;text-decoration:none;min-height:44px}
+.student-navigation a:hover,.student-navigation summary:hover{background:rgba(120,120,120,.1)}
+.student-navigation :is(a,summary):focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+@media(max-width:740px){.student-navigation{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.student-navigation__submenu{position:static;min-width:0;max-width:none;box-shadow:none;margin-top:3px}.student-navigation__group{min-width:0}.student-navigation>a,.student-navigation summary{overflow-wrap:anywhere}}
+</style>

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "kind": "knowledge",
+  "layoutSlug": "field-notes",
+  "visualTheme": "botanical",
+  "brand": {
+    "name": "陽台觀察室",
+    "primaryColor": "#3F6A4D",
+    "tagline": "一個租屋族在兩坪西曬陽台，慢慢記錄植物怎麼活下來。",
+    "palette": {
+      "primary": "#3F6A4D",
+      "secondary": "#8D9B72",
+      "accent": "#B48569",
+      "background": "#F6F7EF",
+      "text": "#28392E"
+    }
+  },
+  "navigation": [
+    {
+      "id": "start-here",
+      "label": "新手入門",
+      "enabled": true
+    },
+    {
+      "id": "articles",
+      "label": "觀察筆記",
+      "enabled": true
+    },
+    {
+      "id": "topics",
+      "label": "植物分類",
+      "enabled": true
+    },
+    {
+      "id": "about",
+      "label": "關於我",
+      "enabled": true
+    },
+    {
+      "id": "resources",
+      "label": "資源",
+      "enabled": false
+    }
+  ],
+  "sectionPatterns": [
+    {
+      "patternId": "featured-work",
+      "targetPage": "/",
+      "insertAfter": "首頁自我介紹之後"
+    },
+    {
+      "patternId": "footer-editorial",
+      "targetPage": "site-wide",
+      "insertAfter": "每頁主要內容之後"
+    }
+  ],
+  "primaryCta": {
+    "label": "新手從這裡開始",
+    "pageId": "start-here"
+  },
+  "notes": "本站為工作坊驗收用模擬網站，人物「阿蕨」與文章皆為虛構示範，不代表真實個人、資格或成效。沒有照片與聯絡方式，請不要放假的表單或按鈕。"
+}
