@@ -1,13 +1,21 @@
 {
-  "name": "student-astro-site",
+  "name": "balcony-field-notes",
   "type": "module",
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build": "astro build && pagefind --site dist --root-selector main",
+    "preview": "astro preview",
+    "qa:static": "node scripts/qa/static-checks.mjs",
+    "qa:browser": "node scripts/qa/browser-checks.mjs"
   },
   "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/noto-serif-tc": "^5.3.0",
     "astro": "^5.14.0"
+  },
+  "devDependencies": {
+    "pagefind": "^1.5.2",
+    "playwright": "^1.56.1"
   }
 }

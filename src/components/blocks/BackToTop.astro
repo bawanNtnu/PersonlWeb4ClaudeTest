@@ -1,0 +1,44 @@
+---
+interface Props {
+  threshold?: number;
+  label?: string;
+  bottom?: string;
+  right?: string;
+  className?: string;
+}
+const { threshold=420, label='返回頁首', bottom='24px', right='24px', className='' }=Astro.props;
+const safeThreshold=Math.max(0,Math.min(10000,Math.round(threshold)));
+---
+<button
+  class:list={['back-to-top',className]}
+  type="button"
+  aria-label={label}
+  title={label}
+  data-back-to-top
+  data-threshold={safeThreshold}
+  style={`--back-to-top-bottom:${bottom};--back-to-top-right:${right}`}
+  hidden
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<script>
+  const initializeBackToTop=()=>{
+    document.querySelectorAll<HTMLButtonElement>('[data-back-to-top]:not([data-back-to-top-ready])').forEach(button=>{
+      button.dataset.backToTopReady='true';
+      const threshold=Math.max(0,Number(button.dataset.threshold)||420);
+      const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+      let ticking=false;
+      const update=()=>{
+        ticking=false;
+        button.hidden=window.scrollY<threshold;
+      };
+      const onScroll=()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}};
+      window.addEventListener('scroll',onScroll,{passive:true});
+      button.addEventListener('click',()=>{
+        window.scrollTo({top:0,behavior:reduced.matches?'instant':'smooth'});
+      });
+      update();
+    });
+  };
+  initializeBackToTop();
+</script>

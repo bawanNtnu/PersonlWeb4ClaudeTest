@@ -1,0 +1,5 @@
+---
+interface Props {months:{month:string;count:number}[];baseHref:string;active?:string;}
+const {months,baseHref,active}=Astro.props;
+---
+<nav class="v2-archive" aria-label="按月份瀏覽文章"><ul>{months.map(x=><li><a href={baseHref+'?month='+encodeURIComponent(x.month)} aria-current={active===x.month?'true':undefined}><time datetime={x.month}>{x.month.replace('-', ' 年 ')} 月</time><span>{x.count} 篇 →</span></a></li>)}</ul></nav>

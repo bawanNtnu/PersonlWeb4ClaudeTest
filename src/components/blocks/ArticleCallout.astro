@@ -1,0 +1,5 @@
+---
+interface Props {title?:string;tone?:'note'|'tip'|'warning';}
+const {title='重點提示',tone='note'}=Astro.props;
+---
+<aside class:list={['v2-callout','v2-callout-'+tone]} role={tone==='warning'?'note':undefined}><strong>{title}</strong><div><slot /></div></aside>

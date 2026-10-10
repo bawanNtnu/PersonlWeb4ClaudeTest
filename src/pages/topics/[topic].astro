@@ -1,0 +1,35 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
+import {href,publishedArticles,articleHref,formatDate,readingMinutes,navigation,type Article} from '../../lib/site';
+import {topics} from '../../data/topics';
+
+export async function getStaticPaths(){
+  const articles=await publishedArticles();
+  // 只為「至少有一篇公開文章」的分類產生頁面，避免空白頁與孤兒頁。
+  return topics.map(t=>({topic:t,items:articles.filter(a=>a.data.topic===t.slug)})).filter(x=>x.items.length>0)
+    .map(({topic,items})=>({params:{topic:topic.slug},props:{topic,items}}));
+}
+interface Props {topic:typeof topics[number];items:Article[]}
+const {topic,items}=Astro.props;
+const label=navigation.find(x=>x.id==='topics')?.label??'植物分類';
+---
+<SiteLayout title={topic.label} description={`${label}「${topic.label}」：${topic.description}`}>
+  <div class="fn-page">
+    <aside class="fn-page__rail" aria-hidden="true"><span>03</span><span>TOPIC</span></aside>
+    <div class="fn-page__body">
+      <Breadcrumbs items={[{label:'首頁',href:href()},{label,href:href('topics/')},{label:topic.label}]}/>
+      <header class="fn-page-head">
+        <p class="fn-kicker">TOPIC / {topic.slug.toUpperCase()}</p>
+        <h1>{topic.label}</h1>
+        <p class="fn-deck">{topic.description}目前共 {items.length} 篇。</p>
+      </header>
+      <ol class="fn-ledger-list" style="border-top:2px solid var(--ink)">
+        {items.map(a=><li>
+          <time datetime={a.data.publishedAt.toISOString().slice(0,10)}>{formatDate(a.data.publishedAt)}</time>
+          <a href={articleHref(a)}><b>{a.data.title}</b><small>{readingMinutes(a)} 分鐘 · {a.data.tags.join('、')}</small></a>
+        </li>)}
+      </ol>
+    </div>
+  </div>
+</SiteLayout>

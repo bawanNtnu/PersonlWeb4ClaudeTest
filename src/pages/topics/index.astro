@@ -1,0 +1,30 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
+import {href,publishedArticles,navigation} from '../../lib/site';
+import {topics} from '../../data/topics';
+
+const label=navigation.find(x=>x.id==='topics')?.label??'植物分類';
+const articles=await publishedArticles();
+const rows=topics.map(t=>({...t,count:articles.filter(a=>a.data.topic===t.slug).length}));
+---
+<SiteLayout title={label} description="依陽台環境、觀察方法與植物種類整理的觀察筆記分類。">
+  <div class="fn-page">
+    <aside class="fn-page__rail" aria-hidden="true"><span>03</span><span>TOPICS</span></aside>
+    <div class="fn-page__body">
+      <Breadcrumbs items={[{label:'首頁',href:href()},{label}]}/>
+      <header class="fn-page-head">
+        <p class="fn-kicker">SPECIMEN INDEX / 分類索引</p>
+        <h1>{label}</h1>
+        <p class="fn-deck">每篇筆記只歸在一個分類。還沒有寫過的分類會先列出來，但不會有空白頁面。</p>
+      </header>
+      <ul class="fn-topic-list">
+        {rows.map((t,i)=><li class:list={{'is-empty':t.count===0}}>
+          <span class="fn-count">{String(i+1).padStart(2,'0')} · {t.count>0?`${t.count} 篇`:'還沒寫'}</span>
+          {t.count>0?<a href={href('topics/'+t.slug+'/')}><h2>{t.label}</h2></a>:<h2>{t.label}</h2>}
+          <p>{t.description}</p>
+        </li>)}
+      </ul>
+    </div>
+  </div>
+</SiteLayout>

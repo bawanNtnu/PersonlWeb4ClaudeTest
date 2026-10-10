@@ -1,0 +1,5 @@
+---
+interface Props {items:{title:string;description:string}[];columns?:2|3;}
+const {items,columns=3}=Astro.props;
+---
+<div class:list={['ab-grid',`ab-cols-${columns}`]}>{items.map((x,i)=><article class="ab-feature"><span class="ab-number">0{i+1}</span><h3>{x.title}</h3><p>{x.description}</p></article>)}</div>

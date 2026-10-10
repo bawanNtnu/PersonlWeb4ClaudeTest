@@ -1,0 +1,25 @@
+---
+import FeatureGrid from '../blocks/FeatureGrid.astro';
+interface Item {title:string;description:string;href?:string}
+interface Props {eyebrow?:string;title:string;description?:string;items:Item[];action?:{label:string;href:string};demo?:boolean}
+const {eyebrow='SELECTED WORK',title,description,items,action,demo=false}=Astro.props;
+const safe=(href?:string)=>href&&(/^(https:\/\/|\/|#)/.test(href))?href:undefined;
+const selected=items.filter(x=>x.title.trim()&&x.description.trim()).slice(0,6);
+const validAction=action&&safe(action.href)?action:undefined;
+---
+<section class="sp-section sp-featured" aria-label={title}>
+ <header class="sp-heading"><p class="sp-eyebrow">{eyebrow}</p><h2>{title}</h2>{description&&<p>{description}</p>}</header>
+ {demo&&<p class="sp-demo-note">示範內容｜請以自己的真實作品與文字替換</p>}
+ {selected.length>0?<FeatureGrid items={selected.map(({title,description})=>({title,description}))} columns={selected.length===2?2:3}/>:<p>尚未設定作品內容。</p>}
+ {selected.some(x=>safe(x.href))&&<nav class="sp-work-links" aria-label="作品連結">{selected.filter(x=>safe(x.href)).map(x=><a href={safe(x.href)}>{x.title} ↗</a>)}</nav>}
+ {validAction&&<a class="sp-next" href={validAction.href}>{validAction.label} →</a>}
+</section>
+<style>
+.sp-section{width:min(100%,1120px);margin-inline:auto;padding:clamp(28px,6vw,80px) clamp(18px,3vw,36px);color:var(--text,#1f1d1a)}
+.sp-heading{max-width:700px;margin-bottom:30px}.sp-heading h2{font-size:clamp(28px,4vw,48px);line-height:1.22;margin:8px 0}.sp-heading>p:last-child{color:var(--muted,#605c55);font-size:clamp(16px,1.7vw,19px)}
+.sp-eyebrow{font-size:12px;letter-spacing:.13em;font-weight:700;color:var(--accent,#9a3b2e)}
+.sp-demo-note{font-size:13px;color:var(--muted,#605c55);margin:0 0 20px}
+.sp-work-links{display:flex;gap:12px 24px;flex-wrap:wrap;margin-top:20px}
+.sp-next{display:inline-block;margin-top:28px;padding:10px 0;border-bottom:2px solid var(--accent,#9a3b2e);text-decoration:none;font-weight:700}
+.sp-section a:focus-visible{outline:3px solid var(--accent,#9a3b2e);outline-offset:4px}
+</style>

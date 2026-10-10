@@ -1,0 +1,40 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Breadcrumbs from '../components/blocks/Breadcrumbs.astro';
+import {href,navigation,publishedArticles} from '../lib/site';
+
+const label=navigation.find(x=>x.id==='about')?.label??'關於我';
+const total=(await publishedArticles()).length;
+---
+<SiteLayout title={label} description="阿蕨（模擬人物）是誰、為什麼開始寫陽台觀察筆記，以及這個網站不會做的事。">
+  <div class="fn-page">
+    <aside class="fn-page__rail" aria-hidden="true"><span>04</span><span>ABOUT</span></aside>
+    <div class="fn-page__body">
+      <Breadcrumbs items={[{label:'首頁',href:href()},{label}]}/>
+      <header class="fn-page-head">
+        <p class="fn-kicker">ABOUT / 寫這些筆記的人</p>
+        <h1>我是阿蕨，<br/><i>一個把植物養死過很多次的人。</i></h1>
+      </header>
+      <div class="fn-about">
+        <div class="fn-prose">
+          <p>白天我在辦公室上班，晚上回到租屋處，陽台是我唯一能種東西的地方：朝西、兩坪大，旁邊還有一台冷氣室外機。</p>
+          <p>第一年我養死了五盆植物。那時候我以為是自己「不夠照顧」，後來才發現，問題常常是照顧得太勤、太急。從那之後，我開始在筆記本上記錄每一盆植物的變化，再慢慢理解它們。</p>
+          <p>這個網站整理的就是這些紀錄。我想寫給跟我一樣，住在小空間、陽光條件不完美、又一直想再試一次的人。</p>
+          <h2>這裡會有的</h2>
+          <ul><li>真實的失敗與觀察紀錄（本站目前為模擬示範）</li><li>我在自己陽台上試過的方法</li><li>還沒有答案的問題</li></ul>
+          <h2>這裡不會有的</h2>
+          <ul><li>專業資格、證照或「保證養活」的承諾</li><li>付費課程、代購或廣告合作</li><li>其他人的照片或住址</li></ul>
+        </div>
+        <aside class="fn-about__facts" aria-label="基本資料">
+          <dl>
+            <div><dt>NAME</dt><dd>阿蕨（筆名・模擬人物）</dd></div>
+            <div><dt>BALCONY</dt><dd>朝西・約 2 坪・有屋簷</dd></div>
+            <div><dt>NOTES</dt><dd>目前公開 {total} 篇</dd></div>
+            <div><dt>CONTACT</dt><dd>尚未提供公開聯絡方式</dd></div>
+            <div><dt>FEED</dt><dd><a href={href('rss.xml')}>RSS 訂閱</a>（網站自動產生，不需註冊）</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </div>
+</SiteLayout>

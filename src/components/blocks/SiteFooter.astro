@@ -1,0 +1,53 @@
+---
+import SocialLinks from './SocialLinks.astro';
+type Social = {platform:'instagram'|'facebook'|'threads'|'youtube'|'line'|'github'|'linkedin'|'x'|'tiktok'|'pinterest'|'discord'|'telegram'|'spotify'|'email'|'phone'|'website'|'rss';href:string;label?:string};
+type Group={title:string;links:{label:string;href:string}[]};
+interface Props {
+ brand?:string;description?:string;links?:{label:string;href:string}[];
+ groups?:Group[];socialLinks?:Social[];rssHref?:string;
+ eyebrow?:string;copyright?:string;legalLinks?:{label:string;href:string}[];
+ variant?:'minimal'|'editorial'|'professional';
+}
+const {brand='Your Studio',description='把重要的故事留在自己的網站。',links=[],groups=[],socialLinks=[],rssHref,eyebrow,copyright,legalLinks=[],variant='minimal'}=Astro.props;
+const safe=(href?:string)=>{if(!href)return undefined;const v=href.trim();if(v.startsWith('/')&&!v.startsWith('//')||v.startsWith('#'))return v;try{const u=new URL(v);return u.protocol==='https:'?u.href:undefined}catch{return undefined}};
+const normalize=(items:{label:string;href:string}[])=>items.map(x=>({...x,href:safe(x.href)})).filter((x):x is {label:string;href:string}=>Boolean(x.href&&x.label?.trim()));
+const top=normalize(links),columns=groups.map(g=>({...g,links:normalize(g.links)})).filter(g=>g.title.trim()&&g.links.length),legal=normalize(legalLinks),rss=safe(rssHref);
+---
+<footer class:list={['ab-footer','site-footer','site-footer--'+variant]} aria-label="網站頁尾">
+ <div class="site-footer__main">
+  <div class="site-footer__identity">
+   {eyebrow&&<p class="site-footer__eyebrow">{eyebrow}</p>}
+   <strong>{brand}</strong><p>{description}</p>
+   {socialLinks.length>0&&<div class="site-footer__social"><SocialLinks items={socialLinks} size="sm" title="頁尾社群與聯絡連結"/></div>}
+  </div>
+  {(top.length>0||columns.length>0)&&<nav class="site-footer__nav" aria-label="頁尾導覽">
+   {top.length>0&&<div class="site-footer__group"><h3>網站導覽</h3>{top.map(x=><a href={x.href}>{x.label}</a>)}</div>}
+   {columns.map(group=><div class="site-footer__group"><h3>{group.title}</h3>{group.links.map(x=><a href={x.href}>{x.label}</a>)}</div>)}
+  </nav>}
+ </div>
+ <div class="site-footer__bottom">
+  <small>{copyright||'© '+new Date().getFullYear()+' '+brand}</small>
+  {(legal.length>0||rss)&&<nav class="site-footer__legal" aria-label="法律資訊與訂閱">{legal.map(x=><a href={x.href}>{x.label}</a>)}{rss&&<a href={rss}>RSS</a>}</nav>}
+ </div>
+</footer>
+<style>
+.site-footer{--footer-ink:var(--text,#28251f);--footer-muted:var(--muted,#69635b);--footer-line:var(--line,#d9d3c9);color:var(--footer-ink);display:grid;gap:clamp(28px,4vw,56px);padding:clamp(28px,5vw,64px) clamp(20px,4vw,60px);border-top:1px solid var(--footer-line);background:var(--surface,#fffdf8)}
+.site-footer--editorial{background:var(--surface-2,#f0ebe3);border-top:4px solid var(--accent,#9a3b2e)}
+.site-footer--professional{background:var(--footer-ink);color:var(--bg,#f8f5ef);--footer-muted:color-mix(in srgb,var(--bg,#f8f5ef) 70%,transparent);--footer-line:color-mix(in srgb,var(--bg,#f8f5ef) 26%,transparent)}
+.site-footer__main{display:flex;justify-content:space-between;align-items:start;gap:clamp(20px,4vw,60px)}
+.site-footer__identity{flex:1 1 230px;max-width:430px;min-width:0}
+.site-footer__identity strong{display:block;font-size:clamp(24px,2.6vw,38px);line-height:1.24;overflow-wrap:anywhere}
+.site-footer__identity>p:not(.site-footer__eyebrow){font-size:clamp(15px,1.4vw,17px);line-height:1.75;color:var(--footer-muted);margin:14px 0}
+.site-footer__eyebrow{letter-spacing:.13em;text-transform:uppercase;font-size:12px;color:var(--footer-muted);margin:0 0 16px}
+.site-footer__social{margin-top:18px}
+.site-footer__nav{flex:1 1 450px;display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:28px}
+.site-footer__group{display:grid;gap:9px;align-content:start}.site-footer__group h3{font-size:14px;letter-spacing:.04em;margin:0 0 6px;color:var(--footer-muted)}
+.site-footer__group a,.site-footer__legal a{color:inherit;text-decoration:none;font-size:15px;line-height:1.65;overflow-wrap:anywhere}
+.site-footer__group a:hover,.site-footer__legal a:hover{text-decoration:underline;text-underline-offset:4px}
+.site-footer__bottom{border-top:1px solid var(--footer-line);padding-top:20px;display:flex;justify-content:space-between;align-items:start;gap:16px;flex-wrap:wrap}
+.site-footer__bottom small{color:var(--footer-muted);font-size:13px;line-height:1.6}
+.site-footer__legal{display:flex;flex-wrap:wrap;gap:10px 22px}
+.site-footer a:focus-visible{outline:3px solid currentColor;outline-offset:4px}
+@media(max-width:730px){.site-footer__main{display:grid;gap:30px}.site-footer__identity{max-width:100%}.site-footer__nav{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}}
+@media(max-width:390px){.site-footer__nav{gap:24px 14px}}
+</style>

@@ -1,9 +1,69 @@
 ---
-import config from '../../site.config.json';
-import StudentNavigation from '../components/StudentNavigation.astro';
-import SelectedPatterns from '../components/SelectedPatterns.astro';
-const {title,description=config.brand.tagline}=Astro.props;
-const base=import.meta.env.BASE_URL;
+import '@fontsource/noto-serif-tc/400.css';
+import '@fontsource/noto-serif-tc/600.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '../styles/tokens.css';
+import '../styles/blocks-ported.css';
+import '../styles/site.css';
+import SiteNav from '../components/site/SiteNav.astro';
+import MobileMenu from '../components/blocks/MobileMenu.astro';
+import SiteSearchDialog from '../components/blocks/SiteSearchDialog.astro';
+import SiteFooter from '../components/blocks/SiteFooter.astro';
+import BackToTop from '../components/blocks/BackToTop.astro';
+import {config,href,indexable,navigation,navHref,navChildren} from '../lib/site';
+import {topics} from '../data/topics';
+
+interface Props {title:string;description?:string;type?:'website'|'article';noindex?:boolean}
+const {title,description=config.brand.tagline,type='website',noindex=false}=Astro.props;
+const fullTitle=title===config.brand.name?title:`${title}｜${config.brand.name}`;
+const canonical=new URL(Astro.url.pathname,Astro.site??Astro.url).href;
+const robots=indexable&&!noindex?'index,follow':'noindex,nofollow';
+const mobileLinks=navigation.flatMap(item=>item.parentId?[]:[{label:item.label,href:navHref(item)},...navChildren(item.id).map(child=>({label:'　└ '+child.label,href:navHref(child)}))]);
+const footerGroups=[
+  {title:'閱讀',links:navigation.filter(x=>!x.parentId).map(x=>({label:x.label,href:navHref(x)}))},
+  {title:'植物分類',links:topics.slice(0,3).map(t=>({label:t.label,href:href('topics/'+t.slug+'/')}))},
+];
 ---
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title===config.brand.name ? title : `${title}｜${config.brand.name}`}</title><meta name="description" content={description}/><link rel="canonical" href={new URL(Astro.url.pathname,Astro.site??Astro.url).href}/><link rel="stylesheet" href={base+'site.css'}/></head>
-<body><a href="#main" class="skip">跳到主要內容</a><header><a class="brand" href={base}>{config.brand.name}</a><StudentNavigation /><a class="button" href={base+config.primaryCta.pageId+'/'}>{config.primaryCta.label}</a></header><main id="main"><slot/></main>{config.sectionPatterns?.some(x=>x.patternId.startsWith('footer-'))?<SelectedPatterns page="site-wide" />:<footer>© {new Date().getFullYear()} {config.brand.name}</footer>}</body></html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}/>
+  <link rel="canonical" href={canonical}/>
+  <meta name="robots" content={robots}/>
+  <meta property="og:title" content={fullTitle}/>
+  <meta property="og:description" content={description}/>
+  <meta property="og:type" content={type}/>
+  <meta property="og:url" content={canonical}/>
+  <meta property="og:locale" content="zh_TW"/>
+  <meta property="og:site_name" content={config.brand.name}/>
+  <meta name="theme-color" content={config.brand.palette.background}/>
+  <link rel="icon" href={href('favicon.svg')} type="image/svg+xml"/>
+  <link rel="alternate" type="application/rss+xml" title={config.brand.name+' RSS'} href={href('rss.xml')}/>
+  <link rel="sitemap" href={href('sitemap.xml')}/>
+</head>
+<body>
+  <a href="#main" class="skip">跳到主要內容</a>
+  <p class="fn-disclosure" data-pagefind-ignore>工作坊驗收用<strong>模擬網站</strong>：人物「阿蕨」與所有文章皆為虛構示範，不代表真實個人、資格或成效。</p>
+  <header class="fn-header">
+    <a class="fn-mark" href={href()} aria-label={config.brand.name+' 首頁'}>
+      <span class="fn-mark__en">BALCONY<br/><b>FIELD NOTES</b></span>
+      <span class="fn-mark__zh">{config.brand.name}</span>
+      <small>VOL. 01 · 西曬 2 坪</small>
+    </a>
+    <div class="fn-header__desktop"><SiteNav/></div>
+    <div class="fn-header__tools">
+      <SiteSearchDialog/>
+      <a class="fn-cta" href={href(config.primaryCta.pageId+'/')}>{config.primaryCta.label}</a>
+      <div class="fn-header__mobile"><MobileMenu links={mobileLinks} label="網站選單"/></div>
+    </div>
+  </header>
+  <main id="main" data-pagefind-body={noindex?undefined:true} data-pagefind-ignore={noindex?"all":undefined}><slot/></main>
+  <SiteFooter variant="editorial" eyebrow="BALCONY FIELD NOTES / 陽台觀察室" brand={config.brand.name}
+    description={config.brand.tagline+'（模擬網站）'} groups={footerGroups} rssHref={href('rss.xml')}
+    copyright={`© ${new Date().getFullYear()} ${config.brand.name}・模擬內容，僅供工作坊驗收`}/>
+  <BackToTop/>
+</body>
+</html>

@@ -53,6 +53,12 @@
       "insertAfter": "每頁主要內容之後"
     }
   ],
-  "site": "https://example.com",
-  "base": "/"
+  "site": "https://balcony-field-notes.invalid",
+  "base": "/",
+  "siteNote": "正式網址尚未決定（.invalid 為刻意的佔位）。預覽建置會改用 Cloudflare 提供的 CF_PAGES_URL；只有設定 SITE_URL 且 SITE_INDEXABLE=true 時才允許搜尋引擎索引。",
+  "author": {
+    "name": "阿蕨",
+    "note": "模擬人物（工作坊驗收用），非真實個人"
+  },
+  "simulated": true
 }
