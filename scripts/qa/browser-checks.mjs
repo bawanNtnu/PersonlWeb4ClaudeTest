@@ -90,6 +90,14 @@ for(const width of widths){
     const closed=await page.locator('.fn-nav__group[open]').count()===0;
     check(`子選單 Escape 收合 ${parent.label}`,closed);
   }
+  // 維護任務 2：精選卡片整張可點（點描述文字也會進入文章）
+  try{
+    await page.goto(url('/'));
+    const card=page.locator('.ab-feature--link').first();
+    const target=await card.locator('a').getAttribute('href');
+    await Promise.all([page.waitForLoadState('load'),card.locator('p').click({timeout:5000})]);
+    check('點擊精選卡片描述進入文章',new URL(page.url()).pathname===target,page.url());
+  }catch(error){check('點擊精選卡片描述進入文章',false,error.message.split('\n')[0]);}
   // 鍵盤：第一個 Tab 停在「跳到主要內容」
   await page.goto(url('/'));await page.keyboard.press('Tab');
   check('第一個 Tab 是跳到主要內容',await page.evaluate(()=>document.activeElement?.getAttribute('href')==='#main'));

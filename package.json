@@ -7,7 +7,9 @@
     "build": "astro build && pagefind --site dist --root-selector main",
     "preview": "astro preview",
     "qa:static": "node scripts/qa/static-checks.mjs",
-    "qa:browser": "node scripts/qa/browser-checks.mjs"
+    "qa:browser": "node scripts/qa/browser-checks.mjs",
+    "qa:unit": "vitest run",
+    "qa:faults": "node scripts/qa/fault-injection.mjs && node scripts/qa/browser-fault-injection.mjs"
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^5.3.0",
@@ -18,6 +20,7 @@
     "pagefind": "^1.5.2",
     "pixelmatch": "^7.2.0",
     "playwright": "^1.56.1",
-    "pngjs": "^7.0.0"
+    "pngjs": "^7.0.0",
+    "vitest": "^3.2.7"
   }
 }
