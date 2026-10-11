@@ -40,6 +40,7 @@ const footerGroups=[
   <meta property="og:locale" content="zh_TW"/>
   <meta property="og:site_name" content={config.brand.name}/>
   <meta name="theme-color" content={config.brand.palette.background}/>
+  <meta name="build-commit" content={process.env.CF_PAGES_COMMIT_SHA??process.env.GITHUB_SHA??"local"}/>
   <link rel="icon" href={href('favicon.svg')} type="image/svg+xml"/>
   <link rel="alternate" type="application/rss+xml" title={config.brand.name+' RSS'} href={href('rss.xml')}/>
   <link rel="sitemap" href={href('sitemap.xml')}/>
