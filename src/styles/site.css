@@ -243,6 +243,8 @@ a.fn-ledger-type:hover{border-color:var(--moss);color:var(--moss)}
   .fn-rail__stem{height:70px}
   .fn-hero h1{font-size:clamp(2.7rem,13.5vw,4.4rem);letter-spacing:-.05em}
   .fn-figure{width:100%}
+  /* 維護任務 1：手機版示意圖改為較矮的橫幅，讓文字與最近紀錄更早出現 */
+  .fn-figure img{aspect-ratio:16/9;border-radius:36% 36% 6px 6px / 50% 50% 6px 6px}
   .fn-ledger-list li{grid-template-columns:72px minmax(0,1fr)}
   .fn-ledger-list .fn-ledger-type{display:none}
   .fn-question__inner{grid-template-columns:1fr;gap:10px}

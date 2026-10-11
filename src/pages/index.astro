@@ -49,15 +49,6 @@ const topicsWithPosts=topics.filter(t=>articles.some(a=>a.data.topic===t.slug));
   </section>
   </Reveal>
 
-  <Reveal variant="fade">
-  <div class="fn-featured">
-    <FeaturedWorkSection eyebrow="FIELD PICKS / 精選三篇" title="第一次來，先讀這幾篇"
-      description="從最多人問的失敗、記錄方法和一次小小的成功開始。"
-      items={featured.map(a=>({title:a.data.title,description:a.data.description,href:articleHref(a)}))}
-      action={{label:'看全部觀察筆記',href:href('articles/')}} />
-  </div>
-  </Reveal>
-
   <section class="fn-ledger" id="ledger" aria-labelledby="ledger-title">
     <div class="fn-ledger__inner">
       <header><p class="fn-kicker">FIELD LEDGER / 近期紀錄</p><h2 id="ledger-title">最近，陽台上發生了這些事。</h2><a class="fn-ledger__more" href={href('articles/')}>看全部筆記 ↗</a></header>
@@ -70,6 +61,15 @@ const topicsWithPosts=topics.filter(t=>articles.some(a=>a.data.topic===t.slug));
       </ol>
     </div>
   </section>
+
+  <Reveal variant="fade">
+  <div class="fn-featured">
+    <FeaturedWorkSection eyebrow="FIELD PICKS / 精選三篇" title="第一次來，先讀這幾篇"
+      description="從最多人問的失敗、記錄方法和一次小小的成功開始。"
+      items={featured.map(a=>({title:a.data.title,description:a.data.description,href:articleHref(a)}))}
+      action={{label:'看全部觀察筆記',href:href('articles/')}} />
+  </div>
+  </Reveal>
 
   <section class="fn-question" id="question" aria-labelledby="question-title">
     <div class="fn-question__inner">
