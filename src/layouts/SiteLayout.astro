@@ -10,7 +10,7 @@ import MobileMenu from '../components/blocks/MobileMenu.astro';
 import SiteSearchDialog from '../components/blocks/SiteSearchDialog.astro';
 import SiteFooter from '../components/blocks/SiteFooter.astro';
 import BackToTop from '../components/blocks/BackToTop.astro';
-import {config,href,indexable,navigation,navHref,navChildren} from '../lib/site';
+import {config,href,indexable,navigation,navHref,navChildren,showDrafts} from '../lib/site';
 import {topics} from '../data/topics';
 
 interface Props {title:string;description?:string;type?:'website'|'article';noindex?:boolean}
@@ -47,6 +47,7 @@ const footerGroups=[
 </head>
 <body>
   <a href="#main" class="skip">跳到主要內容</a>
+  {showDrafts&&<p class="fn-disclosure fn-disclosure--draft" data-pagefind-ignore>本機草稿預覽模式：此畫面包含尚未公開的草稿，只能在本機查看，不會出現在 Preview 或正式網站。</p>}
   <p class="fn-disclosure" data-pagefind-ignore>工作坊驗收用<strong>模擬網站</strong>：人物「阿蕨」與所有文章皆為虛構示範，不代表真實個人、資格或成效。</p>
   <header class="fn-header">
     <a class="fn-mark" href={href()} aria-label={config.brand.name+' 首頁'}>

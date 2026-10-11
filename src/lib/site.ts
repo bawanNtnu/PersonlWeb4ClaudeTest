@@ -15,9 +15,15 @@ export const navRoots=navigation.filter(x=>!x.parentId);
 export const navChildren=(id:string)=>navigation.filter(x=>x.parentId===id);
 
 export type Article=CollectionEntry<'articles'>;
+/**
+ * 本機草稿預覽：只有在本機執行 `SHOW_DRAFTS=true npm run dev/build` 時才生效。
+ * Cloudflare Pages（CF_PAGES）與 CI 建置一律忽略此旗標，草稿永遠不會出現在可公開開啟的 Preview。
+ */
+export const showDrafts=process.env.SHOW_DRAFTS==='true'&&!process.env.CF_PAGES&&!process.env.CI;
+
 /** 公開文章唯一入口：所有列表、RSS、Sitemap、搜尋索引都必須經過這裡，草稿才不會外洩。 */
 export async function publishedArticles():Promise<Article[]>{
-  const entries=await getCollection('articles',({data})=>data.draft!==true);
+  const entries=await getCollection('articles',({data})=>showDrafts||data.draft!==true);
   return entries.sort((a,b)=>b.data.publishedAt.getTime()-a.data.publishedAt.getTime());
 }
 export const articleHref=(entry:Article)=>href('articles/'+entry.id+'/');

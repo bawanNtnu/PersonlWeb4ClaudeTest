@@ -15,6 +15,7 @@ a{color:inherit}
 
 /* 模擬網站聲明（全站） */
 .fn-disclosure{margin:0;padding:6px clamp(16px,4vw,64px);background:var(--ink);color:var(--paper);font:400 12px/1.6 var(--mono);letter-spacing:.02em;text-align:center}
+.fn-disclosure--draft{background:#8A5A3E}
 .fn-disclosure strong{font-weight:400;border-bottom:1px solid currentColor}
 
 /* 刊頭 */

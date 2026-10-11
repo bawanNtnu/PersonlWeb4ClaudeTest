@@ -3,3 +3,4 @@ dist/
 .astro/
 qa-artifacts/
 .DS_Store
+dist-drafts/

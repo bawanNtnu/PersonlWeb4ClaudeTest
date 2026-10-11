@@ -3,6 +3,7 @@
 // 預期值來自「網站自己的設定與原始內容」（site.config.json、src/content/articles/*.md），不是來自建置結果本身。
 import {readFileSync,readdirSync,existsSync,writeFileSync} from 'node:fs';
 import {join,relative,dirname} from 'node:path';
+import {gunzipSync} from 'node:zlib';
 
 const arg=(name,fallback)=>{const i=process.argv.indexOf(name);return i>-1?process.argv[i+1]:fallback};
 const root=arg('--root',process.cwd());
@@ -48,6 +49,11 @@ for(const d of drafts){
   const leaks=[...pages].filter(([,body])=>body.includes(`/articles/${d.slug}/`)||body.includes(d.title)).map(([r])=>r);
   check(`草稿標題/連結不在任何 HTML ${d.slug}`,leaks.length===0,leaks.join(', '));
 }
+// 2b. Pagefind 索引片段（gzip）不得含草稿標題；同時以公開文章標題做正向對照，證明解壓比對方法有效
+const fragDir=join(dist,'pagefind/fragment');
+const fragments=existsSync(fragDir)?readdirSync(fragDir).map(f=>{const raw=readFileSync(join(fragDir,f));try{return gunzipSync(raw).toString('utf8')}catch{return raw.toString('utf8')}}):[];
+if(published.length)check('Pagefind 片段可解讀（正向對照：含公開文章標題）',fragments.some(t=>t.includes(published[0].title)),published[0].title);
+for(const d of drafts)check(`草稿不在 Pagefind 索引 ${d.slug}`,!fragments.some(t=>t.includes(d.title)));
 // 3. 公開文章必須出現在列表、RSS、Sitemap、搜尋索引
 const listHtml=pages.get('/articles/')??'';
 for(const a of published){
