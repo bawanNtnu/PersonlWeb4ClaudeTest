@@ -95,7 +95,10 @@ for(const width of widths){
     await page.goto(url('/'));
     const card=page.locator('.ab-feature--link').first();
     const target=await card.locator('a').getAttribute('href');
-    await Promise.all([page.waitForLoadState('load'),card.locator('p').click({timeout:5000})]);
+    // 卡片的 ::after 覆蓋層會接住點擊（設計如此），因此以真實滑鼠座標點在描述文字上，而非 locator.click。
+    await card.locator('p').scrollIntoViewIfNeeded();
+    const box=await card.locator('p').boundingBox();
+    await Promise.all([page.waitForURL(u=>new URL(u).pathname===target,{timeout:5000}),page.mouse.click(box.x+box.width/2,box.y+box.height/2)]);
     check('點擊精選卡片描述進入文章',new URL(page.url()).pathname===target,page.url());
   }catch(error){check('點擊精選卡片描述進入文章',false,error.message.split('\n')[0]);}
   // 鍵盤：第一個 Tab 停在「跳到主要內容」

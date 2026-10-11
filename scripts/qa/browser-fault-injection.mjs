@@ -1,5 +1,5 @@
 // 驗證 browser-checks.mjs 本身：對 dist 副本注入「只有真實瀏覽器才看得到」的缺陷，確認每一項都會被判 FAIL。
-import {cpSync,mkdtempSync,readFileSync,writeFileSync,rmSync,existsSync,statSync} from 'node:fs';
+import {cpSync,mkdtempSync,readFileSync,writeFileSync,rmSync,existsSync,statSync,readdirSync} from 'node:fs';
 import {createServer} from 'node:http';
 import {tmpdir} from 'node:os';
 import {join,extname} from 'node:path';
@@ -19,6 +19,7 @@ const faults=[
   {name:'頁面 JS 錯誤',expect:'無 console/JS 錯誤 1440 /start-here/',apply:d=>edit(d,'start-here/index.html',s=>s.replace('</body>','<script>throw new Error("injected")</script></body>'))},
   {name:'破圖',expect:'圖片載入 1280 /',apply:d=>edit(d,'index.html',s=>s.replace('illustrations/balcony-west.svg','illustrations/missing.svg'))},
   {name:'搜尋索引遺失',expect:'全站搜尋找得到公開文章',apply:d=>{rmSync(join(d,'search'),{recursive:true});rmSync(join(d,'pagefind'),{recursive:true})}},
+  {name:'精選卡片覆蓋層被移除（卡片不能整張點）',expect:'點擊精選卡片描述進入文章',apply:d=>{for(const f of readdirSync(join(d,'_astro')).filter(x=>x.endsWith('.css')))edit(d,'_astro/'+f,s=>s.replace(/\.ab-feature__link:+after\{[^}]*\}/g,''))}},
   {name:'導航指到 404',expect:'點擊導航到達',apply:d=>{for(const f of ['index.html'])edit(d,f,s=>s.replace(/(<nav class="fn-nav"[\s\S]*?)href="\/about\/"/,'$1href="/about-old/"'))}},
 ];
 let missed=0,port=4600;const rows=[];
