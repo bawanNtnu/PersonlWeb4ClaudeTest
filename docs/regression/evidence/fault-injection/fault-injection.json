@@ -1,0 +1,335 @@
+[
+ {
+  "id": "F00-baseline",
+  "desc": "未注入（基準，應全部 PASS）",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 0,
+    "detected": false,
+    "tail": "Independent student technical output checks passed: routes, RSS, sitemap, robots, draft audit. This does NOT mean personal content is ready or approved for publication."
+   },
+   "nav": {
+    "code": 0,
+    "detected": false,
+    "tail": "  \"fail\": []"
+   },
+   "audit": {
+    "code": 0,
+    "detected": false,
+    "tail": "path                             w     hScroll spill h1(px/lines/ls) minFont lt12 overlap contrast touch<44  FAIL / WARN"
+   },
+   "static": {
+    "code": 0,
+    "detected": false,
+    "tail": "static-checks: 65 PASS / 0 FAIL"
+   },
+   "browser": {
+    "code": 0,
+    "detected": false,
+    "tail": "browser-checks: 231 PASS / 0 FAIL"
+   },
+   "a11y": {
+    "code": 0,
+    "detected": false,
+    "tail": "a11y-checks: 22 clean / 0 with violations"
+   }
+  }
+ },
+ {
+  "id": "F01-nav-404",
+  "desc": "子選單連結指向不存在頁面",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 0,
+    "detected": false,
+    "tail": "Independent student technical output checks passed: routes, RSS, sitemap, robots, draft audit. This does NOT mean personal content is ready or approved for publication."
+   },
+   "nav": {
+    "code": 1,
+    "detected": true,
+    "tail": "  \"fail\": ["
+   },
+   "static": {
+    "code": 1,
+    "detected": true,
+    "tail": "static-checks: 63 PASS / 2 FAIL |   FAIL no broken internal links :: /404.html -> /tools-missing/; /about/ -> /tools-missing/; /articles/ -> /tools-missing/; /articles/mint-comeback/ -> /tools-missing/; /articles/one-notebook-plant-log/ -> /tools-missing/; /articles/typhoon-balcony-checklist/ -> /tools-missing/; / -> /tools-missing/; /page-custom-1/ -> /tools-missing/; /start-here/ -> /tools-missing/; /topics/ -> /tools-missing/ |   FAIL desktop and mobile nav same destinations :: /start-here/,/tools-missing/,/articles/,/topics/,/about/ | /start-here/,/page-custom-1/,/articles/,/topics/,/about"
+   }
+  }
+ },
+ {
+  "id": "F02-mobile-missing",
+  "desc": "手機選單少了「關於我」",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 0,
+    "detected": false,
+    "tail": "Independent student technical output checks passed: routes, RSS, sitemap, robots, draft audit. This does NOT mean personal content is ready or approved for publication."
+   },
+   "nav": {
+    "code": 1,
+    "detected": true,
+    "tail": "  \"fail\": ["
+   },
+   "static": {
+    "code": 1,
+    "detected": true,
+    "tail": "static-checks: 64 PASS / 1 FAIL |   FAIL desktop and mobile nav same destinations :: /start-here/,/page-custom-1/,/articles/,/topics/,/about/ | /start-here/,/page-custom-1/,/articles/,/topics/"
+   }
+  }
+ },
+ {
+  "id": "F03-draft-json",
+  "desc": "AI 自寫 JSON 搜尋端點未過濾草稿",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 0,
+    "detected": false,
+    "tail": "Independent student technical output checks passed: routes, RSS, sitemap, robots, draft audit. This does NOT mean personal content is ready or approved for publication."
+   },
+   "static": {
+    "code": 1,
+    "detected": true,
+    "tail": "static-checks: 64 PASS / 1 FAIL |   FAIL draft not leaked articles/monstera-split-leaf.md :: /search/all-articles.json"
+   }
+  }
+ },
+ {
+  "id": "F04-short-title-leak",
+  "desc": "首頁以純文字預告草稿標題（7 字中文標題）",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 0,
+    "detected": false,
+    "tail": "Independent student technical output checks passed: routes, RSS, sitemap, robots, draft audit. This does NOT mean personal content is ready or approved for publication."
+   },
+   "static": {
+    "code": 1,
+    "detected": true,
+    "tail": "static-checks: 64 PASS / 1 FAIL |   FAIL draft not leaked drafts/winter-pothos.md :: /index.html, /search/exact-zh.json"
+   }
+  }
+ },
+ {
+  "id": "F05-drafts-folder-loaded",
+  "desc": "Collection 同時讀 articles/ 與 drafts/（drafts/ 依 Skill 資料夾模型未加 draft 旗標）",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 1,
+    "detected": true,
+    "tail": "   if(existsSync(route))throw Error('Draft emitted as public HTML route: '+relative); | Error: Draft emitted as public HTML route: winter-pothos.md"
+   },
+   "static": {
+    "code": 1,
+    "detected": true,
+    "tail": "static-checks: 66 PASS / 3 FAIL |   FAIL draft route absent winter-pothos ::  |   FAIL draft not leaked drafts/winter-pothos.md :: /articles/index.html, /articles/mint-comeback/index.html, /articles/winter-pothos/index.html, /index.html, /pagefind/fragment/zh-hant_90b233c.pf_fragment, /rss.xml, /search/exact-zh.json, /sitemap.xml, /topics/index.html |   FAIL RSS item count = published :: 4 vs 3"
+   }
+  }
+ },
+ {
+  "id": "F06-footer-path-404",
+  "desc": "為自訂頁設定好看網址 path（生成器頁尾仍用 id）",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 0,
+    "detected": false,
+    "tail": "Independent student technical output checks passed: routes, RSS, sitemap, robots, draft audit. This does NOT mean personal content is ready or approved for publication."
+   },
+   "nav": {
+    "code": 0,
+    "detected": false,
+    "tail": "  \"fail\": []"
+   },
+   "static": {
+    "code": 1,
+    "detected": true,
+    "tail": "static-checks: 64 PASS / 1 FAIL |   FAIL no broken internal links :: /404.html -> /page-custom-1/; /about/ -> /page-custom-1/; /articles/ -> /page-custom-1/; /articles/mint-comeback/ -> /page-custom-1/; /articles/one-notebook-plant-log/ -> /page-custom-1/; /articles/typhoon-balcony-checklist/ -> /page-custom-1/; / -> /page-custom-1/; /start-here/ -> /page-custom-1/; /start-here/tools/ -> /page-custom-1/; /topics/ -> /page-custom-1/"
+   }
+  }
+ },
+ {
+  "id": "F07-overflow-390",
+  "desc": "內頁麵包屑區塊設固定最小寬度 520px，手機水平溢出",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "nav": {
+    "code": 1,
+    "detected": true,
+    "tail": "  \"fail\": ["
+   },
+   "audit": {
+    "code": 1,
+    "detected": true,
+    "tail": "path                             w     hScroll spill h1(px/lines/ls) minFont lt12 overlap contrast touch<44  FAIL / WARN | /articles/mint-comeback/         390   130     3     32/2/0            12.0    0    0       0        0       FAIL 水平捲動 +130px | 3 個元素超出視窗：div.page-head L0 R520; nav.practical-breadcrumbs L24 R496"
+   },
+   "browser": {
+    "code": 1,
+    "detected": true,
+    "tail": "browser-checks: 223 PASS / 8 FAIL |   FAIL 390 /start-here/ no horizontal overflow :: 520>390 |   FAIL 390 /page-custom-1/ no horizontal overflow :: 520>390 |   FAIL 390 /articles/ no horizontal overflow :: 520>390 |   FAIL 390 /topics/ no horizontal overflow :: 520>390 |   FAIL 390 /about/ no horizontal overflow :: 520>390"
+   }
+  }
+ },
+ {
+  "id": "F08-low-contrast",
+  "desc": "文章日期／中繼資料改為淺灰（約 1.8:1）",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "audit": {
+    "code": 0,
+    "detected": false,
+    "tail": "path                             w     hScroll spill h1(px/lines/ls) minFont lt12 overlap contrast touch<44  FAIL / WARN"
+   },
+   "a11y": {
+    "code": 1,
+    "detected": true,
+    "tail": "a11y-checks: 14 clean / 8 with violations"
+   }
+  }
+ },
+ {
+  "id": "F09-noindex-removed",
+  "desc": "Preview 移除 noindex",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 0,
+    "detected": false,
+    "tail": "Independent student technical output checks passed: routes, RSS, sitemap, robots, draft audit. This does NOT mean personal content is ready or approved for publication."
+   },
+   "static": {
+    "code": 1,
+    "detected": true,
+    "tail": "static-checks: 55 PASS / 10 FAIL |   FAIL noindex /404.html :: preview build must be noindex |   FAIL noindex /about/ :: preview build must be noindex |   FAIL noindex /articles/ :: preview build must be noindex |   FAIL noindex /articles/mint-comeback/ :: preview build must be noindex |   FAIL noindex /articles/one-notebook-plant-log/ :: preview build must be noindex"
+   }
+  }
+ },
+ {
+  "id": "F10-menu-focus",
+  "desc": "手機選單關閉後焦點未回到按鈕",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "nav": {
+    "code": 0,
+    "detected": false,
+    "tail": "  \"fail\": []"
+   },
+   "browser": {
+    "code": 0,
+    "detected": false,
+    "tail": "browser-checks: 231 PASS / 0 FAIL"
+   }
+  }
+ },
+ {
+  "id": "F10b-menu-esc-blocked",
+  "desc": "手機選單攔截 cancel，Esc 無法關閉",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "nav": {
+    "code": 0,
+    "detected": false,
+    "tail": "  \"fail\": []"
+   },
+   "browser": {
+    "code": 1,
+    "detected": true,
+    "tail": "browser-checks: 223 PASS / 8 FAIL |   FAIL 768 Escape closes menu ::  |   FAIL 768 focus returns to trigger ::  |   FAIL 768 aria-expanded false when closed ::  |   FAIL 768 mobile menu :: threw: locator.click: Timeout 30000ms exceeded. |   FAIL 390 Escape closes menu :: "
+   }
+  }
+ },
+ {
+  "id": "F11-no-exact-index",
+  "desc": "build 漏掉中文完整比對索引",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 0,
+    "detected": false,
+    "tail": "Independent student technical output checks passed: routes, RSS, sitemap, robots, draft audit. This does NOT mean personal content is ready or approved for publication."
+   },
+   "static": {
+    "code": 1,
+    "detected": true,
+    "tail": "Error: ENOENT: no such file or directory, open '/tmp/claude-0/-home-user-PersonlWeb4ClaudeTest/f08f9dba-322f-5707-af2a-11dc914515c1/scratchpad/ws/fault/F11-no-exact-index/dist/search/exact-zh.json'"
+   },
+   "browser": {
+    "code": 1,
+    "detected": true,
+    "tail": "browser-checks: 227 PASS / 4 FAIL |   FAIL 1440 search 薄荷 finds article :: [] |   FAIL 1280 search 薄荷 finds article :: [] |   FAIL 768 search 薄荷 finds article :: [] |   FAIL 390 search 薄荷 finds article :: []"
+   }
+  }
+ },
+ {
+  "id": "F12-no-description",
+  "desc": "所有頁面缺 meta description（對照組）",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 1,
+    "detected": true,
+    "tail": "  if(!/<title>[^<]+<\\/title>/.test(head)||!head.includes('name=\"description\"')||!head.includes('rel=\"canonical\"'))throw Error('Student metadata escaped head: '+path); | Error: Student metadata escaped head: /tmp/claude-0/-home-user-PersonlWeb4ClaudeTest/f08f9dba-322f-5707-af2a-11dc914515c1/scratchpad/ws/fault/F12-no-description/dist/404.html"
+   },
+   "static": {
+    "code": 1,
+    "detected": true,
+    "tail": "static-checks: 55 PASS / 10 FAIL |   FAIL meta /404.html :: title/description/canonical/build-commit missing |   FAIL meta /about/ :: title/description/canonical/build-commit missing |   FAIL meta /articles/ :: title/description/canonical/build-commit missing |   FAIL meta /articles/mint-comeback/ :: title/description/canonical/build-commit missing |   FAIL meta /articles/one-notebook-plant-log/ :: title/description/canonical/build-commit missing"
+   }
+  }
+ },
+ {
+  "id": "F13-draft-in-rss",
+  "desc": "RSS 未過濾草稿（對照組）",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "v28": {
+    "code": 1,
+    "detected": true,
+    "tail": "   if(suspects.length)throw Error('Draft leaked into public discovery/output: '+relative+'; files: '+suspects.map(x=>x.path).join(', ')); | Error: Draft leaked into public discovery/output: monstera-split-leaf.md; files: /tmp/claude-0/-home-user-PersonlWeb4ClaudeTest/f08f9dba-322f-5707-af2a-11dc914515c1/scratchpad/ws/fault/F13-draft-in-rss/dist/rss.xml"
+   },
+   "static": {
+    "code": 1,
+    "detected": true,
+    "tail": "static-checks: 63 PASS / 2 FAIL |   FAIL draft not leaked articles/monstera-split-leaf.md :: /rss.xml |   FAIL RSS item count = published :: 4 vs 3"
+   }
+  }
+ },
+ {
+  "id": "F14-reveal-stuck",
+  "desc": "Reveal 永遠不顯示內容（JS 不加 visible class）",
+  "injected": true,
+  "build": "ok",
+  "tools": {
+   "audit": {
+    "code": 0,
+    "detected": false,
+    "tail": "path                             w     hScroll spill h1(px/lines/ls) minFont lt12 overlap contrast touch<44  FAIL / WARN"
+   },
+   "browser": {
+    "code": 1,
+    "detected": true,
+    "tail": "browser-checks: 227 PASS / 4 FAIL |   FAIL 1440 / reveal content visible after scroll :: 2 hidden |   FAIL 1280 / reveal content visible after scroll :: 2 hidden |   FAIL 768 / reveal content visible after scroll :: 2 hidden |   FAIL 390 / reveal content visible after scroll :: 2 hidden"
+   }
+  }
+ }
+]

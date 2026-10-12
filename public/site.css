@@ -1,0 +1,47 @@
+:root{--brand:#3F6A4D;--ink:#28392E;--bg:#F6F7EF;--line:color-mix(in srgb, #28392E 20%, #F6F7EF)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 system-ui,"Noto Sans TC",sans-serif}a{color:inherit}a:focus-visible{outline:3px solid var(--brand);outline-offset:3px}.skip{position:absolute;left:-9999px}.skip:focus{top:8px;left:8px;background:#fff;padding:6px}header{display:flex;gap:24px;flex-wrap:wrap;align-items:center;padding:20px 4vw;border-bottom:1px solid var(--line)}header nav{margin-left:auto;display:flex;gap:20px;flex-wrap:wrap}.brand{font-weight:700;font-size:23px}.button{border:2px solid var(--brand);padding:10px 20px;border-radius:8px;font-weight:700;text-decoration:none}.hero{padding:clamp(60px,8vw,120px) 6vw;max-width:1200px;margin:auto}.hero h1{font-size:clamp(40px,7vw,90px);line-height:1.15}.eyebrow{font-size:13px;letter-spacing:.15em}.interior{max-width:1060px;padding:40px 24px 100px;margin:auto}.links{display:grid;gap:12px}.links a{display:flex;justify-content:space-between;text-decoration:none;border-bottom:1px solid var(--line);padding:16px 0}.prose{max-width:780px}footer{border-top:1px solid var(--line);padding:36px 4vw}.layout-radio-letter{background:#29251f;color:white}.layout-reading-atlas,.layout-field-notes,.layout-clinician{border-left:5px solid var(--brand)}.layout-coach,.layout-essayist{font-size:1.3em}.layout-companion,.layout-somatic{text-align:center}.layout-curator,.layout-collective{background:#eae4dc}.layout-learning-lab,.layout-trust-path{border-top:5px solid var(--brand)}@media(max-width:650px){header nav{margin-left:0;width:100%}}
+:root{--brand-primary:#3F6A4D;--brand-secondary:#8D9B72;--brand-accent:#8A5A3E;--brand-background:#F6F7EF;--brand-text:#28392E;}
+
+/* ---- 回歸測試站適配層（AI 補充）：把生成器的五色盤橋接到工作坊 Blocks／Editorial 配方的 token ---- */
+:root{
+  --text:var(--brand-text);--heading:var(--brand-text);--body:var(--brand-text);--muted:#4f5a50;
+  --accent:var(--brand-primary);--accent-soft:color-mix(in srgb,var(--brand-primary) 12%,var(--brand-background));
+  --surface:#ffffff;--surface-2:color-mix(in srgb,var(--brand-secondary) 14%,var(--brand-background));
+  --radius:8px;--radius-lg:14px;--shadow:0 12px 30px rgba(0,0,0,.08);--ease:cubic-bezier(.2,.7,.2,1);--fast:.18s;
+  --ed-paper:var(--brand-background);--ed-ink:var(--brand-text);--ed-ink-2:#4f5a50;--ed-accent:var(--brand-accent);
+  --ed-accent-deco:var(--brand-secondary);--ed-line:var(--line);--ed-panel:var(--surface-2);
+}
+.skip:focus{position:fixed;z-index:100}
+.sim-banner{margin:0;padding:6px 4vw;font-size:14px;background:var(--surface-2);text-align:center}
+.site-header{display:flex;align-items:center;gap:16px 24px;padding:14px 4vw;border-bottom:1px solid var(--line);flex-wrap:nowrap}
+.site-header .brand{text-decoration:none;white-space:nowrap}
+.desktop-nav{margin-left:auto;min-width:0}
+.site-header nav{margin-left:0}
+.header-tools{display:flex;align-items:center;gap:10px}
+.header-cta{white-space:nowrap}
+.mobile-only{display:none}
+@media(max-width:900px){
+  .desktop-nav{display:none}.mobile-only{display:block}.header-tools{margin-left:auto}.header-cta{display:none}
+  .site-header .brand{font-size:19px;white-space:normal}
+}
+.practical-menu-dialog nav{display:grid;gap:4px}
+.practical-menu-dialog nav a{display:flex;justify-content:space-between;align-items:center;min-height:44px;padding:8px 12px;text-decoration:none}
+[aria-current="page"]{font-weight:700;text-decoration:underline;text-underline-offset:6px}
+.page-head{max-width:1060px;margin:auto;padding:28px 24px 0}
+.interior h1{font-family:var(--ed-serif);font-weight:500;font-size:clamp(32px,5vw,52px);line-height:1.2;margin:.2em 0 .4em}
+.prose h2{font-family:var(--ed-serif);font-weight:500;margin-top:2em}
+.prose table{border-collapse:collapse;width:100%;font-size:16px}.prose th,.prose td{border-bottom:1px solid var(--line);padding:8px;text-align:left}
+.meta{font-size:15px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.tags a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:15px}
+.topic-group{margin-top:40px}
+.home-section{margin:clamp(24px,5vw,60px) 0}
+.h01 .rail a{color:var(--ed-ink)}
+.practical-breadcrumbs ol{display:flex;flex-wrap:wrap;gap:6px 10px;list-style:none;padding:0;margin:0;font-size:15px}
+.practical-breadcrumbs li+li::before{content:"/";margin-right:10px;color:var(--muted)}
+/* audit.mjs 回饋修正：跳過連結改用 clip 隱藏（不超出視窗）、頁尾字級 ≥12px、觸控目標 ≥44px */
+.skip{position:absolute;left:8px;top:0;min-height:44px;display:inline-flex;align-items:center;padding:0 14px;background:#fff;z-index:100;transform:translateY(-120%)}
+.skip:focus{transform:none}
+.student-footer__bottom small{font-size:13px}
+.student-footer__links a{display:inline-flex;align-items:center;min-height:44px}
+.site-header .brand{display:inline-flex;align-items:center;min-height:44px}
+.links a{min-height:44px;align-items:center}

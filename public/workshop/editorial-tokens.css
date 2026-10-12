@@ -1,0 +1,40 @@
+/*
+ * tokens.css — Astro Editorial Layout Design Skill 基礎 tokens
+ * 所有 recipes/code/** 元件都以 var(--ed-*, 後備值) 讀取；
+ * 不匯入此檔也能運作，但換站時請覆寫這些變數（不是複製元件改色）。
+ * 標記：本檔為 [NEW] 建議值，十款原始碼中沒有對應的共用 token 檔。
+ */
+:root {
+  /* 容器 */
+  --ed-gutter: clamp(1rem, 4vw, 4rem);
+  --ed-wide: 1320px;   /* 寬內容（十款 1260–1360） */
+  --ed-mid: 1120px;    /* 中內容（十款 1080–1150） */
+  --ed-read: 36rem;    /* 閱讀欄（十款 580–610px ≈ 36–38rem） */
+
+  /* 色票：對比已用 WCAG 公式驗算（ink/paper 約 15:1、ink-2/paper 約 6.7:1、accent/paper 約 6.1:1） */
+  --ed-paper: #f5f1e8;
+  --ed-ink: #222018;
+  --ed-ink-2: #57534a;
+  --ed-accent: #9a3b24;       /* 文字用強調色 */
+  --ed-accent-deco: #c8613f;  /* 只做線、形狀（約 3.6:1，不可用於小字） */
+  --ed-line: #cfc8b8;
+  --ed-panel: #ebe4d4;
+  --ed-dark: #17212b;
+  --ed-on-dark: #ecece6;
+  --ed-on-dark-2: #b4bcc4;
+
+  /* 字體 */
+  --ed-serif: Georgia, "Noto Serif TC", "Songti TC", serif;
+  --ed-sans: system-ui, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --ed-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* 間距階（8px 基準） */
+  --ed-s1: .5rem; --ed-s2: 1rem; --ed-s3: 1.5rem; --ed-s4: 2rem;
+  --ed-s5: 3rem; --ed-s6: 5rem; --ed-s7: 6rem;
+  --ed-section: clamp(4rem, 8vw, 6rem);  /* 章節間距：手機 64px，桌機 96px */
+
+  /* 字級（label 下限 12px） */
+  --ed-fs-label: .75rem;
+  --ed-fs-body: 1rem;
+  --ed-fs-lead: 1.15rem;
+}

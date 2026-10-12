@@ -1,0 +1,50 @@
+[
+ {
+  "url": "https://efd6b288.personal-site-starter.pages.dev/guide/",
+  "width": 1440,
+  "violations": []
+ },
+ {
+  "url": "https://efd6b288.personal-site-starter.pages.dev/guide/",
+  "width": 390,
+  "violations": []
+ },
+ {
+  "url": "https://efd6b288.personal-site-starter.pages.dev/guide/prepare/",
+  "width": 1440,
+  "violations": []
+ },
+ {
+  "url": "https://efd6b288.personal-site-starter.pages.dev/guide/prepare/",
+  "width": 390,
+  "violations": []
+ },
+ {
+  "url": "https://efd6b288.personal-site-starter.pages.dev/starter/",
+  "width": 1440,
+  "violations": [
+   {
+    "id": "scrollable-region-focusable",
+    "impact": "serious",
+    "n": 1,
+    "sample": [
+     "#plan-preview ::   Element should have focusable content"
+    ]
+   }
+  ]
+ },
+ {
+  "url": "https://efd6b288.personal-site-starter.pages.dev/starter/",
+  "width": 390,
+  "violations": [
+   {
+    "id": "scrollable-region-focusable",
+    "impact": "serious",
+    "n": 1,
+    "sample": [
+     "#plan-preview ::   Element should have focusable content"
+    ]
+   }
+  ]
+ }
+]

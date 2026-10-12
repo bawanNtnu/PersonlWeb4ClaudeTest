@@ -1,0 +1,6 @@
+---
+interface PostLink {title:string;href:string}
+interface Props {previous?:PostLink;next?:PostLink;indexHref?:string}
+const {previous,next,indexHref}=Astro.props;
+---
+<nav class="practical-article-nav" aria-label="文章前後篇">{previous?<a href={previous.href}><small>← 上一篇</small><strong>{previous.title}</strong></a>:<span/>}{next?<a href={next.href}><small>下一篇 →</small><strong>{next.title}</strong></a>:<span/>}{indexHref&&<a class="practical-article-nav__index" href={indexHref}>返回文章列表 ↑</a>}</nav>

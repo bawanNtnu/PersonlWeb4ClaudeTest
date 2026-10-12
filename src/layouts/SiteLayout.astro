@@ -1,0 +1,58 @@
+---
+import config from '../../site.config.json';
+import SelectedPatterns from '../components/SelectedPatterns.astro';
+import StudentNavigation from '../components/StudentNavigation.astro';
+import MobileMenu from '../components/blocks/MobileMenu.astro';
+import SiteSearchDialog from '../components/blocks/SiteSearchDialog.astro';
+import BackToTop from '../components/blocks/BackToTop.astro';
+interface Props {title:string;description?:string;noindex?:boolean}
+const {title,description=config.brand.tagline,noindex=false}=Astro.props;
+const base=import.meta.env.BASE_URL;
+// 預設不讓搜尋引擎收錄；正式上線需另外設定 SITE_INDEXABLE=true（需學員同意）。
+const indexable=process.env.SITE_INDEXABLE==='true'&&!noindex;
+const buildCommit=process.env.CF_PAGES_COMMIT_SHA||process.env.GITHUB_SHA||'local';
+const hrefOf=(x:{id:string;path?:string})=>base+(x.path??x.id+'/');
+// 手機選單與桌機導航使用同一份 site.config.json；父項目展開後的文字與桌機一致。
+const mobileLinks=config.navigation.flatMap(item=>{
+  if(item.parentId)return [];
+  const children=config.navigation.filter(x=>x.parentId===item.id);
+  return children.length
+    ?[{label:'查看全部'+item.label,href:hrefOf(item)},...children.map(c=>({label:c.label,href:hrefOf(c),level:1}))]
+    :[{label:item.label,href:hrefOf(item)}];
+});
+const ctaHref=hrefOf(config.navigation.find(x=>x.id===config.primaryCta.pageId)!);
+const current=Astro.url.pathname;
+---
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>{title===config.brand.name ? title : `${title}｜${config.brand.name}`}</title>
+<meta name="description" content={description}/>
+<link rel="canonical" href={new URL(Astro.url.pathname,Astro.site??Astro.url).href}/>
+{!indexable&&<meta name="robots" content="noindex, nofollow"/>}
+<meta name="build-commit" content={buildCommit}/>
+<link rel="icon" href={base+'favicon.svg'} type="image/svg+xml"/>
+<link rel="stylesheet" href={base+'workshop/editorial-tokens.css'}/>
+<link rel="stylesheet" href={base+'workshop/blocks.css'}/>
+<link rel="stylesheet" href={base+'workshop/v02.css'}/>
+<link rel="stylesheet" href={base+'workshop/effects.css'}/>
+<link rel="stylesheet" href={base+'site.css'}/>
+</head>
+<body data-current={current}><a href="#main" class="skip">跳到主要內容</a>
+<p class="sim-banner">本站為工作坊回歸測試用的<strong>模擬網站</strong>，人物與內容皆為虛構。</p>
+<header class="site-header">
+  <a class="brand" href={base}>{config.brand.name}</a>
+  <div class="desktop-nav"><StudentNavigation /></div>
+  <div class="header-tools">
+    <SiteSearchDialog kind={config.kind as any} theme={config.visualTheme as any} />
+    <div class="mobile-only"><MobileMenu links={mobileLinks} label="選單" /></div>
+    <a class="button header-cta" href={ctaHref}>{config.primaryCta.label}</a>
+  </div>
+</header>
+<main id="main" data-pagefind-body={noindex?undefined:''}><slot/></main>
+{config.sectionPatterns?.some(x=>x.patternId.startsWith('footer-'))?<SelectedPatterns page="site-wide" />:<footer>© {new Date().getFullYear()} {config.brand.name}</footer>}
+<BackToTop />
+<script>
+  // 標記目前所在頁（StudentNavigation／MobileMenu 原本沒有 aria-current）。
+  const here=location.pathname;
+  document.querySelectorAll<HTMLAnchorElement>('header nav a[href]').forEach(a=>{if(new URL(a.href).pathname===here)a.setAttribute('aria-current','page')});
+</script>
+</body></html>

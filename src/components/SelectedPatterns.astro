@@ -1,0 +1,37 @@
+---
+import settings from '../../site.config.json';
+interface Props {page:string}
+const {page}=Astro.props;
+const chosen=(settings.sectionPatterns||[]).filter(x=>x.targetPage===page);
+const isFooter=chosen.some(x=>x.patternId.startsWith('footer-'));
+const links=settings.navigation;
+---
+{chosen.map(choice=>
+  choice.patternId==='featured-work'?<section class="student-pattern" aria-label="精選作品">
+    <p class="pattern-label">SELECTED WORK / 待完成</p><h2>代表作品與文章</h2><p>已選用作品展示組合樣板。請提供真實作品名稱、介紹與連結後，再由 AI 完成此區段。</p>
+    <p class="pattern-note">規劃位置：{choice.insertAfter}</p>
+  </section>:choice.patternId==='trust-service-path'?<section class="student-pattern" aria-label="服務適合度">
+    <p class="pattern-label">TRUST AND SERVICE / 待完成</p><h2>服務與合作方式</h2><p>已選用服務信任組合樣板。請提供實際服務、適合與不適合情況、必要政策，再由 AI 完成此區段。</p>
+    <p class="pattern-note">規劃位置：{choice.insertAfter}</p>
+  </section>:choice.patternId.startsWith('footer-')?<footer class:list={['student-footer','student-footer--'+choice.patternId]}>
+    <div class="student-footer__main"><div><p class="pattern-label">PERSONAL WEBSITE</p><strong>{settings.brand.name}</strong><p>{settings.brand.tagline}</p></div>
+    <nav aria-label="頁腳導覽"><h2>網站導覽</h2><div class="student-footer__links">{links.map(x=><a href={import.meta.env.BASE_URL+x.id+'/'}>{x.label}</a>)}</div></nav></div>
+    <div class="student-footer__bottom"><small>© {new Date().getFullYear()} {settings.brand.name}</small><span>法律及隱私權連結：尚未設定，不顯示假連結</span></div>
+  </footer>:null
+)}
+<style>
+.student-pattern{margin:clamp(32px,5vw,70px) auto;max-width:1060px;padding:clamp(24px,4vw,48px);background:var(--bg,#f7f5f0);border-top:3px solid var(--brand)}
+.student-pattern h2{font-size:clamp(26px,3vw,40px);margin:.3em 0}
+.student-pattern>p:not(.pattern-label){max-width:62ch}
+.pattern-note,.pattern-label{font-size:13px;letter-spacing:.04em}
+.student-footer{display:grid;gap:35px;padding:clamp(30px,6vw,72px) clamp(22px,5vw,80px);border-top:2px solid var(--brand)}
+.student-footer__main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+.student-footer__main strong{font-size:clamp(25px,4vw,44px)}
+.student-footer__main h2{font-size:17px}
+.student-footer__links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px}
+.student-footer__bottom{border-top:1px solid currentColor;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+.student-footer--footer-editorial{background:#eee8dd}
+.student-footer--footer-professional{background:#292722;color:#fff}
+.student-footer--footer-minimal{background:#f7f5f0}
+@media(max-width:720px){.student-footer__main{grid-template-columns:1fr}}
+</style>

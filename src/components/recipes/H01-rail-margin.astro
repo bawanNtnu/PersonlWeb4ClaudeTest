@@ -1,0 +1,67 @@
+---
+/**
+ * H01 rail-margin — 窄索引軌 + 主欄大標 + 邊注（衍生自 01 田野筆記 .fn-layout）
+ * 結構：4.5rem | minmax(0,1fr) | 11rem；手機 2rem | 1fr，邊注落到主欄下方。
+ */
+interface Props {
+  kicker?: string; phrases?: string[]; voice?: string; deck?: string;
+  rail?: (string|{label:string;href:string})[]; railNo?: string; figCaption?: string; note?: string; noteBy?: string; src?: string; alt?: string;
+}
+const {
+  kicker = '一種慢慢觀看的方法',
+  phrases = ['先把世界', '記錄下來，'],
+  voice = '再慢慢理解。',
+  deck = '寫下沿途遇見的細節、反覆出現的模式，以及暫時還沒有答案的問題。',
+  rail = ['筆記索引', '研究問題'],
+  note = '有時候，一個準確的問題，比一個快速的答案更值得留下。',
+  noteBy = '— 研究手記',
+  src, alt = '', railNo = '01—05', figCaption = '示意圖說',
+} = Astro.props;
+---
+<section class="h01">
+  <nav class="rail" aria-label="本頁索引">
+    <span class="no">{railNo}</span>
+    {rail.map((r) => typeof r === 'string' ? <span class="rail-item">{r}</span> : <a href={r.href}>{r.label}</a>)}
+    <span class="stem" aria-hidden="true"></span>
+  </nav>
+  <div class="main">
+    <p class="label">{kicker}</p>
+    <h1>{phrases.map((p) => <span class="ph">{p}</span>)}<em class="ph">{voice}</em></h1>
+    <p class="deck">{deck}</p>
+    <figure class="fig">
+      {src ? <img src={src} alt={alt} width="1200" height="900" /> : <div class="art" role="img" aria-label={alt || '示意圖'}></div>}
+      <figcaption><span>FIG. 01</span>{figCaption}</figcaption>
+    </figure>
+  </div>
+  <aside class="margin">
+    <p class="label">MARGIN NOTE</p>
+    <p class="quote">「{note}」</p>
+    <span class="by">{noteBy}</span>
+  </aside>
+</section>
+<style>
+  .h01 { max-width: var(--ed-wide, 1320px); margin-inline: auto; padding: var(--ed-s5, 3rem) var(--ed-gutter, clamp(1rem,4vw,4rem)) var(--ed-s6, 5rem);
+    display: grid; grid-template-columns: 4.75rem minmax(0, 1fr) 11rem; gap: clamp(1.2rem, 4vw, 4rem); color: var(--ed-ink, #222); }
+  .label { font: .75rem/1.4 var(--ed-mono, ui-monospace, monospace); letter-spacing: .12em; text-transform: uppercase; color: var(--ed-accent, #9a3b24); margin: 0; }
+  .rail { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; font: .75rem/1.4 var(--ed-mono, monospace); letter-spacing: .08em; color: var(--ed-ink-2, #57534a); }
+  .rail a { writing-mode: vertical-rl; color: var(--ed-ink, #222); text-decoration: none; min-height: 44px; padding: .5rem .9rem; }
+  .stem { width: 1px; height: 110px; background: var(--ed-line, #cfc8b8); margin-left: .35rem; }
+  .main { max-width: 920px; }
+  h1 { font: 400 clamp(3rem, 9vw, 8.5rem)/1.04 var(--ed-serif, Georgia, serif); letter-spacing: -.03em; margin: 1rem 0 1.5rem; text-wrap: balance; }
+  .ph { display: inline-block; }
+  h1 em { font-style: italic; color: var(--ed-accent, #9a3b24); }
+  .deck { font-size: 1.15rem; line-height: 1.85; max-width: 34em; color: var(--ed-ink-2, #57534a); margin: 0 0 2rem; }
+  .fig { margin: 0 0 0 auto; width: min(76%, 680px); }
+  .fig img, .art { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 48% 48% 4px 4px; }
+  .art { background: repeating-linear-gradient(135deg, #0000 0 14px, #0000000a 14px 15px), linear-gradient(160deg, var(--ed-panel, #ebe4d4), color-mix(in srgb, var(--ed-accent-deco, #c8613f) 30%, var(--ed-panel, #ebe4d4))); }
+  figcaption { display: flex; justify-content: space-between; gap: 1rem; font: .75rem/1.4 var(--ed-mono, monospace); color: var(--ed-ink-2, #57534a); padding: .55rem 0; border-bottom: 1px solid var(--ed-line, #cfc8b8); }
+  figcaption span { color: var(--ed-accent, #9a3b24); }
+  .margin { align-self: center; margin-top: 5rem; border-left: 1px solid var(--ed-line, #cfc8b8); padding-left: 1rem; }
+  .quote { font-size: 1rem; line-height: 1.8; margin: .6rem 0; }
+  .by { font: .75rem var(--ed-mono, monospace); color: var(--ed-ink-2, #57534a); }
+  @media (max-width: 850px) {
+    .h01 { grid-template-columns: 3.4rem minmax(0, 1fr); gap: .5rem; }
+    .margin { grid-column: 2; margin: 0; max-width: 30rem; }
+    .fig { width: 100%; }
+  }
+</style>

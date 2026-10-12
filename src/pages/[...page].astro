@@ -1,0 +1,21 @@
+---
+import config from '../../site.config.json';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SelectedPatterns from '../components/SelectedPatterns.astro';
+import Breadcrumbs from '../components/blocks/Breadcrumbs.astro';
+import {pageContent} from '../data/pages';
+// articles 與 topics 有自己的頁面檔；其餘一般頁面由導航設定產生。
+export function getStaticPaths(){return config.navigation.filter(x=>!['articles','topics'].includes(x.id)).map(item=>({params:{page:(item.path??item.id+'/').slice(0,-1)},props:{item}}))}
+const {item}=Astro.props;
+const base=import.meta.env.BASE_URL;
+const parent=item.parentId?config.navigation.find(x=>x.id===item.parentId):undefined;
+const content=pageContent[item.id];
+const crumbs=[{label:'首頁',href:base},...(parent?[{label:parent.label,href:base+(parent.path??parent.id+'/')}]:[]),{label:item.label}];
+---
+<SiteLayout title={item.label} description={content?.lead}>
+  <div class="page-head"><Breadcrumbs items={crumbs} /></div>
+  <section class="interior prose"><h1>{item.label}</h1>
+    {content?<><p>{content.lead}</p>{content.sections.map(s=><><h2>{s.h}</h2><p>{s.p}</p></>)}</>:<p>這裡尚未填入個人的正式內容，請先完成內容與設計驗收再公開。</p>}
+  </section>
+  <SelectedPatterns page={item.id} />
+</SiteLayout>

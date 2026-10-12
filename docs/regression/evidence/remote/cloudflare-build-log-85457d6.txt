@@ -1,0 +1,17 @@
+# Cloudflare Pages build log (project balcony-field-notes-qa, deployment 011d368a-ef8c-4587-9991-0ec21e9f208d)
+# 透過 Cloudflare API GET /pages/projects/.../deployments/{id}/history/logs 取得；以下為完整重點行（去除 ANSI 色碼）
+2026-10-12T03:24:20Z Cloning repository...
+2026-10-12T03:24:21Z  * branch            85457d6bc8c2869b19f433486225a31dace7b362 -> FETCH_HEAD
+2026-10-12T03:24:21Z HEAD is now at 85457d6 feat: 以工作坊 Blocks／Effects／Editorial 配方適配回歸測試站
+2026-10-12T03:24:23Z Detected the following tools from environment: nodejs@22.22.0, npm@10.9.2
+2026-10-12T03:24:26Z WARNING: node-v22.22.0-linux-x64 is in LTS Maintenance mode and nearing its end of life.
+2026-10-12T03:24:27Z Installing project dependencies: npm clean-install --progress=false
+2026-10-12T03:24:36Z added 285 packages in 8s
+2026-10-12T03:24:36Z > astro build && pagefind --site dist --root-selector main && node scripts/build-exact-search.mjs
+2026-10-12T03:24:39Z   /404.html /start-here/ /page-custom-1/ /about/ /articles/mint-comeback/ /articles/one-notebook-plant-log/ /articles/typhoon-balcony-checklist/ /articles/ / /robots.txt /rss.xml /sitemap.xml /topics/
+2026-10-12T03:24:39Z [build] 10 page(s) built in 2.43s
+2026-10-12T03:24:40Z Pagefind v1.5.2: Found a data-pagefind-body element on the site. ↳ Ignoring pages without this tag. Indexed 9 pages, 360 words
+2026-10-12T03:24:40Z Supplemental Chinese search index: 9 pages. Pagefind is separate.
+2026-10-12T03:24:44Z ✨ Success! Uploaded 33 files (10 already uploaded) (0.98 sec)
+2026-10-12T03:24:46Z Success: Assets published!
+2026-10-12T03:24:48Z Success: Your site was deployed!

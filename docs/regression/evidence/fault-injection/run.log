@@ -1,0 +1,15 @@
+F00-baseline           build=ok v28:pass  nav:pass  audit:pass  static:pass  browser:pass  a11y:pass
+F01-nav-404            build=ok v28:pass  nav:DETECTED  static:DETECTED
+F02-mobile-missing     build=ok v28:pass  nav:DETECTED  static:DETECTED
+F03-draft-json         build=ok v28:pass  static:DETECTED
+F04-short-title-leak   build=ok v28:pass  static:DETECTED
+F05-drafts-folder-loaded build=ok v28:DETECTED  static:DETECTED
+F06-footer-path-404    build=ok v28:pass  nav:pass  static:DETECTED
+F07-overflow-390       build=ok nav:DETECTED  audit:DETECTED  browser:DETECTED
+F08-low-contrast       build=ok audit:pass  a11y:DETECTED
+F09-noindex-removed    build=ok v28:pass  static:DETECTED
+F10-menu-focus         build=ok nav:pass  browser:pass
+F11-no-exact-index     build=ok v28:pass  static:DETECTED  browser:DETECTED
+F12-no-description     build=ok v28:DETECTED  static:DETECTED
+F13-draft-in-rss       build=ok v28:DETECTED  static:DETECTED
+F14-reveal-stuck       build=ok audit:pass  browser:DETECTED

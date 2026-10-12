@@ -1,0 +1,22 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
+import ArticleNavigation from '../../components/blocks/ArticleNavigation.astro';
+import {getCollection,render} from 'astro:content';
+export async function getStaticPaths(){
+  const list=(await getCollection('articles',({data})=>!data.draft)).sort((a,b)=>b.data.publishedAt.getTime()-a.data.publishedAt.getTime());
+  return list.map((entry,i)=>({params:{slug:entry.id},props:{entry,newer:list[i-1],older:list[i+1]}}));
+}
+const {entry,newer,older}=Astro.props;
+const {Content}=await render(entry);
+const base=import.meta.env.BASE_URL;
+const link=(e:any)=>e?{title:e.data.title,href:base+'articles/'+e.id+'/'}:undefined;
+---
+<SiteLayout title={entry.data.title} description={entry.data.description}>
+  <div class="page-head"><Breadcrumbs items={[{label:'首頁',href:base},{label:'文章',href:base+'articles/'},{label:entry.data.title}]} /></div>
+  <article class="interior prose"><h1>{entry.data.title}</h1>
+    <p class="meta"><time datetime={entry.data.publishedAt.toISOString()}>{entry.data.publishedAt.toISOString().slice(0,10)}</time>{entry.data.tags.length>0&&<> · {entry.data.tags.join('、')}</>}</p>
+    <p>{entry.data.description}</p><Content/>
+    <ArticleNavigation previous={link(older)} next={link(newer)} indexHref={base+'articles/'} />
+  </article>
+</SiteLayout>

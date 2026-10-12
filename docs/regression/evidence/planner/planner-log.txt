@@ -1,0 +1,176 @@
+THEMES [
+ {
+  "theme": "paper",
+  "primary": "#9A3B2E",
+  "secondary": "#806A54",
+  "accent": "#C58D63",
+  "background": "#F8F5EF",
+  "text": "#28231F",
+  "text_bg": "14.291",
+  "primary_bg": "6.350",
+  "accent_bg": "2.621",
+  "secondary_bg": "4.698"
+ },
+ {
+  "theme": "morning",
+  "primary": "#C8775A",
+  "secondary": "#7F8F80",
+  "accent": "#B65B75",
+  "background": "#FFF8F3",
+  "text": "#362B29",
+  "text_bg": "13.017",
+  "primary_bg": "3.200",
+  "accent_bg": "4.212",
+  "secondary_bg": "3.251"
+ },
+ {
+  "theme": "studio",
+  "primary": "#2F5D50",
+  "secondary": "#708A7A",
+  "accent": "#B17C60",
+  "background": "#F6F7F3",
+  "text": "#23312D",
+  "text_bg": "12.602",
+  "primary_bg": "6.964",
+  "accent_bg": "3.296",
+  "secondary_bg": "3.482"
+ },
+ {
+  "theme": "botanical",
+  "primary": "#50775B",
+  "secondary": "#8D9B72",
+  "accent": "#8A5A3E",
+  "background": "#F6F7EF",
+  "text": "#28392E",
+  "text_bg": "11.353",
+  "primary_bg": "4.713",
+  "accent_bg": "5.389",
+  "secondary_bg": "2.756"
+ },
+ {
+  "theme": "ocean",
+  "primary": "#245D78",
+  "secondary": "#647E88",
+  "accent": "#B57949",
+  "background": "#F5F8FA",
+  "text": "#1E303A",
+  "text_bg": "12.793",
+  "primary_bg": "6.762",
+  "accent_bg": "3.397",
+  "secondary_bg": "4.033"
+ },
+ {
+  "theme": "sand",
+  "primary": "#9C603B",
+  "secondary": "#877E69",
+  "accent": "#6B826C",
+  "background": "#FBF7EF",
+  "text": "#352A23",
+  "text_bg": "13.042",
+  "primary_bg": "4.736",
+  "accent_bg": "3.903",
+  "secondary_bg": "3.766"
+ },
+ {
+  "theme": "slate",
+  "primary": "#475569",
+  "secondary": "#657784",
+  "accent": "#B38B53",
+  "background": "#F4F6F8",
+  "text": "#202C39",
+  "text_bg": "13.091",
+  "primary_bg": "6.995",
+  "accent_bg": "2.878",
+  "secondary_bg": "4.284"
+ },
+ {
+  "theme": "lavender",
+  "primary": "#705A95",
+  "secondary": "#857F99",
+  "accent": "#A56D82",
+  "background": "#F8F6FB",
+  "text": "#30283C",
+  "text_bg": "13.093",
+  "primary_bg": "5.457",
+  "accent_bg": "3.829",
+  "secondary_bg": "3.562"
+ }
+]
+PALETTE after primary change {"primary":"#3F6A4D","secondary":"#8D9B72","accent":"#8A5A3E","background":"#F6F7EF","text":"#28392E"} brandColor= #3f6a4d
+W4 aria-labels after rename start-here->新手入門: ["上移：新手入門","下移：新手入門","縮排為子選單：新手入門","提升至第一層：新手入門","刪除頁面：新手入門"]
+W4 checkbox label: 顯示新手入門
+W4 aria-labels after moves: ["上移：新手入門","下移：新手入門","縮排為子選單：新手入門","提升至第一層：新手入門","刪除頁面：新手入門"]
+focus after move: BODY
+custom checkbox checked: true
+order start-here,articles,topics,about,resources,page-custom-1
+order after [{"id":"start-here","cls":"nav-row","label":"新手入門"},{"id":"page-custom-1","cls":"nav-row nav-row-child","label":"陽台工具"},{"id":"articles","cls":"nav-row","label":"文章"},{"id":"topics","cls":"nav-row","label":"主題"},{"id":"about","cls":"nav-row","label":"關於我"},{"id":"resources","cls":"nav-row","label":"資源"}]
+custom aria-labels: ["顯示陽台工具","page-custom-1 選單名稱","上移：陽台工具","下移：陽台工具","縮排為子選單：陽台工具","提升至第一層：陽台工具","刪除頁面：陽台工具"]
+cta options [["start-here","新手入門"],["page-custom-1","陽台工具"],["articles","文章"],["topics","主題"],["about","關於我"]]
+featured options [["/","首頁"],["start-here","新手入門"],["page-custom-1","陽台工具"],["articles","文章"],["topics","主題"],["about","關於我"]]
+NAV PREVIEW 03
+頁面架構與導航列
+
+這裡會依照步驟 01 選擇的網站方向，帶入一組預設導航項目：A01–A06（知識／部落格）使用內容型預設，B01–B06（助人者／專業服務）使用服務型預設。目前同類型的六款 Layout 共用初始項目，並非每款版型都有不同選單；你可以自由新增、刪除、排序及設定第二層選單。
+
+網站導覽
+⠿
+↑
+↓
+→
+←
+×
+⠿
+↑
+↓
+→
+←
+×
+⠿
+↑
+↓
+→
+←
+×
+⠿
+↑
+↓
+→
+←
+×
+⠿
+↑
+↓
+→
+←
+×
+⠿
+↑
+↓
+→
+←
+×
+＋ 新增自訂頁面
+
+拖曳 ⠿ 調整順序；→ 縮排為子選單、← 提升層級。觸控或鍵盤可使用 ↑ ↓ 排序。所有頁面都可刪除或暫時取消勾選；有子選單的頁面刪除前會先詢問。
+
+NAVIGATION PREVIEW
+
+陽台觀察室（回歸測試）
+新手入門
+陽台工具
+文章
+主題
+關於我
+主要按鈕前往
+新手入門
+陽台工具
+文章
+主題
+關於我
+按鈕文字
+overflow 1440 {"sw":1440,"iw":1440}
+overflow 1280 {"sw":1280,"iw":1280}
+overflow 768 {"sw":768,"iw":768}
+overflow 390 {"sw":390,"iw":390}
+download suggested name: my-astro-site-plan.json
+PAGE ERRORS []

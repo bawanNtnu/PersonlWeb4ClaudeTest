@@ -1,0 +1,146 @@
+Generated independent Astro scaffold: /tmp/astro-starter-test-3XZDaS/knowledge pages: [ 'articles', 'about', 'page-custom-guide' ]
+npm warn deprecated tsconfck@3.1.6: unmaintained
+
+added 282 packages in 8s
+
+> build
+> astro build && pagefind --site dist --root-selector main && node scripts/build-exact-search.mjs
+
+03:10:23 [content] Syncing content
+03:10:23 [WARN] [glob-loader] No files found matching "**/*.md" in directory "src/content/articles"
+03:10:23 [content] Synced content
+03:10:23 [types] Generated 517ms
+03:10:23 [build] output: "static"
+03:10:23 [build] mode: "static"
+03:10:23 [build] directory: /tmp/astro-starter-test-3XZDaS/knowledge/dist/
+03:10:23 [build] Collecting build info...
+03:10:23 [build] ✓ Completed in 533ms.
+03:10:23 [build] Building static entrypoints...
+03:10:24 [vite] ✓ built in 941ms
+03:10:24 [build] ✓ Completed in 990ms.
+
+ generating static routes 
+03:10:24 ▶ src/pages/404.astro
+03:10:24   └─ /404.html (+9ms) 
+03:10:24 ▶ src/pages/[...page].astro
+03:10:24   ├─ /about/index.html (+2ms) 
+03:10:24   └─ /start-here/tools/index.html (+2ms) 
+03:10:24 ▶ src/pages/articles/[slug].astro
+The collection "articles" does not exist or is empty. Please check your content config file for errors.
+03:10:24 ▶ src/pages/articles/index.astro
+03:10:24   └─ /articles/index.htmlThe collection "articles" does not exist or is empty. Please check your content config file for errors.
+ (+2ms) 
+03:10:24 ▶ src/pages/index.astro
+03:10:24   └─ /index.html (+2ms) 
+03:10:24 λ src/pages/robots.txt.js
+03:10:24   └─ /robots.txt (+2ms) 
+03:10:24 λ src/pages/rss.xml.js
+03:10:24   └─ /rss.xmlThe collection "articles" does not exist or is empty. Please check your content config file for errors.
+ (+2ms) 
+03:10:24 λ src/pages/sitemap.xml.js
+03:10:24   └─ /sitemap.xmlThe collection "articles" does not exist or is empty. Please check your content config file for errors.
+ (+2ms) 
+03:10:24 ✓ Completed in 41ms.
+
+03:10:24 [build] 5 page(s) built in 1.58s
+03:10:24 [build] Complete!
+
+Running Pagefind v1.5.2 (Extended)
+Running from: "/tmp/astro-starter-test-3XZDaS/knowledge"
+Source:       "dist"
+Output:       "dist/pagefind"
+
+[Walking source directory]
+Found 5 files matching **/*.{html}
+
+[Parsing files]
+Did not find a data-pagefind-body element on the site.
+↳ Indexing all <body> elements on the site.
+
+[Reading languages]
+Discovered 1 language: zh-hant
+
+[Building search indexes]
+Total: 
+  Indexed 1 language
+  Indexed 5 pages
+  Indexed 82 words
+  Indexed 0 filters
+  Indexed 0 sorts
+Note: Pagefind doesn't support stemming for the language zh-hant. 
+Search will still work, but will not match across root words.
+Note: Pagefind doesn't support stemming for the language zh-hant. 
+Search will still work, but will not match across root words.
+
+Finished in 0.286 seconds
+Supplemental Chinese search index: 4 pages. Pagefind is separate.
+Generated independent Astro scaffold: /tmp/astro-starter-test-3XZDaS/helper pages: [ 'services', 'about' ]
+npm warn deprecated tsconfck@3.1.6: unmaintained
+
+added 282 packages in 8s
+
+> build
+> astro build && pagefind --site dist --root-selector main && node scripts/build-exact-search.mjs
+
+03:10:34 [content] Syncing content
+03:10:34 [WARN] [glob-loader] No files found matching "**/*.md" in directory "src/content/articles"
+03:10:34 [content] Synced content
+03:10:34 [types] Generated 537ms
+03:10:34 [build] output: "static"
+03:10:34 [build] mode: "static"
+03:10:34 [build] directory: /tmp/astro-starter-test-3XZDaS/helper/dist/
+03:10:34 [build] Collecting build info...
+03:10:34 [build] ✓ Completed in 560ms.
+03:10:34 [build] Building static entrypoints...
+03:10:35 [vite] ✓ built in 905ms
+03:10:35 [build] ✓ Completed in 942ms.
+
+ generating static routes 
+03:10:35 ▶ src/pages/404.astro
+03:10:35   └─ /404.html (+8ms) 
+03:10:35 ▶ src/pages/[...page].astro
+03:10:35   ├─ /services/index.html (+2ms) 
+03:10:35   └─ /about/index.html (+2ms) 
+03:10:35 ▶ src/pages/index.astro
+03:10:35   └─ /index.html (+2ms) 
+03:10:35 λ src/pages/robots.txt.js
+03:10:35   └─ /robots.txt (+4ms) 
+03:10:35 λ src/pages/rss.xml.js
+03:10:35   └─ /rss.xml (+2ms) 
+03:10:35 λ src/pages/sitemap.xml.js
+03:10:35   └─ /sitemap.xml (+2ms) 
+03:10:35 ✓ Completed in 36ms.
+
+03:10:35 [build] 4 page(s) built in 1.55s
+03:10:35 [build] Complete!
+
+Running Pagefind v1.5.2 (Extended)
+Running from: "/tmp/astro-starter-test-3XZDaS/helper"
+Source:       "dist"
+Output:       "dist/pagefind"
+
+[Walking source directory]
+Found 4 files matching **/*.{html}
+
+[Parsing files]
+Did not find a data-pagefind-body element on the site.
+↳ Indexing all <body> elements on the site.
+
+[Reading languages]
+Discovered 1 language: zh-hant
+
+[Building search indexes]
+Total: 
+  Indexed 1 language
+  Indexed 4 pages
+  Indexed 81 words
+  Indexed 0 filters
+  Indexed 0 sorts
+Note: Pagefind doesn't support stemming for the language zh-hant. 
+Search will still work, but will not match across root words.
+Note: Pagefind doesn't support stemming for the language zh-hant. 
+Search will still work, but will not match across root words.
+
+Finished in 0.297 seconds
+Supplemental Chinese search index: 3 pages. Pagefind is separate.
+Starter exporter checks passed for knowledge/helper
