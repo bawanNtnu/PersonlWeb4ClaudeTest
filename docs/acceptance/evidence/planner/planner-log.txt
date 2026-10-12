@@ -1,0 +1,5 @@
+up-button labels after rename: ["上移：開始閱讀","上移：文章","上移：主題","上移：關於我","上移：資源"]
+resources checked before=false
+trust-service-path visible/enabled for knowledge: false/true
+final live regions: [""]
+downloaded filename: my-astro-site-plan.json

@@ -1,0 +1,5 @@
+---
+interface Props {articles:{title:string;href:string;excerpt?:string}[];}
+const {articles}=Astro.props;
+---
+<aside class="v2-related"><h3>延伸閱讀</h3><ul>{articles.map(article=><li><a href={article.href}><strong>{article.title}</strong>{article.excerpt&&<span>{article.excerpt}</span>}</a></li>)}</ul></aside>

@@ -1,0 +1,48 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
+import ArticleNavigation from '../../components/blocks/ArticleNavigation.astro';
+import RelatedArticles from '../../components/blocks/RelatedArticles.astro';
+import {render} from 'astro:content';
+import {href,publishedArticles,articleHref,formatDate,readingMinutes,navigation,type Article} from '../../lib/site';
+import {topicBySlug} from '../../data/topics';
+
+export async function getStaticPaths(){
+  const articles=await publishedArticles();
+  return articles.map((entry,i)=>({params:{slug:entry.id},props:{entry,newer:articles[i-1],older:articles[i+1],all:articles}}));
+}
+interface Props {entry:Article;newer?:Article;older?:Article;all:Article[]}
+const {entry,newer,older,all}=Astro.props;
+const {Content}=await render(entry);
+const topic=topicBySlug(entry.data.topic);
+const listLabel=navigation.find(x=>x.id==='articles')?.label??'觀察筆記';
+const related=all.filter(a=>a.id!==entry.id&&(a.data.topic===entry.data.topic||a.data.tags.some(t=>entry.data.tags.includes(t)))).slice(0,3);
+const iso=(d:Date)=>d.toISOString().slice(0,10);
+---
+<SiteLayout title={entry.data.title} description={entry.data.description} type="article">
+  <article class="fn-article">
+    <aside class="fn-article__meta" aria-label="文章資訊">
+      <dl>
+        <div><dt>DATE</dt><dd><time datetime={iso(entry.data.publishedAt)}>{formatDate(entry.data.publishedAt)}</time></dd></div>
+        {entry.data.updatedAt&&<div><dt>UPDATED</dt><dd><time datetime={iso(entry.data.updatedAt)}>{formatDate(entry.data.updatedAt)}</time></dd></div>}
+        <div><dt>TOPIC</dt><dd><a href={href('topics/'+entry.data.topic+'/')}>{topic?.label}</a></dd></div>
+        <div><dt>READING</dt><dd>{readingMinutes(entry)} 分鐘</dd></div>
+        {entry.data.tags.length>0&&<div><dt>TAGS</dt><dd><ul>{entry.data.tags.map(t=><li><a href={href('articles/?tag='+encodeURIComponent(t))}>{t}</a></li>)}</ul></dd></div>}
+        <div><dt>NATURE</dt><dd>模擬示範內容</dd></div>
+      </dl>
+    </aside>
+    <div class="fn-article__main">
+      <Breadcrumbs items={[{label:'首頁',href:href()},{label:listLabel,href:href('articles/')},{label:entry.data.title}]}/>
+      <header class="fn-article__head"><p class="fn-kicker">FIELD NOTE / {topic?.label}</p><h1>{entry.data.title}</h1><p>{entry.data.description}</p></header>
+      <div class="fn-prose"><Content/></div>
+    </div>
+    <aside class="fn-article__aside" aria-label="邊注">
+      <p class="fn-kicker">MARGIN NOTE</p>
+      <p>這篇是在一個朝西、兩坪大的租屋陽台上的個人觀察，不是專業園藝建議。</p>
+    </aside>
+    <footer class="fn-article__foot">
+      <ArticleNavigation previous={older&&{title:older.data.title,href:articleHref(older)}} next={newer&&{title:newer.data.title,href:articleHref(newer)}} indexHref={href('articles/')}/>
+      {related.length>0&&<RelatedArticles articles={related.map(a=>({title:a.data.title,href:articleHref(a),excerpt:a.data.description}))}/>}
+    </footer>
+  </article>
+</SiteLayout>

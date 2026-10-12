@@ -1,0 +1,22 @@
+/* 品牌 Token：數值來自 site-brief.json 的五色盤（植感 botanical，主色由學員調深為 #3F6A4D）。
+   工作坊元件使用 --accent/--line/--text… 等通用名稱，這裡統一對應，元件本身不再寫死顏色。 */
+:root{
+  --brand-primary:#3F6A4D;--brand-secondary:#8D9B72;--brand-accent:#B48569;--brand-background:#F6F7EF;--brand-text:#28392E;
+  --paper:var(--brand-background);
+  --paper-deep:#ECEEE2;
+  --ink:var(--brand-text);
+  --moss:var(--brand-primary);
+  --sage:var(--brand-secondary);
+  --clay:#8A5A3E; /* 由 accent #B48569 加深，讓小字也達 4.5:1；原 accent 只用於裝飾 */
+  --muted:#4E5B50;
+  --line:#C9CDBC;
+  --line-strong:#A9AF98;
+  /* 工作坊元件通用 token 對應 */
+  --bg:var(--paper);--text:var(--ink);--accent:var(--moss);--accent-soft:#E2E8DC;
+  --surface:#FBFBF6;--surface-2:var(--paper-deep);
+  --radius:6px;--radius-lg:14px;--fast:160ms;
+  --serif:"Noto Serif TC","Songti TC","Source Han Serif TC",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --heading:var(--serif);--body:var(--serif);
+  --canvas:1360px;--reading:720px;
+}

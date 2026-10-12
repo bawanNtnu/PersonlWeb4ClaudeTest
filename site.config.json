@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "kind": "knowledge",
+  "layoutSlug": "field-notes",
+  "visualTheme": "botanical",
+  "brand": {
+    "name": "陽台觀察室",
+    "primaryColor": "#3F6A4D",
+    "tagline": "一個租屋族在兩坪西曬陽台，慢慢記錄植物怎麼活下來。",
+    "palette": {
+      "primary": "#3F6A4D",
+      "secondary": "#8D9B72",
+      "accent": "#B48569",
+      "background": "#F6F7EF",
+      "text": "#28392E"
+    }
+  },
+  "navigation": [
+    {
+      "id": "start-here",
+      "label": "新手入門",
+      "enabled": true
+    },
+    {
+      "id": "page-balcony-tools",
+      "label": "陽台工具",
+      "enabled": true,
+      "parentId": "start-here",
+      "path": "start-here/tools/"
+    },
+    {
+      "id": "articles",
+      "label": "觀察筆記",
+      "enabled": true
+    },
+    {
+      "id": "topics",
+      "label": "植物分類",
+      "enabled": true
+    },
+    {
+      "id": "about",
+      "label": "關於我",
+      "enabled": true
+    }
+  ],
+  "primaryCta": {
+    "label": "新手從這裡開始",
+    "pageId": "start-here"
+  },
+  "sectionPatterns": [
+    {
+      "patternId": "featured-work",
+      "targetPage": "/",
+      "insertAfter": "首頁自我介紹之後"
+    },
+    {
+      "patternId": "footer-editorial",
+      "targetPage": "site-wide",
+      "insertAfter": "每頁主要內容之後"
+    }
+  ],
+  "site": "https://balcony-field-notes.invalid",
+  "base": "/",
+  "siteNote": "正式網址尚未決定（.invalid 為刻意的佔位）。預覽建置會改用 Cloudflare 提供的 CF_PAGES_URL；只有設定 SITE_URL 且 SITE_INDEXABLE=true 時才允許搜尋引擎索引。",
+  "author": {
+    "name": "阿蕨",
+    "note": "模擬人物（工作坊驗收用），非真實個人"
+  },
+  "simulated": true
+}

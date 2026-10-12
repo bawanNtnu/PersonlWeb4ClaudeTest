@@ -1,0 +1,32 @@
+---
+/**
+ * 桌機主導覽。唯一資料來源是 site.config.json 的 navigation；手機選單（MobileMenu）也由同一份資料產生。
+ * 第二層選單沿用工作坊生成器 StudentNavigation 的 <details> 作法：父項目保留自己的目的頁（「查看全部」）。
+ */
+import {navRoots,navChildren,navHref} from '../../lib/site';
+const current=Astro.url.pathname;
+const isCurrent=(url:string)=>current===url;
+const inSection=(url:string)=>current.startsWith(url);
+---
+<nav class="fn-nav" aria-label="主要導覽">
+  {navRoots.map(item=>{
+    const children=navChildren(item.id);
+    const url=navHref(item);
+    return children.length?(
+      <details class="fn-nav__group" data-nav-group>
+        <summary aria-current={inSection(url)||children.some(c=>inSection(navHref(c)))?'true':undefined}>{item.label}<span aria-hidden="true">⌄</span></summary>
+        <div class="fn-nav__submenu">
+          <a href={url} aria-current={isCurrent(url)?'page':undefined}>{item.label}・總覽</a>
+          {children.map(child=><a href={navHref(child)} aria-current={isCurrent(navHref(child))?'page':undefined}>{child.label}</a>)}
+        </div>
+      </details>
+    ):<a href={url} aria-current={isCurrent(url)?'page':inSection(url)?'true':undefined}>{item.label}</a>;
+  })}
+</nav>
+<script>
+  // Escape 關閉下拉、點擊外部收合；<details> 本身已支援 Enter/Space 與觸控。
+  document.querySelectorAll<HTMLDetailsElement>('[data-nav-group]').forEach(group=>{
+    group.addEventListener('keydown',event=>{if(event.key==='Escape'&&group.open){group.open=false;group.querySelector('summary')?.focus();}});
+    document.addEventListener('click',event=>{if(group.open&&!group.contains(event.target as Node))group.open=false;});
+  });
+</script>

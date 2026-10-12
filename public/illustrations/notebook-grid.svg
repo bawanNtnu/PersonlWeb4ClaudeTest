@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+<title id="t">植物觀察筆記格式示意圖</title>
+<desc id="d">AI 繪製的示意圖：一頁攤開的筆記本，左欄是日期，中間是觀察文字，右欄是澆水與天氣記號。非實拍。</desc>
+<rect width="800" height="520" fill="#ECEEE2"/>
+<rect x="80" y="60" width="640" height="400" fill="#F6F7EF" stroke="#28392E" stroke-width="3"/>
+<path d="M400 60V460" stroke="#28392E" stroke-width="2"/>
+<g stroke="#C9CDBC" stroke-width="1.5"><path d="M100 120H380M100 170H380M100 220H380M100 270H380M100 320H380M100 370H380M100 420H380"/><path d="M420 120H700M420 170H700M420 220H700M420 270H700M420 320H700M420 370H700M420 420H700"/></g>
+<path d="M160 90V440M640 90V440" stroke="#B48569" stroke-width="2"/>
+<g font-family="monospace" font-size="16" fill="#3F6A4D"><text x="104" y="112">09.02</text><text x="104" y="162">09.05</text><text x="104" y="212">09.09</text><text x="424" y="112">09.12</text><text x="424" y="162">09.14</text></g>
+<g stroke="#4E5B50" stroke-width="2" stroke-linecap="round"><path d="M176 108H330M176 158H300M176 208H340M496 108H620M496 158H600"/></g>
+<g fill="none" stroke="#3F6A4D" stroke-width="2"><circle cx="664" cy="104" r="8"/><path d="M652 158h24M664 146v24"/><circle cx="350" cy="204" r="8"/></g>
+<text x="80" y="500" font-family="monospace" font-size="18" letter-spacing="3" fill="#4E5B50">ILLUSTRATION · 示意圖 · NOT A PHOTO</text>
+</svg>

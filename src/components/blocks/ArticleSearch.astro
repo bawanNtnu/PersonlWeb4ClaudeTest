@@ -1,0 +1,8 @@
+---
+interface Props {action:string;placeholder?:string;query?:string;}
+const {action,placeholder='搜尋標題、摘要、分類與標籤…',query=''}=Astro.props;
+---
+<form class="v2-search" role="search" action={action} method="get">
+<label for="v2-article-search">搜尋文章</label>
+<div class="v2-search-row"><input id="v2-article-search" type="search" name="q" value={query} placeholder={placeholder}/><button type="submit">搜尋 →</button></div>
+</form>

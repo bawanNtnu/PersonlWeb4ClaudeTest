@@ -1,0 +1,113 @@
+---
+// 學員站移植：原元件的 kind/theme props 只用於研究站 Demo，已移除。索引檔由 src/pages/search/exact-zh.json.ts 產生。
+const base=import.meta.env.BASE_URL.endsWith('/')?import.meta.env.BASE_URL:import.meta.env.BASE_URL+'/';
+---
+<button type="button" class="v2-site-search-trigger" data-search-open aria-label="開啟全站搜尋" aria-haspopup="dialog" title="全站搜尋（Ctrl+K / ⌘K）">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.75" cy="10.75" r="6.75"/><path stroke-linecap="round" d="m16 16 5 5"/></svg>
+</button>
+<dialog class="v2-site-search-dialog" aria-labelledby="v2-site-search-title" data-site-search data-pagefind-base={base}>
+  <div class="v2-search-panel">
+    <div class="v2-search-panel-heading">
+      <div><p class="v2-search-eyebrow">SEARCH</p><h2 id="v2-site-search-title">全站內文搜尋</h2></div>
+      <button class="v2-search-close" type="button" data-search-close aria-label="關閉搜尋（Esc）"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><kbd aria-hidden="true">Esc</kbd></button>
+    </div>
+    <label class="v2-search-field">
+      <span class="sr-only">搜尋網站所有靜態頁面的內文</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.75" cy="10.75" r="6.75"/><path stroke-linecap="round" d="m16 16 5 5"/></svg>
+      <input data-site-query type="search" autocomplete="off" placeholder="搜尋觀察筆記、植物名稱、頁面文字…" />
+    </label>
+    <p class="v2-search-help" data-search-status role="status" aria-live="polite">輸入關鍵字，可搜尋頁面內文與標題</p>
+    <ul class="v2-search-matches" data-search-results aria-label="搜尋結果"></ul>
+    
+  </div>
+</dialog>
+<script>
+  type PagefindResult={url:string;excerpt?:string;plain_excerpt?:string;meta?:{title?:string}};
+  type PagefindApi={options:(o:{baseUrl:string})=>Promise<unknown>;search:(term:string)=>Promise<{results:Array<{data:()=>Promise<PagefindResult>}>}>};
+  const dialog=document.querySelector<HTMLDialogElement>('[data-site-search]');
+  const field=dialog?.querySelector<HTMLInputElement>('[data-site-query]');
+  const resultList=dialog?.querySelector<HTMLUListElement>('[data-search-results]');
+  const status=dialog?.querySelector<HTMLElement>('[data-search-status]');
+  if(dialog&&field&&resultList&&status){
+    let pagefindPromise:Promise<PagefindApi>|null=null;
+    type ExactDoc={url:string;title:string;text:string};
+    let exactPromise:Promise<ExactDoc[]>|null=null;
+    const exactIndex=()=>exactPromise??=fetch((dialog.dataset.pagefindBase||'/')+'search/exact-zh.json')
+      .then(response=>{if(!response.ok)throw new Error('Exact index unavailable');return response.json()})
+      .then((payload:{docs:ExactDoc[]})=>payload.docs);
+
+    let seq=0;
+    const initialize=()=>pagefindPromise??=(async()=>{
+      const base=dialog.dataset.pagefindBase||'/';
+      const source=base+'pagefind/pagefind.js';
+      const api=await import(/* @vite-ignore */ source) as PagefindApi;
+      await api.options({baseUrl:base});
+      return api;
+    })();
+    const render=async()=>{
+      const mySeq=++seq;
+      const query=field.value.trim();
+      resultList.replaceChildren();
+      if(!query){status.textContent='輸入關鍵字，可搜尋頁面內文與標題';return;}
+      status.textContent='正在搜尋…';
+      try {
+        const isChinese=/[\u3400-\u9fff]/u.test(query);
+        const normalized=query.replace(/\s+/g,'').toLocaleLowerCase();
+        let exact:ExactDoc[]=[];
+        if(isChinese){
+          const docs=await exactIndex();
+          exact=docs.filter(d=>(d.title+' '+d.text).replace(/\s+/g,'').toLocaleLowerCase().includes(normalized));
+          exact.sort((a,b)=>Number(b.title.includes(query))-Number(a.title.includes(query)));
+        }
+        const api=await initialize();
+        const found=await api.search(query);
+        const data=await Promise.all(found.results.slice(0,60).map(hit=>hit.data()));
+        if(mySeq!==seq)return;
+        const urls=new Set(exact.map(d=>d.url));
+        const fuzzy=data.filter(d=>!urls.has(d.url));
+        const entries=[
+          ...exact.map(d=>{
+            const pos=(d.title+' '+d.text).replace(/\s+/g,'').toLocaleLowerCase().indexOf(normalized);
+            return {url:d.url,title:d.title,excerpt:d.text.slice(Math.max(0,pos-45),pos+query.length+90),isExact:true};
+          }),
+          ...fuzzy.map(d=>({url:d.url,title:d.meta?.title||'網站頁面',excerpt:d.plain_excerpt||d.excerpt?.replace(/<[^>]*>/g,'')||'',isExact:false})),
+        ];
+        const shown=entries.slice(0,20);
+        status.textContent=exact.length
+          ? '找到 '+exact.length+' 筆完整字串匹配'+(fuzzy.length?'，另有相關結果':'')+'（最多顯示 20 筆）'
+          : found.results.length?'找到 '+found.results.length+' 筆相關頁面（最多顯示 20 筆）':'找不到符合關鍵字的頁面。';
+        for(const entry of shown){
+          const li=document.createElement('li'),link=document.createElement('a');
+          link.href=entry.url;
+          const title=document.createElement('strong');
+          title.textContent=entry.title+(entry.isExact?' · 完整字串匹配':'');
+          const excerpt=document.createElement('span');
+          excerpt.textContent=entry.excerpt;
+          link.append(title,excerpt);li.append(link);resultList.append(li);
+        }
+      }catch(error){
+        if(mySeq!==seq)return;
+        console.error('Pagefind search unavailable:',error);
+        status.textContent='全文索引尚未載入。請使用已完成建置的網站，或重新整理頁面後再試。';
+        pagefindPromise=null;
+      }
+    };
+    let timer:number|undefined;
+    field.addEventListener('input',()=>{window.clearTimeout(timer);timer=window.setTimeout(render,180)});
+    const trigger=document.querySelector<HTMLButtonElement>('[data-search-open]');
+    const open=()=>{
+      if(dialog.open)return;
+      dialog.showModal();field.value='';resultList.replaceChildren();status.textContent='輸入關鍵字，可搜尋頁面內文與標題';
+      field.focus();void initialize().catch(()=>{pagefindPromise=null});
+    };
+    trigger?.addEventListener('click',open);
+    dialog.querySelector('[data-search-close]')?.addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
+    document.addEventListener('keydown',event=>{
+      if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'){
+        event.preventDefault();if(dialog.open)dialog.close();else open();
+      }
+    });
+    dialog.addEventListener('close',()=>{seq++;trigger?.focus()});
+  }
+</script>

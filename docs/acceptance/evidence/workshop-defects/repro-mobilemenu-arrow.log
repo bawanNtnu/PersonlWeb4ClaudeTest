@@ -1,0 +1,24 @@
+variant=workshop-arrow exit=1
+{
+  "routes": 3,
+  "viewports": [
+    1440,
+    390
+  ],
+  "checkedDestinations": 3,
+  "fail": [
+    "/: desktop/mobile nav mismatch",
+    "/about/: desktop/mobile nav mismatch",
+    "/toolbox/: desktop/mobile nav mismatch"
+  ]
+}
+variant=no-arrow exit=0
+{
+  "routes": 3,
+  "viewports": [
+    1440,
+    390
+  ],
+  "checkedDestinations": 3,
+  "fail": []
+}

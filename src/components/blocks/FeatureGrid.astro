@@ -1,0 +1,7 @@
+---
+// 工作坊 Block「FeatureGrid」。學員站擴充：item 可帶 href，整張卡片成為連結（標題是唯一的連結文字，
+// 以 ::after 擴大點擊範圍，避免巢狀連結與重複朗讀）。未提供 href 時輸出與原版完全相同。
+interface Props {items:{title:string;description:string;href?:string}[];columns?:2|3;}
+const {items,columns=3}=Astro.props;
+---
+<div class:list={['ab-grid',`ab-cols-${columns}`]}>{items.map((x,i)=><article class:list={['ab-feature',{'ab-feature--link':x.href}]}><span class="ab-number">0{i+1}</span><h3>{x.href?<a class="ab-feature__link" href={x.href}>{x.title}</a>:x.title}</h3><p>{x.description}</p></article>)}</div>

@@ -1,0 +1,136 @@
+{
+  "base": "https://569b4899.balcony-field-notes-qa.pages.dev/",
+  "sha": "921626b66dfe2ee6d950c0860e87c98b6211f4c4",
+  "results": [
+    {
+      "name": "Preview 首頁可開啟",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Preview 的 build-commit = 預期 SHA",
+      "status": "PASS",
+      "detail": "921626b66dfe2ee6d950c0860e87c98b6211f4c4 vs 921626b66dfe2ee6d950c0860e87c98b6211f4c4"
+    },
+    {
+      "name": "Preview 帶 noindex（meta + x-robots-tag）",
+      "status": "PASS",
+      "detail": "noindex"
+    },
+    {
+      "name": "Sitemap 有內容",
+      "status": "PASS",
+      "detail": "14"
+    },
+    {
+      "name": "Sitemap 網址 200 /",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /start-here/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /start-here/tools/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /articles/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /topics/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /about/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /topics/environment/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /topics/method/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /topics/herbs/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /articles/one-notebook-plant-log/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /articles/typhoon-balcony-checklist/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /articles/mint-comeback/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /articles/finger-and-chopstick-watering/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "Sitemap 網址 200 /articles/first-year-five-plants/",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "公開文章 200 且在 RSS finger-and-chopstick-watering",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "公開文章 200 且在 RSS first-year-five-plants",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "公開文章 200 且在 RSS mint-comeback",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "草稿網址 404 monstera-first-split-leaf",
+      "status": "PASS",
+      "detail": "404"
+    },
+    {
+      "name": "草稿不在遠端 RSS/Sitemap/搜尋索引 monstera-first-split-leaf",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章 200 且在 RSS one-notebook-plant-log",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "公開文章 200 且在 RSS typhoon-balcony-checklist",
+      "status": "PASS",
+      "detail": "200"
+    },
+    {
+      "name": "不存在的網址回 404",
+      "status": "PASS",
+      "detail": "404"
+    }
+  ]
+}

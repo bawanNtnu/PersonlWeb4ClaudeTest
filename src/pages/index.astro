@@ -1,0 +1,81 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import FeaturedWorkSection from '../components/patterns/FeaturedWorkSection.astro';
+import Reveal from '../components/effects/Reveal.astro';
+import {config,href,publishedArticles,articleHref,formatDate,readingMinutes} from '../lib/site';
+import {topics,topicBySlug} from '../data/topics';
+
+const articles=await publishedArticles();
+const latest=articles.slice(0,5);
+const featured=articles.filter(a=>a.data.featured).slice(0,3);
+const topicsWithPosts=topics.filter(t=>articles.some(a=>a.data.topic===t.slug));
+---
+<SiteLayout title={config.brand.name}>
+  <div class="fn-layout">
+    <aside class="fn-rail" aria-label="頁面索引">
+      <span>01—05</span><span>INDEX</span>
+      <a href="#ledger">近期紀錄</a><a href="#question">正在追問</a>
+      <span class="fn-rail__stem" aria-hidden="true"></span>
+      <span>WEST<br/>2 坪</span>
+    </aside>
+    <section class="fn-hero" aria-labelledby="hero-title">
+      <p class="fn-kicker">一個租屋族的陽台觀察方法</p>
+      <h1 id="hero-title"><span class="fn-line">兩坪西曬陽台，</span><br/><span class="fn-line">先記錄，</span><br/><i class="fn-line">再慢慢理解。</i></h1>
+      <p class="fn-deck">{config.brand.tagline}寫下每一盆植物的變化、反覆犯的錯，以及還沒有答案的問題。</p>
+      <ul class="fn-tags" aria-label="植物分類">
+        {topicsWithPosts.map(t=><li><a href={href('topics/'+t.slug+'/')}>{t.label}</a></li>)}
+      </ul>
+      <figure class="fn-figure">
+        <img src={href('illustrations/balcony-west.svg')} width="800" height="600" alt="示意圖：低角度的西曬太陽照進欄杆，欄杆前有四個盆栽與一本攤開的筆記本。" />
+        <figcaption><span>FIG. 01</span>AI 繪製示意圖，非實拍｜我的陽台大概長這樣</figcaption>
+      </figure>
+    </section>
+    <aside class="fn-margin" aria-label="邊注">
+      <p class="fn-kicker">MARGIN NOTE / 01</p>
+      <p>「我養死的植物，比活下來的教我更多。」</p>
+      <small>— 阿蕨（模擬人物）</small>
+    </aside>
+  </div>
+
+  <Reveal variant="fade">
+  <section class="fn-intro" aria-labelledby="intro-title">
+    <div class="fn-intro__inner">
+      <div><p class="fn-kicker">ABOUT / 自我介紹</p><h2 id="intro-title">我不是園藝專家，是邊養邊學的人。</h2></div>
+      <div>
+        <p>我是阿蕨（模擬人物），白天上班，晚上在兩坪大的西曬陽台照顧植物。這裡會老實寫下失敗，也記錄偶爾成功的小變化。</p>
+        <a href={href('about/')}>更多關於我 ↗</a>
+      </div>
+    </div>
+  </section>
+  </Reveal>
+
+  <section class="fn-ledger" id="ledger" aria-labelledby="ledger-title">
+    <div class="fn-ledger__inner">
+      <header><p class="fn-kicker">FIELD LEDGER / 近期紀錄</p><h2 id="ledger-title">最近，陽台上發生了這些事。</h2><a class="fn-ledger__more" href={href('articles/')}>看全部筆記 ↗</a></header>
+      <ol class="fn-ledger-list">
+        {latest.map(a=><li>
+          <time datetime={a.data.publishedAt.toISOString().slice(0,10)}>{formatDate(a.data.publishedAt)}</time>
+          <a href={articleHref(a)}><b>{a.data.title}</b><small>{topicBySlug(a.data.topic)?.label} · {readingMinutes(a)} 分鐘</small></a>
+          <span class="fn-ledger-type">{topicBySlug(a.data.topic)?.label}</span>
+        </li>)}
+      </ol>
+    </div>
+  </section>
+
+  <Reveal variant="fade">
+  <div class="fn-featured">
+    <FeaturedWorkSection eyebrow="FIELD PICKS / 精選三篇" title="第一次來，先讀這幾篇"
+      description="從最多人問的失敗、記錄方法和一次小小的成功開始。"
+      items={featured.map(a=>({title:a.data.title,description:a.data.description,href:articleHref(a)}))}
+      action={{label:'看全部觀察筆記',href:href('articles/')}} />
+  </div>
+  </Reveal>
+
+  <section class="fn-question" id="question" aria-labelledby="question-title">
+    <div class="fn-question__inner">
+      <p class="fn-kicker">OPEN QUESTION / 01</p>
+      <div><h2 id="question-title">今年最想知道的事</h2><p>同樣是西曬，為什麼放在牆角的那盆薄荷，比欄杆邊的那盆活得更好？</p></div>
+      <a class="fn-question__link" href={href('start-here/')}>新手從這裡開始 ↗</a>
+    </div>
+  </section>
+</SiteLayout>

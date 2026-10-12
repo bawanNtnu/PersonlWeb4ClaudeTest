@@ -1,0 +1,49 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Breadcrumbs from '../components/blocks/Breadcrumbs.astro';
+import ProcessSteps from '../components/blocks/ProcessSteps.astro';
+import ArticleCallout from '../components/blocks/ArticleCallout.astro';
+import {href,publishedArticles,articleHref,navigation,navHref,navChildren} from '../lib/site';
+
+const label=navigation.find(x=>x.id==='start-here')?.label??'新手入門';
+const subpages=navChildren('start-here');
+const articles=await publishedArticles();
+// 建議閱讀順序：依 slug 指定；若某篇被撤回（draft），會自動從清單消失，不會產生斷鏈。
+const order=['first-year-five-plants','finger-and-chopstick-watering','one-notebook-plant-log','typhoon-balcony-checklist'];
+const path=order.map(id=>articles.find(a=>a.id===id)).filter(a=>a!==undefined);
+---
+<SiteLayout title={label} description="第一次來陽台觀察室？從三個步驟和建議閱讀順序開始。">
+  <div class="fn-page fn-start">
+    <aside class="fn-page__rail" aria-hidden="true"><span>01</span><span>START</span></aside>
+    <div class="fn-page__body">
+      <Breadcrumbs items={[{label:'首頁',href:href()},{label}]}/>
+      <header class="fn-page-head">
+        <p class="fn-kicker">START HERE / 給第一次來的你</p>
+        <h1>小陽台的植物，<br/><i>先觀察，再動手。</i></h1>
+        <p class="fn-deck">這裡沒有「保證養活」的方法，只有一個新手在西曬陽台上反覆試錯後，整理出來的三個習慣。</p>
+      </header>
+      <ProcessSteps items={[
+        {title:'先認識你的陽台',description:'記下陽台朝向、幾點開始曬、哪裡會淋雨。這比買什麼植物更重要。'},
+        {title:'摸土再澆水',description:'不要照表操課。用手指或竹筷確認盆土乾了才澆，而且一次澆透。'},
+        {title:'每天寫一行',description:'一本筆記本就夠。一行字、一個符號，一週後就看得出問題。'},
+      ]}/>
+      {subpages.length>0&&<section class="fn-section" aria-labelledby="sub-title">
+        <p class="fn-kicker">IN THIS SECTION</p>
+        <h2 id="sub-title">需要準備什麼？</h2>
+        <ul class="fn-reading-order">{subpages.map(p=><li><div><a href={navHref(p)}>{p.label}</a><p>家裡就有的四樣東西，夠你開始觀察。</p></div></li>)}</ul>
+      </section>}
+      <section class="fn-section" aria-labelledby="order-title">
+        <p class="fn-kicker">READING ORDER</p>
+        <h2 id="order-title">建議閱讀順序</h2>
+        <ol class="fn-reading-order">
+          {path.map(a=><li><div><a href={articleHref(a)}>{a.data.title}</a><p>{a.data.description}</p></div></li>)}
+        </ol>
+      </section>
+      <section class="fn-section" style="border-top:0" aria-label="提醒">
+        <ArticleCallout title="這個網站不是什麼" tone="note">
+          <p>這裡不提供付費課程、諮詢或代客照顧，也不是專業園藝建議。內容皆為工作坊驗收用的模擬示範。植物出現病蟲害或你不確定的狀況，請向在地花市或專業人士詢問。</p>
+        </ArticleCallout>
+      </section>
+    </div>
+  </div>
+</SiteLayout>

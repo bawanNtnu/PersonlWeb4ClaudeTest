@@ -1,0 +1,34 @@
+---
+type Variant='fade-up'|'fade'|'soft-zoom'|'blur-up'|'slide-left'|'slide-right'|'clip-up';
+interface Props {variant?:Variant;delay?:number;duration?:number;once?:boolean;className?:string;}
+const {variant='fade-up',delay=0,duration=620,once=true,className=''}=Astro.props;
+const d=Math.max(0,Math.min(1400,Number.isFinite(delay)?delay:0));
+const t=Math.max(300,Math.min(1400,Number.isFinite(duration)?duration:620));
+---
+<div class:list={['motion-reveal','motion-reveal--'+variant,className]} data-motion-reveal data-motion-once={String(once)} style={`--motion-delay:${d}ms;--motion-duration:${t}ms`}><slot/></div>
+<script>
+  const setupMotionReveals=()=>{
+    const elements=Array.from(document.querySelectorAll<HTMLElement>('[data-motion-reveal]:not([data-motion-ready])'));
+    if(!elements.length)return;
+    const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduced||!('IntersectionObserver' in window)){
+      elements.forEach(el=>{el.dataset.motionReady='true';el.classList.add('motion-is-visible')});
+      return;
+    }
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        const el=entry.target as HTMLElement;
+        if(entry.isIntersecting){
+          // One frame with the initial state committed prevents the browser
+          // from collapsing the transition into the same paint.
+          requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.add('motion-is-visible')));
+          if(el.dataset.motionOnce!=='false')observer.unobserve(el);
+        }else if(el.dataset.motionOnce==='false'&&!el.classList.contains('motion-replaying')){
+          el.classList.remove('motion-is-visible');
+        }
+      });
+    },{threshold:0.08,rootMargin:'0px 0px -4% 0px'});
+    elements.forEach(el=>{el.dataset.motionReady='true';el.classList.add('motion-is-pending');observer.observe(el)});
+  };
+  setupMotionReveals();
+</script>

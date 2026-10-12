@@ -1,0 +1,15 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import {href,navigation,navHref} from '../lib/site';
+---
+<SiteLayout title="找不到這個頁面" noindex>
+  <section class="fn-404">
+    <p class="fn-kicker">404 / NOT FOUND</p>
+    <h1>這一頁不在筆記本裡。</h1>
+    <p>可能是網址打錯，或這篇筆記已經暫時收起來。可以從這些地方重新開始：</p>
+    <ul>
+      <li><a href={href()}>首頁</a></li>
+      {navigation.filter(x=>!x.parentId).map(x=><li><a href={navHref(x)}>{x.label}</a></li>)}
+    </ul>
+  </section>
+</SiteLayout>

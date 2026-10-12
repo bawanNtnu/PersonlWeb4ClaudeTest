@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+<title id="t">兩坪西曬陽台示意圖</title>
+<desc id="d">AI 繪製的線條示意圖：低角度的西曬太陽照進欄杆，欄杆前有四個盆栽與一本攤開的筆記本。非實拍。</desc>
+<rect width="800" height="600" fill="#ECEEE2"/>
+<g opacity=".55" stroke="#C9CDBC" stroke-width="1">
+<path d="M0 120H800M0 240H800M0 360H800M0 480H800"/>
+<path d="M160 0V600M320 0V600M480 0V600M640 0V600"/>
+</g>
+<circle cx="132" cy="168" r="62" fill="#D8B9A4"/>
+<g stroke="#B48569" stroke-width="2" stroke-linecap="round" opacity=".8">
+<path d="M210 168h70M196 116l52-30M196 220l52 30"/>
+</g>
+<path d="M0 470H800" stroke="#28392E" stroke-width="3"/>
+<g stroke="#28392E" stroke-width="3" fill="none">
+<path d="M60 290H760"/><path d="M60 300H760" stroke-width="1"/>
+<path d="M90 300V470M170 300V470M250 300V470M330 300V470M410 300V470M490 300V470M570 300V470M650 300V470M730 300V470"/>
+</g>
+<g fill="none" stroke="#3F6A4D" stroke-width="3" stroke-linecap="round">
+<path d="M150 470c0-60 0-90 0-120"/><path d="M150 380c-30-10-44-30-46-58M150 360c26-8 40-26 42-52M150 410c-22 0-36-14-40-34"/>
+<path d="M290 470V330"/><path d="M290 330c-40 6-70-14-80-46 40-4 68 14 80 46ZM290 360c34 4 62-12 74-42-36-6-62 10-74 42Z"/>
+<path d="M445 470c-6-40 4-70 22-96M445 470c8-36 30-58 58-70M445 470c-20-30-48-44-78-46"/>
+<path d="M600 470V360"/><path d="M600 360c-18-30-14-58 10-84 18 28 14 56-10 84Z"/><path d="M600 400c22-16 48-18 70-6-20 18-46 20-70 6Z"/>
+</g>
+<g fill="#F6F7EF" stroke="#28392E" stroke-width="3">
+<path d="M118 470l6-46h52l6 46Z"/><path d="M262 470l4-40h48l4 40Z"/><path d="M412 470l6-34h56l6 34Z"/><path d="M570 470l6-44h48l6 44Z"/>
+</g>
+<g transform="translate(660 480) rotate(-6)">
+<rect width="110" height="74" fill="#F6F7EF" stroke="#28392E" stroke-width="3"/>
+<path d="M55 0V74" stroke="#28392E" stroke-width="2"/>
+<path d="M12 18H45M12 32H40M12 46H44M66 18H98M66 32H92" stroke="#8D9B72" stroke-width="2"/>
+</g>
+<text x="40" y="566" font-family="monospace" font-size="18" letter-spacing="3" fill="#4E5B50">ILLUSTRATION · 示意圖 · NOT A PHOTO</text>
+</svg>

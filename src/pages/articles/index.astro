@@ -1,0 +1,74 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
+import ArticleSearch from '../../components/blocks/ArticleSearch.astro';
+import TagCloud from '../../components/blocks/TagCloud.astro';
+import ArchiveMonths from '../../components/blocks/ArchiveMonths.astro';
+import {href,publishedArticles,articleHref,formatDate,monthKey,readingMinutes,navigation} from '../../lib/site';
+import {topicBySlug} from '../../data/topics';
+
+const label=navigation.find(x=>x.id==='articles')?.label??'觀察筆記';
+const articles=await publishedArticles();
+const count=<T extends string>(values:T[])=>[...values.reduce((m,v)=>m.set(v,(m.get(v)??0)+1),new Map<T,number>())];
+const tags=count(articles.flatMap(a=>a.data.tags)).map(([name,n])=>({name,count:n})).sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name,'zh-Hant'));
+const months=count(articles.map(a=>monthKey(a.data.publishedAt))).map(([month,n])=>({month,count:n}));
+---
+<SiteLayout title={label} description="陽台觀察室的所有公開觀察筆記，可依關鍵字、標籤或月份篩選。">
+  <div class="fn-page">
+    <aside class="fn-page__rail" aria-hidden="true"><span>02</span><span>LEDGER</span></aside>
+    <div class="fn-page__body">
+      <Breadcrumbs items={[{label:'首頁',href:href()},{label}]}/>
+      <header class="fn-page-head">
+        <p class="fn-kicker">FIELD LEDGER / 全部紀錄</p>
+        <h1>{label}</h1>
+        <p class="fn-deck">共 {articles.length} 篇公開筆記，依日期由新到舊排列。可以用關鍵字、標籤或月份縮小範圍。</p>
+      </header>
+      <div class="fn-filters">
+        <div><h2>關鍵字</h2><ArticleSearch action={href('articles/')} placeholder="例如：澆水、颱風、薄荷"/></div>
+        <div><h2>標籤</h2><TagCloud tags={tags} baseHref={href('articles/')}/></div>
+        <div><h2>月份</h2><ArchiveMonths months={months} baseHref={href('articles/')}/></div>
+      </div>
+      <p class="fn-filter-status" data-filter-status role="status" aria-live="polite"></p>
+      <section class="fn-ledger--page" aria-label="文章列表">
+        <ol class="fn-ledger-list" data-article-list>
+          {articles.map(a=><li data-title={a.data.title} data-text={[a.data.title,a.data.description,topicBySlug(a.data.topic)?.label,...a.data.tags].join(' ')} data-tags={JSON.stringify(a.data.tags)} data-month={monthKey(a.data.publishedAt)}>
+            <time datetime={a.data.publishedAt.toISOString().slice(0,10)}>{formatDate(a.data.publishedAt)}</time>
+            <a href={articleHref(a)}><b>{a.data.title}</b><small>{a.data.description}</small></a>
+            <a class="fn-ledger-type" href={href('topics/'+a.data.topic+'/')}>{topicBySlug(a.data.topic)?.label}</a>
+          </li>)}
+        </ol>
+        <p data-empty hidden>沒有符合條件的筆記。</p>
+      </section>
+    </div>
+  </div>
+</SiteLayout>
+<script>
+  // 依網址 ?q= / ?tag= / ?month= 篩選；沒有 JavaScript 時仍會顯示全部文章。
+  const list=document.querySelector<HTMLOListElement>('[data-article-list]');
+  const status=document.querySelector<HTMLElement>('[data-filter-status]');
+  const empty=document.querySelector<HTMLElement>('[data-empty]');
+  const input=document.querySelector<HTMLInputElement>('#v2-article-search');
+  if(list&&status&&empty){
+    const items=[...list.querySelectorAll<HTMLLIElement>('li')];
+    const params=new URLSearchParams(location.search);
+    const tag=params.get('tag')??'',month=params.get('month')??'';
+    if(input)input.value=params.get('q')??'';
+    const apply=()=>{
+      const q=(input?.value??'').trim().toLocaleLowerCase();
+      let shown=0;
+      items.forEach(li=>{
+        const ok=(!q||(li.dataset.text??'').toLocaleLowerCase().includes(q))&&(!tag||JSON.parse(li.dataset.tags??'[]').includes(tag))&&(!month||li.dataset.month===month);
+        li.hidden=!ok;if(ok)shown++;
+      });
+      empty.hidden=shown>0;
+      const filters=[q&&`關鍵字「${q}」`,tag&&`標籤「${tag}」`,month&&`月份 ${month}`].filter(Boolean);
+      status.replaceChildren();
+      if(filters.length){
+        status.append(`${filters.join('、')}：${shown} 篇　`);
+        const reset=document.createElement('a');reset.href=location.pathname;reset.className='fn-filter-reset';reset.textContent='清除篩選';status.append(reset);
+      }
+    };
+    input?.addEventListener('input',apply);
+    apply();
+  }
+</script>

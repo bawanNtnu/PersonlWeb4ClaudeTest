@@ -1,0 +1,12 @@
+file:///tmp/claude-0/-home-user-PersonlWeb4ClaudeTest/f21481fd-b408-5ef4-ab51-0a096632b84e/scratchpad/builder/scripts/verify-v2-8-output.mjs:11
+  if(!existsSync(join(output,path)))throw Error('Student build missing: '+path);
+                                          ^
+
+Error: Student build missing: page-balcony-tools/index.html
+    at file:///tmp/claude-0/-home-user-PersonlWeb4ClaudeTest/f21481fd-b408-5ef4-ab51-0a096632b84e/scratchpad/builder/scripts/verify-v2-8-output.mjs:11:43
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.22.0
+exit=1
