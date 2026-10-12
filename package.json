@@ -9,7 +9,10 @@
     "qa:static": "node scripts/qa/static-checks.mjs",
     "qa:browser": "node scripts/qa/browser-checks.mjs",
     "qa:unit": "vitest run",
-    "qa:faults": "node scripts/qa/fault-injection.mjs && node scripts/qa/browser-fault-injection.mjs"
+    "qa:faults": "node scripts/qa/fault-injection.mjs && node scripts/qa/browser-fault-injection.mjs",
+    "qa:a11y": "node scripts/qa/a11y-checks.mjs",
+    "qa:remote": "node scripts/qa/remote-preview-checks.mjs",
+    "qa:compare": "node scripts/qa/compare-local-remote.mjs"
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^5.3.0",
@@ -17,6 +20,7 @@
     "astro": "^5.14.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "pagefind": "^1.5.2",
     "pixelmatch": "^7.2.0",
     "playwright": "^1.56.1",
