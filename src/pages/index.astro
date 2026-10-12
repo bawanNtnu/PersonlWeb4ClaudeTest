@@ -20,7 +20,7 @@ const topicsWithPosts=topics.filter(t=>articles.some(a=>a.data.topic===t.slug));
     </aside>
     <section class="fn-hero" aria-labelledby="hero-title">
       <p class="fn-kicker">一個租屋族的陽台觀察方法</p>
-      <h1 id="hero-title">兩坪西曬陽台，<br/>先記錄，<br/><i>再慢慢理解。</i></h1>
+      <h1 id="hero-title"><span class="fn-line">兩坪西曬陽台，</span><br/><span class="fn-line">先記錄，</span><br/><i class="fn-line">再慢慢理解。</i></h1>
       <p class="fn-deck">{config.brand.tagline}寫下每一盆植物的變化、反覆犯的錯，以及還沒有答案的問題。</p>
       <ul class="fn-tags" aria-label="植物分類">
         {topicsWithPosts.map(t=><li><a href={href('topics/'+t.slug+'/')}>{t.label}</a></li>)}

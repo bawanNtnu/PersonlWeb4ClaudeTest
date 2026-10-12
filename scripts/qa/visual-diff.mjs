@@ -1,4 +1,4 @@
-// 前後截圖像素比對。用法：node scripts/qa/visual-diff.mjs <beforeDir> <afterDir> <diffOutDir> [--expect-changed pattern1,pattern2]
+// 前後截圖像素比對。用法：node scripts/qa/visual-diff.mjs <beforeDir> <afterDir> <diffOutDir> [--expect-changed ^prefix,substring]
 // 未列入 expect-changed 的頁面若有任何像素差異即 FAIL（代表修改波及了不該動的頁面）。
 import {readFileSync,readdirSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
 import {join} from 'node:path';
@@ -16,7 +16,8 @@ for(const file of readdirSync(before).filter(f=>f.endsWith('.png'))){
   const pad=img=>{if(img.width===w&&img.height===h)return img;const p=new PNG({width:w,height:h});p.data.fill(255);PNG.bitblt(img,p,0,0,img.width,img.height,0,0);return p};
   const pa=pad(a),pb=pad(b),diff=new PNG({width:w,height:h});
   const n=pixelmatch(pa.data,pb.data,diff.data,w,h,{threshold:0.1});
-  const isExpected=expected.some(p=>file.startsWith(p));
+  // 規則：以 ^ 開頭表示前綴比對，其餘為「檔名包含」比對
+  const isExpected=expected.some(p=>p.startsWith('^')?file.startsWith(p.slice(1)):file.includes(p));
   const changed=n>0||a.height!==b.height;
   if(changed)writeFileSync(join(out,file),PNG.sync.write(diff));
   const status=!changed?'UNCHANGED':isExpected?'CHANGED (expected)':'CHANGED (UNEXPECTED)';

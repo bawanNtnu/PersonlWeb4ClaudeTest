@@ -20,7 +20,7 @@ a{color:inherit}
 
 /* 刊頭 */
 .fn-header{max-width:var(--canvas);margin:0 auto;padding:0 clamp(16px,4vw,64px);min-height:96px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;border-bottom:1px solid var(--line)}
-.fn-mark{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:14px;text-decoration:none;color:var(--moss)}
+.fn-mark{display:grid;grid-template-columns:auto auto;justify-content:start;align-items:center;column-gap:14px;text-decoration:none;color:var(--moss)}
 .fn-mark__en{font:400 11px/1 var(--mono);letter-spacing:.12em;grid-row:span 2}
 .fn-mark__en b{font-weight:400;letter-spacing:.06em}
 .fn-mark__zh{font:600 20px/1.2 var(--serif);color:var(--ink);letter-spacing:.06em}
@@ -42,6 +42,9 @@ a{color:inherit}
 .fn-nav__submenu{position:absolute;z-index:40;top:calc(100% + 6px);left:0;min-width:220px;display:grid;gap:2px;padding:8px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:0 18px 32px rgba(40,57,46,.12)}
 .fn-nav__submenu a{display:flex;align-items:center;min-height:44px;padding:0 12px;border-radius:var(--radius);text-decoration:none;font-family:var(--serif);font-size:15px;letter-spacing:.02em}
 .fn-nav__submenu a:hover{background:var(--accent-soft)}
+
+/* 第二輪回饋：手機選單第二層以縮排與左線呈現（取代「└」字元） */
+.practical-menu-dialog nav a.practical-menu__child{margin-left:14px;padding-left:14px;border-left:2px solid var(--line-strong);font-size:.94em}
 
 /* 工作坊 SiteSearchDialog 觸發按鈕微調 */
 .v2-site-search-trigger{min-width:44px;min-height:44px}
@@ -247,7 +250,9 @@ a.fn-ledger-type:hover{border-color:var(--moss);color:var(--moss)}
   .fn-rail{font-size:9px}
   .fn-rail a{font-size:11px}
   .fn-rail__stem{height:70px}
-  .fn-hero h1{font-size:clamp(2.7rem,13.5vw,4.4rem);letter-spacing:-.05em}
+  /* 第二輪回饋：每行完整不斷字（「陽台」不再被拆開），字級隨寬度縮放 */
+  .fn-hero h1{font-size:clamp(2rem,9.6vw,4.4rem);letter-spacing:-.05em}
+  .fn-hero .fn-line{white-space:nowrap}
   .fn-figure{width:100%}
   /* 維護任務 1：手機版示意圖改為較矮的橫幅，讓文字與最近紀錄更早出現 */
   .fn-figure img{aspect-ratio:16/9;border-radius:36% 36% 6px 6px / 50% 50% 6px 6px}

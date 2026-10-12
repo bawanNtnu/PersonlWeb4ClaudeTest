@@ -18,7 +18,7 @@ const {title,description=config.brand.tagline,type='website',noindex=false}=Astr
 const fullTitle=title===config.brand.name?title:`${title}｜${config.brand.name}`;
 const canonical=new URL(Astro.url.pathname,Astro.site??Astro.url).href;
 const robots=indexable&&!noindex?'index,follow':'noindex,nofollow';
-const mobileLinks=navigation.flatMap(item=>item.parentId?[]:[{label:item.label,href:navHref(item)},...navChildren(item.id).map(child=>({label:'　└ '+child.label,href:navHref(child)}))]);
+const mobileLinks=navigation.flatMap(item=>item.parentId?[]:[{label:item.label,href:navHref(item)},...navChildren(item.id).map(child=>({label:child.label,href:navHref(child),level:1 as const,parent:item.label}))]);
 const footerGroups=[
   {title:'閱讀',links:navigation.filter(x=>!x.parentId).map(x=>({label:x.label,href:navHref(x)}))},
   {title:'植物分類',links:topics.slice(0,3).map(t=>({label:t.label,href:href('topics/'+t.slug+'/')}))},
