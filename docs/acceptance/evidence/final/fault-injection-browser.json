@@ -1,0 +1,56 @@
+[
+  {
+    "fault": "（基準：未注入）",
+    "expected": "0 FAIL",
+    "got": "0 FAIL",
+    "caught": true
+  },
+  {
+    "fault": "手機選單在「關於我」頁少一項",
+    "expected": "手機選單可開啟且項目 = 設定檔 390 /about/",
+    "got": "手機選單可開啟且項目 = 設定檔 768 /about/ ／ 手機選單可開啟且項目 = 設定檔 390 /about/",
+    "caught": true
+  },
+  {
+    "fault": "390px 漢堡按鈕被 CSS 隱藏",
+    "expected": "導覽型態符合寬度 390 /",
+    "got": "導覽型態符合寬度 390 /",
+    "caught": true
+  },
+  {
+    "fault": "768px 產生水平溢出",
+    "expected": "無水平溢出 768 /topics/",
+    "got": "無水平溢出 768 /topics/ ／ 無水平溢出 390 /topics/",
+    "caught": true
+  },
+  {
+    "fault": "頁面 JS 錯誤",
+    "expected": "無 console/JS 錯誤 1440 /start-here/",
+    "got": "無 console/JS 錯誤 1440 /start-here/ ／ 無 console/JS 錯誤 1280 /start-here/ ／ 無 console/JS 錯誤 768 /start-here/ ／ 無 console/JS 錯誤 390 /start-here/",
+    "caught": true
+  },
+  {
+    "fault": "破圖",
+    "expected": "圖片載入 1280 /",
+    "got": "圖片載入 1440 / ／ 無 console/JS 錯誤 1440 / ／ 圖片載入 1280 / ／ 無 console/JS 錯誤 1280 /",
+    "caught": true
+  },
+  {
+    "fault": "搜尋索引遺失",
+    "expected": "全站搜尋找得到公開文章",
+    "got": "全站搜尋找得到公開文章（竹筷）",
+    "caught": true
+  },
+  {
+    "fault": "精選卡片覆蓋層被移除（卡片不能整張點）",
+    "expected": "點擊精選卡片描述進入文章",
+    "got": "點擊精選卡片描述進入文章",
+    "caught": true
+  },
+  {
+    "fault": "導航指到 404",
+    "expected": "點擊導航到達",
+    "got": "桌機導覽 = 設定檔 1440 / ／ 桌機導覽 = 設定檔 1280 / ／ 桌機導覽 = 設定檔 768 / ／ 桌機導覽 = 設定檔 390 /",
+    "caught": true
+  }
+]

@@ -1,0 +1,648 @@
+{
+  "summary": {
+    "pass": 128,
+    "fail": 0
+  },
+  "results": [
+    {
+      "name": "dist 存在",
+      "status": "PASS",
+      "detail": "/home/user/PersonlWeb4ClaudeTest/dist"
+    },
+    {
+      "name": "路由存在 /",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /404.html",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /start-here/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /start-here/tools/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /articles/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /topics/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /about/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /articles/finger-and-chopstick-watering/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /articles/first-year-five-plants/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /articles/mint-comeback/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /articles/one-notebook-plant-log/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "路由存在 /articles/typhoon-balcony-checklist/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "檔案存在 rss.xml",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "檔案存在 sitemap.xml",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "檔案存在 robots.txt",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "檔案存在 favicon.svg",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "檔案存在 search/exact-zh.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "檔案存在 pagefind/pagefind.js",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "草稿未產生頁面 monstera-first-split-leaf",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "草稿不在 RSS monstera-first-split-leaf",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "草稿不在 Sitemap monstera-first-split-leaf",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "草稿不在搜尋索引 monstera-first-split-leaf",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "草稿標題/連結不在任何 HTML monstera-first-split-leaf",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Pagefind 片段可解讀（正向對照：含公開文章標題）",
+      "status": "PASS",
+      "detail": "澆水不是照表操課：手指與竹筷的判斷法"
+    },
+    {
+      "name": "草稿不在 Pagefind 索引 monstera-first-split-leaf",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在列表 finger-and-chopstick-watering",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在 RSS finger-and-chopstick-watering",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在 Sitemap finger-and-chopstick-watering",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在搜尋索引 finger-and-chopstick-watering",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在列表 first-year-five-plants",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在 RSS first-year-five-plants",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在 Sitemap first-year-five-plants",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在搜尋索引 first-year-five-plants",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在列表 mint-comeback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在 RSS mint-comeback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在 Sitemap mint-comeback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在搜尋索引 mint-comeback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在列表 one-notebook-plant-log",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在 RSS one-notebook-plant-log",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在 Sitemap one-notebook-plant-log",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在搜尋索引 one-notebook-plant-log",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在列表 typhoon-balcony-checklist",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在 RSS typhoon-balcony-checklist",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在 Sitemap typhoon-balcony-checklist",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "公開文章在搜尋索引 typhoon-balcony-checklist",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "RSS 文章數 = 公開文章數",
+      "status": "PASS",
+      "detail": "5 vs 5"
+    },
+    {
+      "name": "Sitemap 每個網址都有頁面",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "每個頁面都在 Sitemap（無孤兒頁）",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "所有內部連結與資源可達",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "metadata /404.html",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /404.html",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /about/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /about/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /articles/finger-and-chopstick-watering/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /articles/finger-and-chopstick-watering/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /articles/first-year-five-plants/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /articles/first-year-five-plants/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /articles/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /articles/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /articles/mint-comeback/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /articles/mint-comeback/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /articles/one-notebook-plant-log/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /articles/one-notebook-plant-log/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /articles/typhoon-balcony-checklist/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /articles/typhoon-balcony-checklist/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /start-here/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /start-here/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /start-here/tools/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /start-here/tools/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /topics/environment/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /topics/environment/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /topics/herbs/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /topics/herbs/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /topics/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /topics/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "metadata /topics/method/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots meta 符合索引政策 /topics/method/",
+      "status": "PASS",
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "每頁 <title> 不重複",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots.txt 符合索引政策",
+      "status": "PASS",
+      "detail": "User-agent: * | Disallow: / | Sitemap: https://balcony-field-notes.invalid/sitemap.xml | "
+    },
+    {
+      "name": "robots.txt 指向 sitemap",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "桌機導覽一致 /404.html",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /404.html",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /about/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /about/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /articles/finger-and-chopstick-watering/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /articles/finger-and-chopstick-watering/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /articles/first-year-five-plants/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /articles/first-year-five-plants/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /articles/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /articles/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /articles/mint-comeback/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /articles/mint-comeback/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /articles/one-notebook-plant-log/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /articles/one-notebook-plant-log/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /articles/typhoon-balcony-checklist/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /articles/typhoon-balcony-checklist/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /start-here/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /start-here/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /start-here/tools/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /start-here/tools/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /topics/environment/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /topics/environment/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /topics/herbs/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /topics/herbs/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /topics/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /topics/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "桌機導覽一致 /topics/method/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "手機導覽一致 /topics/method/",
+      "status": "PASS",
+      "detail": "/about/,/articles/,/start-here/,/start-here/tools/,/topics/"
+    },
+    {
+      "name": "模擬網站聲明 /404.html",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /about/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /articles/finger-and-chopstick-watering/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /articles/first-year-five-plants/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /articles/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /articles/mint-comeback/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /articles/one-notebook-plant-log/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /articles/typhoon-balcony-checklist/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /start-here/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /start-here/tools/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /topics/environment/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /topics/herbs/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /topics/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "模擬網站聲明 /topics/method/",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

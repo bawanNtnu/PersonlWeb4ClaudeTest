@@ -1,0 +1,11 @@
+HEAD=921626b66dfe2ee6d950c0860e87c98b6211f4c4 expected=921626b66dfe2ee6d950c0860e87c98b6211f4c4 preview=https://569b4899.balcony-field-notes-qa.pages.dev/
+[PASS] static :: 靜態檢查：128 PASS / 0 FAIL（公開文章 5、草稿 1、HTML 15）
+[PASS] unit ::       Tests  4 passed (4)
+[PASS] fault-static :: 故障注入：12/12 正確
+[PASS] browser-local :: 瀏覽器檢查：244 PASS / 0 FAIL（http://127.0.0.1:4321/，寬度 1440/1280/768/390）
+[PASS] a11y-local :: 無障礙檢查：25 PASS / 0 FAIL（http://127.0.0.1:4321/）
+[PASS] fault-browser :: 瀏覽器故障注入：9/9 正確
+[PASS] remote-preview :: 遠端 Preview 檢查：26 PASS / 0 FAIL（https://569b4899.balcony-field-notes-qa.pages.dev/ @ 921626b）
+[PASS] compare :: 本機 vs 遠端：16/16 頁一致
+[PASS] browser-remote :: 瀏覽器檢查：244 PASS / 0 FAIL（https://569b4899.balcony-field-notes-qa.pages.dev/，寬度 1440/1280/768/390）
+[PASS] a11y-remote :: 無障礙檢查：25 PASS / 0 FAIL（https://569b4899.balcony-field-notes-qa.pages.dev/）

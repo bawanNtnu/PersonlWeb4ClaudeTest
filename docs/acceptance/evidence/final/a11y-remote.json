@@ -1,0 +1,130 @@
+{
+  "baseURL": "https://569b4899.balcony-field-notes-qa.pages.dev/",
+  "results": [
+    {
+      "name": "對比 內文 ink / paper ≥ 4.5",
+      "status": "PASS",
+      "detail": "11.35:1"
+    },
+    {
+      "name": "對比 次要文字 muted / paper ≥ 4.5",
+      "status": "PASS",
+      "detail": "6.63:1"
+    },
+    {
+      "name": "對比 連結與 kicker moss / paper ≥ 4.5",
+      "status": "PASS",
+      "detail": "5.76:1"
+    },
+    {
+      "name": "對比 按鈕文字 paper / moss ≥ 4.5",
+      "status": "PASS",
+      "detail": "5.76:1"
+    },
+    {
+      "name": "對比 moss / 頁尾 paper-deep ≥ 4.5",
+      "status": "PASS",
+      "detail": "5.29:1"
+    },
+    {
+      "name": "對比 草稿橫幅 paper / clay ≥ 4.5",
+      "status": "PASS",
+      "detail": "5.39:1"
+    },
+    {
+      "name": "對比 聲明列 paper / ink ≥ 4.5",
+      "status": "PASS",
+      "detail": "11.35:1"
+    },
+    {
+      "name": "accent #B48569（3.00:1）未被用作文字顏色",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 1440 /",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 1440 /start-here/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 1440 /start-here/tools/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 1440 /articles/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 1440 /articles/first-year-five-plants/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 1440 /topics/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 1440 /about/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 1440 /404.html",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 390 /",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 390 /start-here/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 390 /start-here/tools/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 390 /articles/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 390 /articles/first-year-five-plants/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 390 /topics/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 390 /about/",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe WCAG A/AA 390 /404.html",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "axe 反向測試：注入缺 alt 與低對比後會被偵測",
+      "status": "PASS",
+      "detail": "color-contrast,image-alt"
+    }
+  ]
+}

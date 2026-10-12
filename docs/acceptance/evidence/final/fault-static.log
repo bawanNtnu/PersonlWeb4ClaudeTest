@@ -1,0 +1,38 @@
+CAUGHT  （基準：未注入）
+        預期：0 FAIL
+        實際：0 FAIL
+CAUGHT  刪除「關於我」頁
+        預期：路由存在 /about/
+        實際：路由存在 /about/ ／ Sitemap 每個網址都有頁面 ／ 所有內部連結與資源可達
+CAUGHT  草稿外洩到文章列表與 RSS
+        預期：草稿
+        實際：草稿不在 RSS zz-secret-draft ／ 草稿標題/連結不在任何 HTML zz-secret-draft ／ RSS 文章數 = 公開文章數 ／ 所有內部連結與資源可達
+CAUGHT  草稿頁面被建置出來（只有頁面，沒有連結）
+        預期：草稿未產生頁面
+        實際：草稿未產生頁面 zz-secret-draft ／ 草稿標題/連結不在任何 HTML zz-secret-draft ／ 每個頁面都在 Sitemap（無孤兒頁） ／ metadata /articles/zz-secret-draft/
+CAUGHT  某一頁手機選單漏掉一項
+        預期：手機導覽一致 /about/
+        實際：手機導覽一致 /about/
+CAUGHT  桌機導覽目的地改錯（指向不存在的頁）
+        預期：所有內部連結
+        實際：所有內部連結與資源可達 ／ 桌機導覽一致 /
+CAUGHT  公開文章從 RSS 消失
+        預期：公開文章在 RSS
+        實際：公開文章在 RSS one-notebook-plant-log ／ RSS 文章數 = 公開文章數
+CAUGHT  Sitemap 漏掉一頁（孤兒頁）
+        預期：每個頁面都在 Sitemap
+        實際：每個頁面都在 Sitemap（無孤兒頁）
+CAUGHT  預覽被設成可索引
+        預期：robots.txt 符合索引政策
+        實際：robots.txt 符合索引政策
+CAUGHT  頁面少了 canonical
+        預期：metadata /topics/
+        實際：metadata /topics/
+CAUGHT  某頁移除模擬內容聲明
+        預期：模擬網站聲明 /start-here/
+        實際：模擬網站聲明 /start-here/
+CAUGHT  兩頁標題重複
+        預期：<title> 不重複
+        實際：每頁 <title> 不重複
+
+故障注入：12/12 正確

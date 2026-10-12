@@ -1,0 +1,74 @@
+[
+  {
+    "fault": "（基準：未注入）",
+    "expected": "0 FAIL",
+    "got": "0 FAIL",
+    "caught": true
+  },
+  {
+    "fault": "刪除「關於我」頁",
+    "expected": "路由存在 /about/",
+    "got": "路由存在 /about/ ／ Sitemap 每個網址都有頁面 ／ 所有內部連結與資源可達",
+    "caught": true
+  },
+  {
+    "fault": "草稿外洩到文章列表與 RSS",
+    "expected": "草稿",
+    "got": "草稿不在 RSS zz-secret-draft ／ 草稿標題/連結不在任何 HTML zz-secret-draft ／ RSS 文章數 = 公開文章數 ／ 所有內部連結與資源可達",
+    "caught": true
+  },
+  {
+    "fault": "草稿頁面被建置出來（只有頁面，沒有連結）",
+    "expected": "草稿未產生頁面",
+    "got": "草稿未產生頁面 zz-secret-draft ／ 草稿標題/連結不在任何 HTML zz-secret-draft ／ 每個頁面都在 Sitemap（無孤兒頁） ／ metadata /articles/zz-secret-draft/",
+    "caught": true
+  },
+  {
+    "fault": "某一頁手機選單漏掉一項",
+    "expected": "手機導覽一致 /about/",
+    "got": "手機導覽一致 /about/",
+    "caught": true
+  },
+  {
+    "fault": "桌機導覽目的地改錯（指向不存在的頁）",
+    "expected": "所有內部連結",
+    "got": "所有內部連結與資源可達 ／ 桌機導覽一致 /",
+    "caught": true
+  },
+  {
+    "fault": "公開文章從 RSS 消失",
+    "expected": "公開文章在 RSS",
+    "got": "公開文章在 RSS one-notebook-plant-log ／ RSS 文章數 = 公開文章數",
+    "caught": true
+  },
+  {
+    "fault": "Sitemap 漏掉一頁（孤兒頁）",
+    "expected": "每個頁面都在 Sitemap",
+    "got": "每個頁面都在 Sitemap（無孤兒頁）",
+    "caught": true
+  },
+  {
+    "fault": "預覽被設成可索引",
+    "expected": "robots.txt 符合索引政策",
+    "got": "robots.txt 符合索引政策",
+    "caught": true
+  },
+  {
+    "fault": "頁面少了 canonical",
+    "expected": "metadata /topics/",
+    "got": "metadata /topics/",
+    "caught": true
+  },
+  {
+    "fault": "某頁移除模擬內容聲明",
+    "expected": "模擬網站聲明 /start-here/",
+    "got": "模擬網站聲明 /start-here/",
+    "caught": true
+  },
+  {
+    "fault": "兩頁標題重複",
+    "expected": "<title> 不重複",
+    "got": "每頁 <title> 不重複",
+    "caught": true
+  }
+]

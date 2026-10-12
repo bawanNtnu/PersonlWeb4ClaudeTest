@@ -1,0 +1,15 @@
+{
+  "routes": 4,
+  "viewports": [
+    1440,
+    390
+  ],
+  "checkedDestinations": 5,
+  "fail": [
+    "/: desktop/mobile nav mismatch",
+    "/about/: desktop/mobile nav mismatch",
+    "/start-here/tools/: desktop/mobile nav mismatch",
+    "/articles/mint-comeback/: desktop/mobile nav mismatch"
+  ]
+}
+exit=1
