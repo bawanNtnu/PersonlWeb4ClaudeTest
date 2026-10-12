@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "kind": "knowledge",
+  "layoutSlug": "field-notes",
+  "visualTheme": "botanical",
+  "brand": {
+    "name": "陽台觀察室（回歸測試）",
+    "primaryColor": "#3F6A4D",
+    "tagline": "租屋小陽台的植物觀察紀錄（模擬資料）",
+    "palette": {
+      "primary": "#3F6A4D",
+      "secondary": "#8D9B72",
+      "accent": "#8A5A3E",
+      "background": "#F6F7EF",
+      "text": "#28392E"
+    }
+  },
+  "navigation": [
+    {
+      "id": "start-here",
+      "label": "新手入門",
+      "enabled": true
+    },
+    {
+      "id": "page-custom-1",
+      "label": "陽台工具",
+      "enabled": true,
+      "parentId": "start-here"
+    },
+    {
+      "id": "articles",
+      "label": "文章",
+      "enabled": true
+    },
+    {
+      "id": "topics",
+      "label": "主題",
+      "enabled": true
+    },
+    {
+      "id": "about",
+      "label": "關於我",
+      "enabled": true
+    }
+  ],
+  "primaryCta": {
+    "label": "從這裡開始",
+    "pageId": "start-here"
+  },
+  "sectionPatterns": [
+    {
+      "patternId": "featured-work",
+      "targetPage": "/",
+      "insertAfter": "主要內容之後"
+    },
+    {
+      "patternId": "footer-editorial",
+      "targetPage": "site-wide",
+      "insertAfter": "每頁主要內容之後"
+    }
+  ],
+  "site": "https://example.com",
+  "base": "/"
+}

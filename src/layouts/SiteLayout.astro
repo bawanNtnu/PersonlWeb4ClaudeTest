@@ -1,0 +1,9 @@
+---
+import config from '../../site.config.json';
+import StudentNavigation from '../components/StudentNavigation.astro';
+import SelectedPatterns from '../components/SelectedPatterns.astro';
+const {title,description=config.brand.tagline}=Astro.props;
+const base=import.meta.env.BASE_URL;
+---
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title===config.brand.name ? title : `${title}｜${config.brand.name}`}</title><meta name="description" content={description}/><link rel="canonical" href={new URL(Astro.url.pathname,Astro.site??Astro.url).href}/><link rel="stylesheet" href={base+'site.css'}/></head>
+<body><a href="#main" class="skip">跳到主要內容</a><header><a class="brand" href={base}>{config.brand.name}</a><StudentNavigation /><a class="button" href={base+(config.navigation.find(x=>x.id===config.primaryCta.pageId)?.path??config.primaryCta.pageId+'/')}>{config.primaryCta.label}</a></header><main id="main"><slot/></main>{config.sectionPatterns?.some(x=>x.patternId.startsWith('footer-'))?<SelectedPatterns page="site-wide" />:<footer>© {new Date().getFullYear()} {config.brand.name}</footer>}</body></html>

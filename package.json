@@ -1,0 +1,16 @@
+{
+  "name": "student-astro-site",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist --root-selector main && node scripts/build-exact-search.mjs",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.14.0"
+  },
+  "devDependencies": {
+    "pagefind": "^1.5.0"
+  }
+}

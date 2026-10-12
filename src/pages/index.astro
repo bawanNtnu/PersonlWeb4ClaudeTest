@@ -1,0 +1,7 @@
+---
+import config from '../../site.config.json';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SelectedPatterns from '../components/SelectedPatterns.astro';
+const base=import.meta.env.BASE_URL;
+---
+<SiteLayout title={config.brand.name}><section class:list={['hero','layout-'+config.layoutSlug]}><p class="eyebrow">{config.kind==='knowledge'?'閱讀與內容':'專業服務'}</p><h1>{config.brand.name}</h1><p>{config.brand.tagline}</p><a class="button" href={base+config.primaryCta.pageId+'/'}>{config.primaryCta.label} →</a></section><section class="interior"><h2>從這裡開始</h2><div class="links">{config.navigation.map((x,i)=><a href={base+(x.path??x.id+'/')}><span>{String(i+1).padStart(2,'0')}</span><strong>{x.label}</strong><span>→</span></a>)}</div></section><SelectedPatterns page="/" /></SiteLayout>
