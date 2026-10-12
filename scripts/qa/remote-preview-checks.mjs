@@ -21,7 +21,8 @@ for(const a of sources){
   const r=await get(`/articles/${a.slug}/`);
   if(a.draft){
     check(`草稿網址 404 ${a.slug}`,r.status===404,r.status);
-    check(`草稿不在遠端 RSS/Sitemap/搜尋索引 ${a.slug}`,![rss,sitemap,exact].some(t=>t.includes(a.slug)||t.includes(a.title)));
+    // 以完整路徑比對，避免短 slug 的子字串誤判
+    check(`草稿不在遠端 RSS/Sitemap/搜尋索引 ${a.slug}`,![rss,sitemap,exact].some(t=>t.includes(`/articles/${a.slug}/`)||t.includes(a.title)));
   }else check(`公開文章 200 且在 RSS ${a.slug}`,r.status===200&&rss.includes(`/articles/${a.slug}/`),r.status);
 }
 const missing=await get('/this-page-does-not-exist/');

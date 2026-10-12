@@ -45,7 +45,7 @@ for(const d of drafts){
   check(`草稿未產生頁面 ${d.slug}`,!pages.has(`/articles/${d.slug}/`));
   check(`草稿不在 RSS ${d.slug}`,!rss.includes(`/articles/${d.slug}/`)&&!rss.includes(d.title));
   check(`草稿不在 Sitemap ${d.slug}`,!sitemap.includes(`/articles/${d.slug}/`));
-  check(`草稿不在搜尋索引 ${d.slug}`,!exact.includes(d.slug)&&!exact.includes(d.title));
+  check(`草稿不在搜尋索引 ${d.slug}`,!exact.includes(`/articles/${d.slug}/`)&&!exact.includes(d.title));
   const leaks=[...pages].filter(([,body])=>body.includes(`/articles/${d.slug}/`)||body.includes(d.title)).map(([r])=>r);
   check(`草稿標題/連結不在任何 HTML ${d.slug}`,leaks.length===0,leaks.join(', '));
 }

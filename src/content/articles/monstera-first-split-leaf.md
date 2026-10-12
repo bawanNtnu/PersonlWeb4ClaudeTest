@@ -5,6 +5,7 @@ publishedAt: 2026-10-09
 topic: foliage
 tags: [龜背芋, 觀葉]
 readingMinutes: 3
+draft: true
 ---
 
 第一年的龜背芋，放在冷氣室外機旁邊，撐了五個月就倒下了。今年春天我買了第二株，這次把它放在**牆角、下午曬不到**的位置。
