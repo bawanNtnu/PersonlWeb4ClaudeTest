@@ -1,0 +1,15 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
+import {getCollection} from 'astro:content';
+const base=import.meta.env.BASE_URL;
+const articles=await getCollection('articles',({data})=>!data.draft);
+const tags=[...new Set(articles.flatMap(a=>a.data.tags))].sort();
+---
+<SiteLayout title="主題" description="依主題整理的陽台觀察文章。">
+  <div class="page-head"><Breadcrumbs items={[{label:'首頁',href:base},{label:'主題'}]} /></div>
+  <section class="interior"><h1>主題</h1>
+    <ul class="tags">{tags.map(t=><li><a href={'#topic-'+encodeURIComponent(t)}>{t}</a></li>)}</ul>
+    {tags.map(t=><section class="topic-group" id={'topic-'+encodeURIComponent(t)}><h2>{t}</h2><div class="links">{articles.filter(a=>a.data.tags.includes(t)).map(a=><a href={base+'articles/'+a.id+'/'}>{a.data.title} →</a>)}</div></section>)}
+  </section>
+</SiteLayout>

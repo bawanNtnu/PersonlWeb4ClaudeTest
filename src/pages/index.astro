@@ -1,7 +1,27 @@
 ---
 import config from '../../site.config.json';
 import SiteLayout from '../layouts/SiteLayout.astro';
-import SelectedPatterns from '../components/SelectedPatterns.astro';
+import H01 from '../components/recipes/H01-rail-margin.astro';
+import L01 from '../components/recipes/L01-ledger-rows.astro';
+import FeaturedWorkSection from '../components/patterns/FeaturedWorkSection.astro';
+import Reveal from '../components/effects/Reveal.astro';
+import {getCollection} from 'astro:content';
 const base=import.meta.env.BASE_URL;
+const articles=(await getCollection('articles',({data})=>!data.draft)).sort((a,b)=>b.data.publishedAt.getTime()-a.data.publishedAt.getTime());
+const fmt=(d:Date)=>String(d.getMonth()+1).padStart(2,'0')+'.'+String(d.getDate()).padStart(2,'0');
 ---
-<SiteLayout title={config.brand.name}><section class:list={['hero','layout-'+config.layoutSlug]}><p class="eyebrow">{config.kind==='knowledge'?'閱讀與內容':'專業服務'}</p><h1>{config.brand.name}</h1><p>{config.brand.tagline}</p><a class="button" href={base+config.primaryCta.pageId+'/'}>{config.primaryCta.label} →</a></section><section class="interior"><h2>從這裡開始</h2><div class="links">{config.navigation.map((x,i)=><a href={base+(x.path??x.id+'/')}><span>{String(i+1).padStart(2,'0')}</span><strong>{x.label}</strong><span>→</span></a>)}</div></section><SelectedPatterns page="/" /></SiteLayout>
+<SiteLayout title={config.brand.name}>
+  <H01 kicker="租屋小陽台的植物觀察" phrases={['小陽台的','觀察筆記，']} voice="慢慢來。"
+    deck="這裡記錄模擬學員阿蕨從連續養死五盆植物，到重新建立觀察習慣的過程（內容為虛構）。"
+    railNo="01—03" rail={[{label:'新手入門',href:base+'start-here/'},{label:'觀察文章',href:base+'articles/'}]}
+    note="先看光，再決定種什麼。" noteBy="— 阿蕨的陽台手記" alt="以色塊表示的陽台示意圖（AI 繪製示意）" figCaption="示意圖（非實景照片）" />
+  <Reveal>
+    <div class="home-section"><L01 label="FIELD LEDGER / 最近紀錄" title="最近，我在陽台留意這些事。" more="看全部文章" href={base+'articles/'}
+      items={articles.slice(0,3).map(a=>({d:fmt(a.data.publishedAt),t:a.data.title,sub:a.data.description,type:a.data.tags[0]??'筆記',href:base+'articles/'+a.id+'/'}))} /></div>
+  </Reveal>
+  <Reveal variant="fade">
+    <FeaturedWorkSection eyebrow="SELECTED NOTES" title="三篇值得先讀的筆記" description="依據新手最常問的問題挑選。"
+      items={articles.slice(0,3).map(a=>({title:a.data.title,description:a.data.description,href:base+'articles/'+a.id+'/'}))}
+      action={{label:'前往新手入門',href:base+'start-here/'}} />
+  </Reveal>
+</SiteLayout>

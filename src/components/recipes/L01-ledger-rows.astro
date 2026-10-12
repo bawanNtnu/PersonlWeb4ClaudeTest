@@ -1,0 +1,36 @@
+---
+/**
+ * L01 ledger-rows — 日期 | 標題 + 副標 | 類型標籤（衍生自 01 .fn-ledger）。
+ * 上緣 2px 粗線起章節、列間 1px；手機隱藏次要欄位（類型標籤）而不是縮小。
+ */
+interface Props { label?: string; title?: string; more?: string; href?: string; items?: { d: string; t: string; sub: string; type: string; href?: string }[] }
+const {
+  label = 'FIELD LEDGER / 近期紀錄', title = '最近，我在留意這些事。', more = '看全部筆記', href = '#',
+  items = [
+    { d: '06.18', t: '一座城市如何留下安靜的空間', sub: '街道觀察 · 8 分鐘', type: '觀察' },
+    { d: '06.11', t: '讀書筆記裡反覆出現的三個詞', sub: '閱讀札記 · 6 分鐘', type: '閱讀' },
+    { d: '05.29', t: '記錄，不等於急著下結論', sub: '方法備忘 · 4 分鐘', type: '方法' },
+  ],
+} = Astro.props;
+---
+<section class="l01">
+  <header><p class="label">{label}</p><h2>{title}</h2><a class="more" href={href}>{more} ↗</a></header>
+  <ol>{items.map((i) => (
+    <li><time>{i.d}</time><a href={i.href ?? '#'}><b>{i.t}</b><small>{i.sub}</small></a><span class="type">{i.type}</span></li>
+  ))}</ol>
+</section>
+<style>
+  .l01 { max-width: 1150px; margin-inline: auto; padding: 1.4rem var(--ed-gutter, 4vw) 2rem; border-top: 2px solid var(--ed-ink, #222a20); display: grid; grid-template-columns: .7fr 1.3fr; gap: 3rem; color: var(--ed-ink, #222a20); }
+  .label { font: .75rem var(--ed-mono, monospace); letter-spacing: .12em; color: var(--ed-accent, #59664a); margin: 0; }
+  h2 { font: 400 2rem/1.2 var(--ed-serif, Georgia, serif); margin: .4rem 0 1rem; }
+  .more { display: inline-flex; align-items: center; min-height: 44px; font: .8rem var(--ed-mono, monospace); color: inherit; text-decoration: none; border-bottom: 1px solid; }
+  ol { list-style: none; padding: 0; margin: 0; }
+  li { display: grid; grid-template-columns: 3.8rem 1fr auto; gap: .8rem; align-items: start; border-bottom: 1px solid var(--ed-line, #cfcec2); padding: .8rem 0; }
+  time { font: .8rem var(--ed-mono, monospace); color: var(--ed-ink-2, #55564a); padding-top: .2rem; }
+  li a { display: flex; flex-direction: column; gap: .25rem; color: inherit; text-decoration: none; min-height: 44px; justify-content: center; }
+  li a:hover b { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--ed-accent, #59664a); }
+  b { font: 400 1.05rem/1.5 var(--ed-serif, Georgia, serif); } small { font: .75rem var(--ed-mono, monospace); color: var(--ed-ink-2, #55564a); }
+  .type { border: 1px solid var(--ed-line, #aeb2a2); padding: .15rem .5rem; font-size: .8rem; }
+  @media (max-width: 850px) { .l01 { grid-template-columns: 1fr; gap: 1rem; } }
+  @media (max-width: 580px) { li { grid-template-columns: 3.4rem 1fr; } .type { display: none; } }
+</style>
