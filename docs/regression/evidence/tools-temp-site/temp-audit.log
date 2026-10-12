@@ -1,0 +1,36 @@
+
+path                             w     hScroll spill h1(px/lines/ls) minFont lt12 overlap contrast touch<44  FAIL / WARN
+/                                1440  0       1     129.6/5/-0.03     10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/                                1280  0       1     115.2/4/-0.03     10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/                                768   0       1     69.1/3/-0.03      10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/                                390   0       1     48/5/-0.03        10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/start-here/                     1440  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/start-here/                     1280  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/start-here/                     768   0       1     38.4/1/0          10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/start-here/                     390   0       1     32/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/page-custom-1/                  1440  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/page-custom-1/                  1280  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/page-custom-1/                  768   0       1     38.4/1/0          10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/page-custom-1/                  390   0       1     32/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/articles/                       1440  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/articles/                       1280  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/articles/                       768   0       1     38.4/1/0          10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/articles/                       390   0       1     32/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/articles/one-notebook-plant-log/1440  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/articles/one-notebook-plant-log/1280  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/articles/one-notebook-plant-log/768   0       1     38.4/1/0          10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/articles/one-notebook-plant-log/390   0       1     32/2/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/topics/                         1440  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/topics/                         1280  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/topics/                         768   0       1     38.4/1/0          10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/topics/                         390   0       1     32/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/about/                          1440  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/about/                          1280  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/about/                          768   0       1     38.4/1/0          10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/about/                          390   0       1     32/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/404.html                        1440  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/404.html                        1280  0       1     52/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 1
+/404.html                        768   0       1     38.4/1/0          10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+/404.html                        390   0       1     32/1/0            10.8    1    0       0        7       FAIL 1 個元素超出視窗：a.skip L-9999 R-9897 WARN 2
+
+報告：/tmp/claude-0/-home-user-PersonlWeb4ClaudeTest/f08f9dba-322f-5707-af2a-11dc914515c1/scratchpad/ws/audit-temp/report.json  截圖：/tmp/claude-0/-home-user-PersonlWeb4ClaudeTest/f08f9dba-322f-5707-af2a-11dc914515c1/scratchpad/ws/audit-temp

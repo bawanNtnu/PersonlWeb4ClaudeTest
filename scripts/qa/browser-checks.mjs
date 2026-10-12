@@ -71,11 +71,13 @@ try{
       await page.locator('[data-search-open]').click(); const dlg=page.locator('[data-site-search]');
       check(`${w} search dialog opens`,await dlg.isVisible());
       const q=page.locator('[data-site-query]'); const results=page.locator('[data-search-results] a');
-      await q.fill('薄荷'); await page.waitForTimeout(1200);
+      // 等搜尋完成（狀態不再是「正在搜尋…」），不用固定秒數；遠端載入 Pagefind WASM 可能需數秒。
+      const settle=async()=>{await page.waitForTimeout(250);await page.waitForFunction(()=>{const t=document.querySelector('[data-search-status]')?.textContent||'';return t&&!/正在搜尋/.test(t)&&!/^輸入關鍵字/.test(t)},null,{timeout:15000})};
+      await q.fill('薄荷'); await settle();
       const hrefs=await results.evaluateAll(as=>as.map(a=>new URL(a.href).pathname));
       check(`${w} search 薄荷 finds article`,hrefs.includes('/articles/mint-comeback/'),JSON.stringify(hrefs));
       for(const term of ['龜背芋','黃金葛過冬','QA-DRAFT-MARKER']){
-        await q.fill(term); await page.waitForTimeout(1200);
+        await q.fill(term); await settle();
         const h=await results.evaluateAll(as=>as.map(a=>new URL(a.href).pathname));
         check(`${w} search "${term}" returns no draft`,!h.some(x=>/monstera|winter-pothos/.test(x))&&!(await page.locator('[data-search-results]').innerText()).includes('QA-DRAFT'),JSON.stringify(h));
       }

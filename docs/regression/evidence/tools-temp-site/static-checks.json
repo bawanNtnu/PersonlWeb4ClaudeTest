@@ -1,0 +1,348 @@
+{
+ "root": "/home/user/PersonlWeb4ClaudeTest",
+ "drafts": [
+  {
+   "file": "articles/monstera-split-leaf.md",
+   "slug": "monstera-split-leaf",
+   "title": "龜背芋第一片裂葉",
+   "markers": [
+    "QA-DRAFT-MARKER-LEGACY"
+   ]
+  },
+  {
+   "file": "drafts/winter-pothos.md",
+   "slug": "winter-pothos",
+   "title": "黃金葛過冬筆記",
+   "markers": [
+    "QA-DRAFT-MARKER-FOLDER"
+   ]
+  }
+ ],
+ "results": [
+  {
+   "name": "route exists /",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "route exists /start-here/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "route exists /page-custom-1/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "route exists /articles/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "route exists /topics/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "route exists /about/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "route exists /articles/mint-comeback/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "route exists /articles/one-notebook-plant-log/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "route exists /articles/typhoon-balcony-checklist/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "404.html exists",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "no broken internal links",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "pagefind fragments decoded",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "draft route absent monstera-split-leaf",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "draft not leaked articles/monstera-split-leaf.md",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "draft route absent winter-pothos",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "draft not leaked drafts/winter-pothos.md",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "meta /404.html",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "noindex /404.html",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "single h1 /404.html",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lang zh-Hant /404.html",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "meta /about/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "noindex /about/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "single h1 /about/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lang zh-Hant /about/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "meta /articles/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "noindex /articles/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "single h1 /articles/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lang zh-Hant /articles/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "meta /articles/mint-comeback/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "noindex /articles/mint-comeback/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "single h1 /articles/mint-comeback/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lang zh-Hant /articles/mint-comeback/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "meta /articles/one-notebook-plant-log/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "noindex /articles/one-notebook-plant-log/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "single h1 /articles/one-notebook-plant-log/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lang zh-Hant /articles/one-notebook-plant-log/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "meta /articles/typhoon-balcony-checklist/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "noindex /articles/typhoon-balcony-checklist/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "single h1 /articles/typhoon-balcony-checklist/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lang zh-Hant /articles/typhoon-balcony-checklist/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "meta /",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "noindex /",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "single h1 /",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lang zh-Hant /",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "meta /page-custom-1/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "noindex /page-custom-1/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "single h1 /page-custom-1/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lang zh-Hant /page-custom-1/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "meta /start-here/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "noindex /start-here/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "single h1 /start-here/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lang zh-Hant /start-here/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "meta /topics/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "noindex /topics/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "single h1 /topics/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lang zh-Hant /topics/",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "sitemap ⊆ pages",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "pages ⊆ sitemap",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "RSS item count = published",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "desktop nav identical on all pages",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "mobile nav identical on all pages",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "desktop and mobile nav same destinations",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "exact-zh excludes 404",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "exact-zh covers every sitemap page",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "pagefind entry exists",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

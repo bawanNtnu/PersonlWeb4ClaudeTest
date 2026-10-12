@@ -1,0 +1,54 @@
+{
+ "version": 1,
+ "kind": "knowledge",
+ "layoutSlug": "field-notes",
+ "visualTheme": "paper",
+ "brand": {
+  "name": "測試知識站",
+  "primaryColor": "#245E50",
+  "tagline": "測試文章與頁面",
+  "palette": {
+   "primary": "#245E50",
+   "secondary": "#58776C",
+   "accent": "#C49B70",
+   "background": "#F7F8F4",
+   "text": "#1F2924"
+  }
+ },
+ "navigation": [
+  {
+   "id": "articles",
+   "label": "文章",
+   "enabled": true
+  },
+  {
+   "id": "about",
+   "label": "關於我",
+   "enabled": true
+  },
+  {
+   "id": "page-custom-guide",
+   "label": "閱讀指南",
+   "enabled": true,
+   "parentId": "articles",
+   "path": "start-here/tools/"
+  }
+ ],
+ "primaryCta": {
+  "label": "閱讀文章",
+  "pageId": "articles"
+ },
+ "sectionPatterns": [
+  {
+   "patternId": "featured-work",
+   "targetPage": "/",
+   "insertAfter": "首頁介紹後"
+  },
+  {
+   "patternId": "footer-editorial",
+   "targetPage": "site-wide",
+   "insertAfter": "所有頁面底部"
+  }
+ ],
+ "notes": ""
+}

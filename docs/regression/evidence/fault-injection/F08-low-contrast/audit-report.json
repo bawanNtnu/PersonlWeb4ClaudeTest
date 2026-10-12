@@ -1,0 +1,349 @@
+[
+  {
+    "path": "/",
+    "width": 1440,
+    "fail": [],
+    "warn": [],
+    "metrics": {
+      "vw": 1440,
+      "hScroll": 0,
+      "pageHeight": 2878,
+      "spill": [],
+      "spillCount": 0,
+      "textElCount": 62,
+      "minFont": 12,
+      "smallText": {
+        "lt11": 0,
+        "lt12": 0,
+        "lt14": 26
+      },
+      "smallTextSamples": [],
+      "distinctFontSizes": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18.5,
+        19,
+        23,
+        32,
+        44,
+        48,
+        129.5
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 129.6,
+        "lineHeightRatio": 1.04,
+        "letterSpacingEm": -0.03,
+        "width": 838,
+        "height": 404,
+        "lines": 3,
+        "vwRatio": 0.09,
+        "family": "Georgia"
+      },
+      "body": {
+        "s": "p.deck",
+        "len": 40,
+        "widthPx": 626,
+        "fs": 18.4,
+        "lh": 1.85,
+        "approxCharsPerLine": 34
+      },
+      "images": [],
+      "touch": {
+        "total": 23,
+        "lt24": 0,
+        "lt44": 0,
+        "samples": []
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "section.h01",
+          "left": 60,
+          "width": 1320,
+          "bg": "",
+          "py": "48/80"
+        }
+      ],
+      "rightEdgeElement": "main#main",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/",
+    "width": 390,
+    "fail": [],
+    "warn": [],
+    "metrics": {
+      "vw": 390,
+      "hScroll": 0,
+      "pageHeight": 3255,
+      "spill": [],
+      "spillCount": 0,
+      "textElCount": 53,
+      "minFont": 12,
+      "smallText": {
+        "lt11": 0,
+        "lt12": 0,
+        "lt14": 23
+      },
+      "smallTextSamples": [],
+      "distinctFontSizes": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18.5,
+        19,
+        25,
+        28,
+        32,
+        48
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 48,
+        "lineHeightRatio": 1.04,
+        "letterSpacingEm": -0.03,
+        "width": 296,
+        "height": 150,
+        "lines": 3,
+        "vwRatio": 0.123,
+        "family": "Georgia"
+      },
+      "body": {
+        "s": "p.deck",
+        "len": 40,
+        "widthPx": 296,
+        "fs": 18.4,
+        "lh": 1.85,
+        "approxCharsPerLine": 16
+      },
+      "images": [],
+      "touch": {
+        "total": 19,
+        "lt24": 0,
+        "lt44": 0,
+        "samples": []
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "section.h01",
+          "left": 0,
+          "width": 390,
+          "bg": "",
+          "py": "48/80"
+        }
+      ],
+      "rightEdgeElement": "section.h01",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/",
+    "width": "reduced-motion",
+    "infiniteAnimationsRunning": 0
+  },
+  {
+    "path": "/articles/mint-comeback/",
+    "width": 1440,
+    "fail": [],
+    "warn": [
+      "對比不足 2（例 time:1.73, p.meta:1.73）"
+    ],
+    "metrics": {
+      "vw": 1440,
+      "hScroll": 0,
+      "pageHeight": 1628,
+      "spill": [],
+      "spillCount": 0,
+      "textElCount": 38,
+      "minFont": 12,
+      "smallText": {
+        "lt11": 0,
+        "lt12": 0,
+        "lt14": 4
+      },
+      "smallTextSamples": [],
+      "distinctFontSizes": [
+        12,
+        13,
+        14,
+        15,
+        17,
+        23,
+        25.5,
+        44,
+        52
+      ],
+      "contrastFail": 2,
+      "contrastSamples": [
+        {
+          "s": "time",
+          "cr": 1.73,
+          "need": 4.5,
+          "fs": 15,
+          "t": "2026-09-20"
+        },
+        {
+          "s": "p.meta",
+          "cr": 1.73,
+          "need": 4.5,
+          "fs": 15,
+          "t": "2026-09-20 · 薄"
+        }
+      ],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 52,
+        "lineHeightRatio": 1.2,
+        "letterSpacingEm": 0,
+        "width": 732,
+        "height": 62,
+        "lines": 1,
+        "vwRatio": 0.036,
+        "family": "Georgia"
+      },
+      "body": null,
+      "images": [],
+      "touch": {
+        "total": 17,
+        "lt24": 0,
+        "lt44": 0,
+        "samples": []
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.page-head",
+          "left": 190,
+          "width": 1060,
+          "bg": "",
+          "py": "28/0"
+        },
+        {
+          "s": "article.interior.prose",
+          "left": 330,
+          "width": 780,
+          "bg": "",
+          "py": "40/100"
+        }
+      ],
+      "rightEdgeElement": "main#main",
+      "gaps": [
+        32
+      ]
+    }
+  },
+  {
+    "path": "/articles/mint-comeback/",
+    "width": 390,
+    "fail": [],
+    "warn": [
+      "對比不足 2（例 time:1.73, p.meta:1.73）"
+    ],
+    "metrics": {
+      "vw": 390,
+      "hScroll": 0,
+      "pageHeight": 1912,
+      "spill": [],
+      "spillCount": 0,
+      "textElCount": 32,
+      "minFont": 12,
+      "smallText": {
+        "lt11": 0,
+        "lt12": 0,
+        "lt14": 4
+      },
+      "smallTextSamples": [],
+      "distinctFontSizes": [
+        12,
+        13,
+        14,
+        15,
+        17,
+        19,
+        25,
+        25.5,
+        32
+      ],
+      "contrastFail": 2,
+      "contrastSamples": [
+        {
+          "s": "time",
+          "cr": 1.73,
+          "need": 4.5,
+          "fs": 15,
+          "t": "2026-09-20"
+        },
+        {
+          "s": "p.meta",
+          "cr": 1.73,
+          "need": 4.5,
+          "fs": 15,
+          "t": "2026-09-20 · 薄"
+        }
+      ],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 32,
+        "lineHeightRatio": 1.2,
+        "letterSpacingEm": 0,
+        "width": 342,
+        "height": 77,
+        "lines": 2,
+        "vwRatio": 0.082,
+        "family": "Georgia"
+      },
+      "body": null,
+      "images": [],
+      "touch": {
+        "total": 13,
+        "lt24": 0,
+        "lt44": 0,
+        "samples": []
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.page-head",
+          "left": 0,
+          "width": 390,
+          "bg": "",
+          "py": "28/0"
+        },
+        {
+          "s": "article.interior.prose",
+          "left": 0,
+          "width": 390,
+          "bg": "",
+          "py": "40/100"
+        }
+      ],
+      "rightEdgeElement": "article.interior.prose",
+      "gaps": [
+        32
+      ]
+    }
+  },
+  {
+    "path": "/articles/mint-comeback/",
+    "width": "reduced-motion",
+    "infiniteAnimationsRunning": 0
+  }
+]

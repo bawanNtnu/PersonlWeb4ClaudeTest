@@ -1,0 +1,2071 @@
+[
+  {
+    "path": "/",
+    "width": 1440,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897",
+      "文字疊壓 3：p.fn-kicker × span.fn-line; span.fn-line × span.fn-line"
+    ],
+    "warn": [
+      "<11px 文字 4 處"
+    ],
+    "metrics": {
+      "vw": 1440,
+      "hScroll": 0,
+      "pageHeight": 3437,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 89,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 4,
+        "lt12": 17,
+        "lt14": 49
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px",
+        "span 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        16.5,
+        17,
+        17.5,
+        19,
+        20,
+        21,
+        27,
+        32,
+        33.5,
+        37.5,
+        48,
+        121
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 121,
+        "lineHeightRatio": 0.98,
+        "letterSpacingEm": -0.06,
+        "width": 852,
+        "height": 356,
+        "lines": 3,
+        "vwRatio": 0.084,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 54,
+        "widthPx": 620,
+        "fs": 17,
+        "lh": 1.85,
+        "approxCharsPerLine": 36
+      },
+      "images": [
+        {
+          "s": "img",
+          "nat": 1.33,
+          "rendered": 1.33,
+          "fit": "cover",
+          "distort": false,
+          "w": 664
+        }
+      ],
+      "touch": {
+        "total": 33,
+        "lt24": 3,
+        "lt44": 17,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 218x38",
+          "a 17x22",
+          "a 17x22",
+          "a 86x36"
+        ]
+      },
+      "textOverlap": 3,
+      "textOverlapSamples": [
+        "p.fn-kicker × span.fn-line",
+        "span.fn-line × span.fn-line",
+        "span.fn-line × i.fn-line"
+      ],
+      "sections": [
+        {
+          "s": "div.fn-layout",
+          "left": 40,
+          "width": 1360,
+          "bg": "",
+          "py": "72/86.4"
+        },
+        {
+          "s": "section#ledger.fn-ledger",
+          "left": 145,
+          "width": 1150,
+          "bg": "",
+          "py": "0/0"
+        },
+        {
+          "s": "section#question.fn-question",
+          "left": 145,
+          "width": 1150,
+          "bg": "",
+          "py": "0/0"
+        }
+      ],
+      "rightEdgeElement": "main#main",
+      "gaps": [
+        227,
+        753
+      ]
+    }
+  },
+  {
+    "path": "/",
+    "width": 1280,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897",
+      "文字疊壓 3：p.fn-kicker × span.fn-line; span.fn-line × span.fn-line"
+    ],
+    "warn": [
+      "<11px 文字 4 處"
+    ],
+    "metrics": {
+      "vw": 1280,
+      "hScroll": 0,
+      "pageHeight": 3303,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 89,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 4,
+        "lt12": 17,
+        "lt14": 49
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px",
+        "span 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        16.5,
+        17,
+        17.5,
+        18,
+        19,
+        20,
+        21,
+        27,
+        30.5,
+        32,
+        33.5,
+        48,
+        107.5
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 107.5,
+        "lineHeightRatio": 0.98,
+        "letterSpacingEm": -0.06,
+        "width": 797,
+        "height": 316,
+        "lines": 3,
+        "vwRatio": 0.084,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 54,
+        "widthPx": 620,
+        "fs": 17,
+        "lh": 1.85,
+        "approxCharsPerLine": 36
+      },
+      "images": [
+        {
+          "s": "img",
+          "nat": 1.33,
+          "rendered": 1.33,
+          "fit": "cover",
+          "distort": false,
+          "w": 622
+        }
+      ],
+      "touch": {
+        "total": 33,
+        "lt24": 3,
+        "lt44": 17,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 218x38",
+          "a 17x22",
+          "a 17x22",
+          "a 86x36"
+        ]
+      },
+      "textOverlap": 3,
+      "textOverlapSamples": [
+        "p.fn-kicker × span.fn-line",
+        "span.fn-line × span.fn-line",
+        "span.fn-line × i.fn-line"
+      ],
+      "sections": [
+        {
+          "s": "div.fn-layout",
+          "left": 0,
+          "width": 1280,
+          "bg": "",
+          "py": "64/76.8"
+        },
+        {
+          "s": "section#ledger.fn-ledger",
+          "left": 65,
+          "width": 1150,
+          "bg": "",
+          "py": "0/0"
+        },
+        {
+          "s": "section#question.fn-question",
+          "left": 65,
+          "width": 1150,
+          "bg": "",
+          "py": "0/0"
+        }
+      ],
+      "rightEdgeElement": "div.fn-layout",
+      "gaps": [
+        211,
+        740
+      ]
+    }
+  },
+  {
+    "path": "/",
+    "width": 768,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897",
+      "觸控目標 <24px：3"
+    ],
+    "warn": [
+      "文字疊壓 2：span.fn-line × span.fn-line; span.fn-line × i.fn-line",
+      "<11px 文字 4 處",
+      "11–12px 文字 13 處"
+    ],
+    "metrics": {
+      "vw": 768,
+      "hScroll": 0,
+      "pageHeight": 3411,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 84,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 4,
+        "lt12": 17,
+        "lt14": 44
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px",
+        "span 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        16,
+        16.5,
+        17,
+        17.5,
+        20,
+        21,
+        24,
+        25.5,
+        27,
+        30.5,
+        32,
+        64.5
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 64.5,
+        "lineHeightRatio": 0.98,
+        "letterSpacingEm": -0.06,
+        "width": 620,
+        "height": 190,
+        "lines": 3,
+        "vwRatio": 0.084,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 54,
+        "widthPx": 620,
+        "fs": 17,
+        "lh": 1.85,
+        "approxCharsPerLine": 36
+      },
+      "images": [
+        {
+          "s": "img",
+          "nat": 1.33,
+          "rendered": 1.33,
+          "fit": "cover",
+          "distort": false,
+          "w": 483
+        }
+      ],
+      "touch": {
+        "total": 30,
+        "lt24": 3,
+        "lt44": 17,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 444x38",
+          "a 17x22",
+          "a 17x22",
+          "a 86x36"
+        ]
+      },
+      "textOverlap": 2,
+      "textOverlapSamples": [
+        "span.fn-line × span.fn-line",
+        "span.fn-line × i.fn-line"
+      ],
+      "sections": [
+        {
+          "s": "div.fn-layout",
+          "left": 0,
+          "width": 768,
+          "bg": "",
+          "py": "40/56"
+        },
+        {
+          "s": "section#ledger.fn-ledger",
+          "left": 0,
+          "width": 768,
+          "bg": "",
+          "py": "0/0"
+        },
+        {
+          "s": "section#question.fn-question",
+          "left": 0,
+          "width": 768,
+          "bg": "",
+          "py": "0/0"
+        }
+      ],
+      "rightEdgeElement": "div.fn-layout",
+      "gaps": [
+        261,
+        879
+      ]
+    }
+  },
+  {
+    "path": "/",
+    "width": 390,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9903",
+      "觸控目標 <24px：3"
+    ],
+    "warn": [
+      "文字疊壓 2：span.fn-line × span.fn-line; span.fn-line × i.fn-line",
+      "<11px 文字 4 處",
+      "11–12px 文字 13 處"
+    ],
+    "metrics": {
+      "vw": 390,
+      "hScroll": 0,
+      "pageHeight": 3629,
+      "spill": [
+        "a.skip L-9999 R-9903"
+      ],
+      "spillCount": 1,
+      "textElCount": 76,
+      "minFont": 9,
+      "smallText": {
+        "lt11": 4,
+        "lt12": 17,
+        "lt14": 36
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 9.0px",
+        "span 9.0px",
+        "span 9.0px"
+      ],
+      "distinctFontSizes": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        16,
+        16.5,
+        17.5,
+        20,
+        21,
+        24,
+        25.5,
+        27,
+        28,
+        32,
+        37.5
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 37.4,
+        "lineHeightRatio": 0.98,
+        "letterSpacingEm": -0.05,
+        "width": 320,
+        "height": 110,
+        "lines": 3,
+        "vwRatio": 0.096,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 54,
+        "widthPx": 358,
+        "fs": 16,
+        "lh": 1.85,
+        "approxCharsPerLine": 22
+      },
+      "images": [
+        {
+          "s": "img",
+          "nat": 1.33,
+          "rendered": 1.78,
+          "fit": "cover",
+          "distort": false,
+          "w": 320
+        }
+      ],
+      "touch": {
+        "total": 29,
+        "lt24": 3,
+        "lt44": 17,
+        "samples": [
+          "a.skip 96x30",
+          "a.fn-mark 234x38",
+          "a 15x21",
+          "a 15x21",
+          "a 86x36"
+        ]
+      },
+      "textOverlap": 2,
+      "textOverlapSamples": [
+        "span.fn-line × span.fn-line",
+        "span.fn-line × i.fn-line"
+      ],
+      "sections": [
+        {
+          "s": "div.fn-layout",
+          "left": 0,
+          "width": 390,
+          "bg": "",
+          "py": "40/56"
+        },
+        {
+          "s": "section#ledger.fn-ledger",
+          "left": 0,
+          "width": 390,
+          "bg": "",
+          "py": "0/0"
+        },
+        {
+          "s": "section#question.fn-question",
+          "left": 0,
+          "width": 390,
+          "bg": "",
+          "py": "0/0"
+        }
+      ],
+      "rightEdgeElement": "div.fn-layout",
+      "gaps": [
+        318,
+        978
+      ]
+    }
+  },
+  {
+    "path": "/",
+    "width": "reduced-motion",
+    "infiniteAnimationsRunning": 0
+  },
+  {
+    "path": "/start-here/tools/",
+    "width": 1440,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 3 處",
+      "正文行長約 120 字"
+    ],
+    "metrics": {
+      "vw": 1440,
+      "hScroll": 0,
+      "pageHeight": 2369,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 59,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 3,
+        "lt12": 7,
+        "lt14": 20
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        17.5,
+        19,
+        20,
+        27,
+        37.5,
+        80
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 80,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 860,
+        "height": 168,
+        "lines": 2,
+        "vwRatio": 0.056,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p.fn-disclosure",
+        "len": 43,
+        "widthPx": 1440,
+        "fs": 12,
+        "lh": 1.6,
+        "approxCharsPerLine": 120
+      },
+      "images": [],
+      "touch": {
+        "total": 22,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 218x38",
+          "a 405x25",
+          "a 405x25",
+          "a 405x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page.fn-start",
+          "left": 40,
+          "width": 1360,
+          "bg": "",
+          "py": "56/96"
+        }
+      ],
+      "rightEdgeElement": "main#main",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/start-here/tools/",
+    "width": 1280,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 3 處",
+      "正文行長約 107 字"
+    ],
+    "metrics": {
+      "vw": 1280,
+      "hScroll": 0,
+      "pageHeight": 2327,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 59,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 3,
+        "lt12": 7,
+        "lt14": 20
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        17.5,
+        18,
+        20,
+        27,
+        33.5,
+        71.5
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 71.7,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 860,
+        "height": 151,
+        "lines": 2,
+        "vwRatio": 0.056,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p.fn-disclosure",
+        "len": 43,
+        "widthPx": 1280,
+        "fs": 12,
+        "lh": 1.6,
+        "approxCharsPerLine": 107
+      },
+      "images": [],
+      "touch": {
+        "total": 22,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 218x38",
+          "a 334x25",
+          "a 334x25",
+          "a 334x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page.fn-start",
+          "left": 0,
+          "width": 1280,
+          "bg": "",
+          "py": "51.2/89.6"
+        }
+      ],
+      "rightEdgeElement": "div.fn-page.fn-start",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/start-here/tools/",
+    "width": 768,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 3 處",
+      "11–12px 文字 4 處",
+      "觸控目標 <44px：10"
+    ],
+    "metrics": {
+      "vw": 768,
+      "hScroll": 0,
+      "pageHeight": 2126,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 54,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 3,
+        "lt12": 7,
+        "lt14": 15
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16.5,
+        17,
+        17.5,
+        20,
+        24,
+        27,
+        43
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 43,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 598,
+        "height": 90,
+        "lines": 2,
+        "vwRatio": 0.056,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p.fn-disclosure",
+        "len": 43,
+        "widthPx": 768,
+        "fs": 12,
+        "lh": 1.6,
+        "approxCharsPerLine": 64
+      },
+      "images": [],
+      "touch": {
+        "total": 19,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 444x38",
+          "a 210x25",
+          "a 210x25",
+          "a 210x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page.fn-start",
+          "left": 0,
+          "width": 768,
+          "bg": "",
+          "py": "30.72/56"
+        }
+      ],
+      "rightEdgeElement": "div.fn-page.fn-start",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/start-here/tools/",
+    "width": 390,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9903"
+    ],
+    "warn": [
+      "<11px 文字 1 處",
+      "11–12px 文字 2 處",
+      "觸控目標 <44px：10"
+    ],
+    "metrics": {
+      "vw": 390,
+      "hScroll": 0,
+      "pageHeight": 2483,
+      "spill": [
+        "a.skip L-9999 R-9903"
+      ],
+      "spillCount": 1,
+      "textElCount": 49,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 1,
+        "lt12": 3,
+        "lt14": 10
+      },
+      "smallTextSamples": [
+        "small 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        16.5,
+        17,
+        17.5,
+        18.5,
+        20,
+        24,
+        27,
+        43
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 42.9,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 358,
+        "height": 90,
+        "lines": 2,
+        "vwRatio": 0.11,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p.fn-disclosure",
+        "len": 43,
+        "widthPx": 390,
+        "fs": 12,
+        "lh": 1.6,
+        "approxCharsPerLine": 33
+      },
+      "images": [],
+      "touch": {
+        "total": 18,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 96x30",
+          "a.fn-mark 234x38",
+          "a 168x25",
+          "a 168x25",
+          "a 168x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page.fn-start",
+          "left": 0,
+          "width": 390,
+          "bg": "",
+          "py": "28/56"
+        }
+      ],
+      "rightEdgeElement": "div.fn-page.fn-start",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/start-here/tools/",
+    "width": "reduced-motion",
+    "infiniteAnimationsRunning": 0
+  },
+  {
+    "path": "/articles/",
+    "width": 1440,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 3 處",
+      "正文行長約 120 字"
+    ],
+    "metrics": {
+      "vw": 1440,
+      "hScroll": 0,
+      "pageHeight": 1898,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 87,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 3,
+        "lt12": 9,
+        "lt14": 45
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        17.5,
+        19,
+        20,
+        37.5,
+        80
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 80,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 860,
+        "height": 84,
+        "lines": 1,
+        "vwRatio": 0.056,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p.fn-disclosure",
+        "len": 43,
+        "widthPx": 1440,
+        "fs": 12,
+        "lh": 1.6,
+        "approxCharsPerLine": 120
+      },
+      "images": [],
+      "touch": {
+        "total": 43,
+        "lt24": 0,
+        "lt44": 24,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 218x38",
+          "a 69x36",
+          "a 96x36",
+          "a 68x36"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page",
+          "left": 40,
+          "width": 1360,
+          "bg": "",
+          "py": "56/96"
+        }
+      ],
+      "rightEdgeElement": "main#main",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/articles/",
+    "width": 1280,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 3 處",
+      "正文行長約 107 字"
+    ],
+    "metrics": {
+      "vw": 1280,
+      "hScroll": 0,
+      "pageHeight": 1865,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 87,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 3,
+        "lt12": 9,
+        "lt14": 45
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        17.5,
+        18,
+        20,
+        33.5,
+        71.5
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 71.7,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 860,
+        "height": 75,
+        "lines": 1,
+        "vwRatio": 0.056,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p.fn-disclosure",
+        "len": 43,
+        "widthPx": 1280,
+        "fs": 12,
+        "lh": 1.6,
+        "approxCharsPerLine": 107
+      },
+      "images": [],
+      "touch": {
+        "total": 43,
+        "lt24": 0,
+        "lt44": 24,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 218x38",
+          "a 69x36",
+          "a 96x36",
+          "a 68x36"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page",
+          "left": 0,
+          "width": 1280,
+          "bg": "",
+          "py": "51.2/89.6"
+        }
+      ],
+      "rightEdgeElement": "div.fn-page",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/articles/",
+    "width": 768,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 3 處",
+      "11–12px 文字 6 處",
+      "觸控目標 <44px：24"
+    ],
+    "metrics": {
+      "vw": 768,
+      "hScroll": 0,
+      "pageHeight": 1826,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 82,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 3,
+        "lt12": 9,
+        "lt14": 40
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        16.5,
+        17,
+        17.5,
+        20,
+        24,
+        43
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 43,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 598,
+        "height": 45,
+        "lines": 1,
+        "vwRatio": 0.056,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p.fn-disclosure",
+        "len": 43,
+        "widthPx": 768,
+        "fs": 12,
+        "lh": 1.6,
+        "approxCharsPerLine": 64
+      },
+      "images": [],
+      "touch": {
+        "total": 40,
+        "lt24": 0,
+        "lt44": 24,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 444x38",
+          "a 69x36",
+          "a 96x36",
+          "a 68x36"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page",
+          "left": 0,
+          "width": 768,
+          "bg": "",
+          "py": "30.72/56"
+        }
+      ],
+      "rightEdgeElement": "div.fn-page",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/articles/",
+    "width": 390,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9903"
+    ],
+    "warn": [
+      "<11px 文字 1 處",
+      "11–12px 文字 4 處",
+      "觸控目標 <44px：19"
+    ],
+    "metrics": {
+      "vw": 390,
+      "hScroll": 0,
+      "pageHeight": 2196,
+      "spill": [
+        "a.skip L-9999 R-9903"
+      ],
+      "spillCount": 1,
+      "textElCount": 72,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 1,
+        "lt12": 5,
+        "lt14": 30
+      },
+      "smallTextSamples": [
+        "small 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        16.5,
+        17.5,
+        20,
+        24,
+        43
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 42.9,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 358,
+        "height": 45,
+        "lines": 1,
+        "vwRatio": 0.11,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p.fn-disclosure",
+        "len": 43,
+        "widthPx": 390,
+        "fs": 12,
+        "lh": 1.6,
+        "approxCharsPerLine": 33
+      },
+      "images": [],
+      "touch": {
+        "total": 34,
+        "lt24": 0,
+        "lt44": 19,
+        "samples": [
+          "a.skip 96x30",
+          "a.fn-mark 234x38",
+          "a 69x36",
+          "a 96x36",
+          "a 68x36"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page",
+          "left": 0,
+          "width": 390,
+          "bg": "",
+          "py": "28/56"
+        }
+      ],
+      "rightEdgeElement": "div.fn-page",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/articles/",
+    "width": "reduced-motion",
+    "infiniteAnimationsRunning": 0
+  },
+  {
+    "path": "/articles/first-year-five-plants/",
+    "width": 1440,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 6 處"
+    ],
+    "metrics": {
+      "vw": 1440,
+      "hScroll": 0,
+      "pageHeight": 2993,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 99,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 6,
+        "lt12": 10,
+        "lt14": 35
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "dt 10.0px",
+        "dt 10.0px",
+        "dt 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        17,
+        17.5,
+        18,
+        20,
+        24,
+        25.5,
+        37.5,
+        57.5
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 57.6,
+        "lineHeightRatio": 1.15,
+        "letterSpacingEm": -0.03,
+        "width": 720,
+        "height": 132,
+        "lines": 2,
+        "vwRatio": 0.04,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 85,
+        "widthPx": 720,
+        "fs": 17,
+        "lh": 2,
+        "approxCharsPerLine": 42
+      },
+      "images": [],
+      "touch": {
+        "total": 27,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 218x38",
+          "a 405x25",
+          "a 405x25",
+          "a 405x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "article.fn-article",
+          "left": 40,
+          "width": 1360,
+          "bg": "",
+          "py": "48/96"
+        }
+      ],
+      "rightEdgeElement": "main#main",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/articles/first-year-five-plants/",
+    "width": 1280,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 6 處"
+    ],
+    "metrics": {
+      "vw": 1280,
+      "hScroll": 0,
+      "pageHeight": 2968,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 99,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 6,
+        "lt12": 10,
+        "lt14": 35
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "dt 10.0px",
+        "dt 10.0px",
+        "dt 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        17,
+        17.5,
+        18,
+        20,
+        24,
+        25.5,
+        33.5,
+        56.5
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 56.3,
+        "lineHeightRatio": 1.15,
+        "letterSpacingEm": -0.03,
+        "width": 720,
+        "height": 130,
+        "lines": 2,
+        "vwRatio": 0.044,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 85,
+        "widthPx": 720,
+        "fs": 17,
+        "lh": 2,
+        "approxCharsPerLine": 42
+      },
+      "images": [],
+      "touch": {
+        "total": 27,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 218x38",
+          "a 334x25",
+          "a 334x25",
+          "a 334x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "article.fn-article",
+          "left": 0,
+          "width": 1280,
+          "bg": "",
+          "py": "48/89.6"
+        }
+      ],
+      "rightEdgeElement": "article.fn-article",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/articles/first-year-five-plants/",
+    "width": 768,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 6 處",
+      "11–12px 文字 4 處",
+      "觸控目標 <44px：10"
+    ],
+    "metrics": {
+      "vw": 768,
+      "hScroll": 0,
+      "pageHeight": 3115,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 94,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 6,
+        "lt12": 10,
+        "lt14": 30
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "dt 10.0px",
+        "dt 10.0px",
+        "dt 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        17,
+        17.5,
+        18,
+        20,
+        24,
+        25.5,
+        34
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 33.8,
+        "lineHeightRatio": 1.15,
+        "letterSpacingEm": -0.03,
+        "width": 707,
+        "height": 39,
+        "lines": 1,
+        "vwRatio": 0.044,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 85,
+        "widthPx": 707,
+        "fs": 17,
+        "lh": 2,
+        "approxCharsPerLine": 42
+      },
+      "images": [],
+      "touch": {
+        "total": 24,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 444x38",
+          "a 210x25",
+          "a 210x25",
+          "a 210x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "article.fn-article",
+          "left": 0,
+          "width": 768,
+          "bg": "",
+          "py": "30.72/56"
+        }
+      ],
+      "rightEdgeElement": "article.fn-article",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/articles/first-year-five-plants/",
+    "width": 390,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9903"
+    ],
+    "warn": [
+      "<11px 文字 6 處",
+      "11–12px 文字 2 處",
+      "觸控目標 <44px：10"
+    ],
+    "metrics": {
+      "vw": 390,
+      "hScroll": 0,
+      "pageHeight": 3994,
+      "spill": [
+        "a.skip L-9999 R-9903"
+      ],
+      "spillCount": 1,
+      "textElCount": 91,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 6,
+        "lt12": 8,
+        "lt14": 27
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "dt 10.0px",
+        "dt 10.0px",
+        "dt 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        16,
+        17,
+        17.5,
+        18,
+        20,
+        24,
+        25.5,
+        33.5
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 33.6,
+        "lineHeightRatio": 1.15,
+        "letterSpacingEm": -0.03,
+        "width": 358,
+        "height": 77,
+        "lines": 2,
+        "vwRatio": 0.086,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 85,
+        "widthPx": 358,
+        "fs": 17,
+        "lh": 2,
+        "approxCharsPerLine": 21
+      },
+      "images": [],
+      "touch": {
+        "total": 23,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 96x30",
+          "a.fn-mark 234x38",
+          "a 168x25",
+          "a 168x25",
+          "a 168x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "article.fn-article",
+          "left": 0,
+          "width": 390,
+          "bg": "",
+          "py": "24/56"
+        }
+      ],
+      "rightEdgeElement": "article.fn-article",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/articles/first-year-five-plants/",
+    "width": "reduced-motion",
+    "infiniteAnimationsRunning": 0
+  },
+  {
+    "path": "/about/",
+    "width": 1440,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 8 處"
+    ],
+    "metrics": {
+      "vw": 1440,
+      "hScroll": 0,
+      "pageHeight": 1837,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 56,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 8,
+        "lt12": 11,
+        "lt14": 23
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px",
+        "dt 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        17,
+        20,
+        25.5,
+        37.5,
+        80
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 80,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 860,
+        "height": 252,
+        "lines": 3,
+        "vwRatio": 0.056,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 80,
+        "widthPx": 674,
+        "fs": 17,
+        "lh": 2,
+        "approxCharsPerLine": 40
+      },
+      "images": [],
+      "touch": {
+        "total": 18,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 218x38",
+          "a 405x25",
+          "a 405x25",
+          "a 405x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page",
+          "left": 40,
+          "width": 1360,
+          "bg": "",
+          "py": "56/96"
+        }
+      ],
+      "rightEdgeElement": "main#main",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/about/",
+    "width": 1280,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 8 處"
+    ],
+    "metrics": {
+      "vw": 1280,
+      "hScroll": 0,
+      "pageHeight": 1789,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 56,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 8,
+        "lt12": 11,
+        "lt14": 23
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px",
+        "dt 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        17,
+        20,
+        25.5,
+        33.5,
+        71.5
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 71.7,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 860,
+        "height": 226,
+        "lines": 3,
+        "vwRatio": 0.056,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 80,
+        "widthPx": 640,
+        "fs": 17,
+        "lh": 2,
+        "approxCharsPerLine": 38
+      },
+      "images": [],
+      "touch": {
+        "total": 18,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 218x38",
+          "a 334x25",
+          "a 334x25",
+          "a 334x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page",
+          "left": 0,
+          "width": 1280,
+          "bg": "",
+          "py": "51.2/89.6"
+        }
+      ],
+      "rightEdgeElement": "div.fn-page",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/about/",
+    "width": 768,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9897"
+    ],
+    "warn": [
+      "<11px 文字 8 處",
+      "11–12px 文字 3 處",
+      "觸控目標 <44px：10"
+    ],
+    "metrics": {
+      "vw": 768,
+      "hScroll": 0,
+      "pageHeight": 1840,
+      "spill": [
+        "a.skip L-9999 R-9897"
+      ],
+      "spillCount": 1,
+      "textElCount": 51,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 8,
+        "lt12": 11,
+        "lt14": 18
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "span 10.0px",
+        "span 10.0px",
+        "dt 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        17,
+        20,
+        24,
+        25.5,
+        43
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 43,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 598,
+        "height": 90,
+        "lines": 2,
+        "vwRatio": 0.056,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 80,
+        "widthPx": 598,
+        "fs": 17,
+        "lh": 2,
+        "approxCharsPerLine": 35
+      },
+      "images": [],
+      "touch": {
+        "total": 15,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 102x31",
+          "a.fn-mark 444x38",
+          "a 210x25",
+          "a 210x25",
+          "a 210x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page",
+          "left": 0,
+          "width": 768,
+          "bg": "",
+          "py": "30.72/56"
+        }
+      ],
+      "rightEdgeElement": "div.fn-page",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/about/",
+    "width": 390,
+    "fail": [
+      "1 個元素超出視窗：a.skip L-9999 R-9903"
+    ],
+    "warn": [
+      "<11px 文字 6 處",
+      "11–12px 文字 1 處",
+      "觸控目標 <44px：10"
+    ],
+    "metrics": {
+      "vw": 390,
+      "hScroll": 0,
+      "pageHeight": 2171,
+      "spill": [
+        "a.skip L-9999 R-9903"
+      ],
+      "spillCount": 1,
+      "textElCount": 46,
+      "minFont": 10,
+      "smallText": {
+        "lt11": 6,
+        "lt12": 7,
+        "lt14": 13
+      },
+      "smallTextSamples": [
+        "small 10.0px",
+        "dt 10.0px",
+        "dt 10.0px",
+        "dt 10.0px"
+      ],
+      "distinctFontSizes": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        15.5,
+        16,
+        17,
+        20,
+        24,
+        25.5,
+        43
+      ],
+      "contrastFail": 0,
+      "contrastSamples": [],
+      "contrastSkippedImageBg": 0,
+      "h1": {
+        "fontSize": 42.9,
+        "lineHeightRatio": 1.05,
+        "letterSpacingEm": -0.04,
+        "width": 358,
+        "height": 135,
+        "lines": 3,
+        "vwRatio": 0.11,
+        "family": "\"Noto Serif TC\""
+      },
+      "body": {
+        "s": "p",
+        "len": 80,
+        "widthPx": 358,
+        "fs": 17,
+        "lh": 2,
+        "approxCharsPerLine": 21
+      },
+      "images": [],
+      "touch": {
+        "total": 14,
+        "lt24": 0,
+        "lt44": 10,
+        "samples": [
+          "a.skip 96x30",
+          "a.fn-mark 234x38",
+          "a 168x25",
+          "a 168x25",
+          "a 168x25"
+        ]
+      },
+      "textOverlap": 0,
+      "textOverlapSamples": [],
+      "sections": [
+        {
+          "s": "div.fn-page",
+          "left": 0,
+          "width": 390,
+          "bg": "",
+          "py": "28/56"
+        }
+      ],
+      "rightEdgeElement": "div.fn-page",
+      "gaps": []
+    }
+  },
+  {
+    "path": "/about/",
+    "width": "reduced-motion",
+    "infiniteAnimationsRunning": 0
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "routes": 7,
+  "viewports": [
+    1440,
+    390
+  ],
+  "checkedDestinations": 5,
+  "fail": [
+    "/: desktop/mobile nav mismatch",
+    "/start-here/: desktop/mobile nav mismatch",
+    "/start-here/tools/: desktop/mobile nav mismatch",
+    "/articles/: desktop/mobile nav mismatch",
+    "/articles/first-year-five-plants/: desktop/mobile nav mismatch",
+    "/topics/: desktop/mobile nav mismatch",
+    "/about/: desktop/mobile nav mismatch"
+  ]
+}

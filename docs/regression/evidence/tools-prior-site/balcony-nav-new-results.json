@@ -1,0 +1,546 @@
+{
+  "rows": [
+    {
+      "width": 1440,
+      "route": "/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門・總覽",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "route": "/start-here/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門・總覽",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "route": "/start-here/tools/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門・總覽",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "route": "/articles/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門・總覽",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "route": "/articles/first-year-five-plants/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門・總覽",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "route": "/topics/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門・總覽",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "route": "/about/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門・總覽",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "新手入門・陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "手機主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "route": "/start-here/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "新手入門・陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "手機主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "route": "/start-here/tools/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "新手入門・陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "手機主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "route": "/articles/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "新手入門・陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "手機主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "route": "/articles/first-year-five-plants/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "新手入門・陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "手機主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "route": "/topics/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "新手入門・陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "手機主要導覽",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "route": "/about/",
+      "http": 200,
+      "links": [
+        {
+          "label": "新手入門",
+          "url": "/start-here/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "新手入門・陽台工具",
+          "url": "/start-here/tools/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "觀察筆記",
+          "url": "/articles/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "植物分類",
+          "url": "/topics/",
+          "origin": "http://127.0.0.1:4600"
+        },
+        {
+          "label": "關於我",
+          "url": "/about/",
+          "origin": "http://127.0.0.1:4600"
+        }
+      ],
+      "navFound": true,
+      "navLabel": "手機主要導覽",
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "expected": [
+    "/start-here/",
+    "/start-here/tools/",
+    "/articles/",
+    "/topics/",
+    "/about/"
+  ],
+  "checked": [
+    {
+      "path": "/start-here/",
+      "status": 200
+    },
+    {
+      "path": "/start-here/tools/",
+      "status": 200
+    },
+    {
+      "path": "/articles/",
+      "status": 200
+    },
+    {
+      "path": "/topics/",
+      "status": 200
+    },
+    {
+      "path": "/about/",
+      "status": 200
+    }
+  ],
+  "fail": [
+    "/: desktop/mobile nav mismatch",
+    "/start-here/: desktop/mobile nav mismatch",
+    "/start-here/tools/: desktop/mobile nav mismatch",
+    "/articles/: desktop/mobile nav mismatch",
+    "/articles/first-year-five-plants/: desktop/mobile nav mismatch",
+    "/topics/: desktop/mobile nav mismatch",
+    "/about/: desktop/mobile nav mismatch"
+  ]
+}
