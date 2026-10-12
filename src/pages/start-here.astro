@@ -3,9 +3,10 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import Breadcrumbs from '../components/blocks/Breadcrumbs.astro';
 import ProcessSteps from '../components/blocks/ProcessSteps.astro';
 import ArticleCallout from '../components/blocks/ArticleCallout.astro';
-import {href,publishedArticles,articleHref,navigation} from '../lib/site';
+import {href,publishedArticles,articleHref,navigation,navHref,navChildren} from '../lib/site';
 
 const label=navigation.find(x=>x.id==='start-here')?.label??'新手入門';
+const subpages=navChildren('start-here');
 const articles=await publishedArticles();
 // 建議閱讀順序：依 slug 指定；若某篇被撤回（draft），會自動從清單消失，不會產生斷鏈。
 const order=['first-year-five-plants','finger-and-chopstick-watering','one-notebook-plant-log','typhoon-balcony-checklist'];
@@ -26,6 +27,11 @@ const path=order.map(id=>articles.find(a=>a.id===id)).filter(a=>a!==undefined);
         {title:'摸土再澆水',description:'不要照表操課。用手指或竹筷確認盆土乾了才澆，而且一次澆透。'},
         {title:'每天寫一行',description:'一本筆記本就夠。一行字、一個符號，一週後就看得出問題。'},
       ]}/>
+      {subpages.length>0&&<section class="fn-section" aria-labelledby="sub-title">
+        <p class="fn-kicker">IN THIS SECTION</p>
+        <h2 id="sub-title">需要準備什麼？</h2>
+        <ul class="fn-reading-order">{subpages.map(p=><li><div><a href={navHref(p)}>{p.label}</a><p>家裡就有的四樣東西，夠你開始觀察。</p></div></li>)}</ul>
+      </section>}
       <section class="fn-section" aria-labelledby="order-title">
         <p class="fn-kicker">READING ORDER</p>
         <h2 id="order-title">建議閱讀順序</h2>

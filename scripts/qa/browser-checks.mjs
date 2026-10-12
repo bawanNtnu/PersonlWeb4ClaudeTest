@@ -68,10 +68,9 @@ for(const width of widths){
   for(const item of nav){
     try{
       await page.goto(url('/'));
-      if(item.parentId){
-        const parent=nav.find(x=>x.id===item.parentId);
-        await page.locator('.fn-nav summary',{hasText:parent.label}).click({timeout:5000});
-      }
+      // 子項目要先展開父選單；有子選單的父項目，自己的頁面連結（「總覽」）同樣在下拉選單內
+      const opener=item.parentId?nav.find(x=>x.id===item.parentId):childrenOf(item.id).length?item:null;
+      if(opener)await page.locator('.fn-nav summary',{hasText:opener.label}).click({timeout:5000});
       await Promise.all([page.waitForLoadState('load'),page.locator(`.fn-nav a[href="${navPath(item)}"]`).first().click({timeout:5000})]);
       const ok=new URL(page.url()).pathname===navPath(item)&&!(await page.title()).includes('找不到');
       check(`點擊導航到達 ${item.label} ${navPath(item)}`,ok,page.url());

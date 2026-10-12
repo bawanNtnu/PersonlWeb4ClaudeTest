@@ -1,0 +1,42 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
+import FeatureGrid from '../../components/blocks/FeatureGrid.astro';
+import ArticleCallout from '../../components/blocks/ArticleCallout.astro';
+import {href,navigation,navHref,publishedArticles,articleHref} from '../../lib/site';
+
+const self=navigation.find(x=>x.id==='page-balcony-tools')!;
+const parent=navigation.find(x=>x.id===self.parentId)!;
+const articles=await publishedArticles();
+// 相關文章依 slug 指定；被撤回的文章會自動消失，不會留下斷鏈。
+const related=['finger-and-chopstick-watering','one-notebook-plant-log','mint-comeback'].map(id=>articles.find(a=>a.id===id)).filter(a=>a!==undefined);
+---
+<SiteLayout title={self.label} description="阿蕨（模擬人物）在兩坪西曬陽台實際在用的四樣工具，以及各自的用途。不含購買連結或推薦。">
+  <div class="fn-page fn-start">
+    <aside class="fn-page__rail" aria-hidden="true"><span>01·A</span><span>TOOLS</span></aside>
+    <div class="fn-page__body">
+      <Breadcrumbs items={[{label:'首頁',href:href()},{label:parent.label,href:navHref(parent)},{label:self.label}]}/>
+      <header class="fn-page-head">
+        <p class="fn-kicker">FIELD KIT / 我的陽台工具</p>
+        <h1>四樣工具，<br/><i>就夠開始了。</i></h1>
+        <p class="fn-deck">都是家裡本來就有、或很便宜的東西。這裡不放購買連結，也不推薦品牌。</p>
+      </header>
+      <FeatureGrid columns={2} items={[
+        {title:'免洗竹筷',description:'插進盆土十分鐘再拔起來，看顏色判斷深處是不是還濕的。大盆、深盆特別好用。'},
+        {title:'小噴水壺',description:'夏天傍晚替葉子降溫、擦掉灰塵。不拿來「澆水」，澆水還是要澆透。'},
+        {title:'小剪刀',description:'修剪薄荷、羅勒開花的莖，也用來剪掉颱風後破掉的葉子。用完擦乾。'},
+        {title:'A5 方格筆記本',description:'每天寫一行觀察和一個符號。比手機 App 更不容易忘記。'},
+      ]}/>
+      <section class="fn-section" aria-labelledby="related-title">
+        <p class="fn-kicker">SEE ALSO</p>
+        <h2 id="related-title">這些工具出現在哪幾篇筆記</h2>
+        <ol class="fn-reading-order">
+          {related.map(a=><li><div><a href={articleHref(a)}>{a.data.title}</a><p>{a.data.description}</p></div></li>)}
+        </ol>
+      </section>
+      <section class="fn-section" style="border-top:0" aria-label="提醒">
+        <ArticleCallout title="關於這份清單" tone="note"><p>這是模擬人物在自己陽台的習慣，不是專業建議，也沒有任何廠商合作。<a href={navHref(parent)}>回到新手入門</a></p></ArticleCallout>
+      </section>
+    </div>
+  </div>
+</SiteLayout>

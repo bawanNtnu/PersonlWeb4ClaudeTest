@@ -1,0 +1,394 @@
+[
+  {
+    "file": "404.html-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1389,
+    "heightBefore": 1213,
+    "heightAfter": 1213
+  },
+  {
+    "file": "404.html-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1389,
+    "heightBefore": 1247,
+    "heightAfter": 1247
+  },
+  {
+    "file": "404.html-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 1097,
+    "heightAfter": 1097
+  },
+  {
+    "file": "404.html-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 911,
+    "heightAfter": 911
+  },
+  {
+    "file": "about-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1421,
+    "heightBefore": 1789,
+    "heightAfter": 1789
+  },
+  {
+    "file": "about-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1421,
+    "heightBefore": 1837,
+    "heightAfter": 1837
+  },
+  {
+    "file": "about-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 2171,
+    "heightAfter": 2171
+  },
+  {
+    "file": "about-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 1840,
+    "heightAfter": 1840
+  },
+  {
+    "file": "articles-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 1865,
+    "heightAfter": 1865
+  },
+  {
+    "file": "articles-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 1898,
+    "heightAfter": 1898
+  },
+  {
+    "file": "articles-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 2196,
+    "heightAfter": 2196
+  },
+  {
+    "file": "articles-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 1826,
+    "heightAfter": 1826
+  },
+  {
+    "file": "articles_finger-and-chopstick-watering-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 2568,
+    "heightAfter": 2568
+  },
+  {
+    "file": "articles_finger-and-chopstick-watering-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 2594,
+    "heightAfter": 2594
+  },
+  {
+    "file": "articles_finger-and-chopstick-watering-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 3313,
+    "heightAfter": 3313
+  },
+  {
+    "file": "articles_finger-and-chopstick-watering-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 2715,
+    "heightAfter": 2715
+  },
+  {
+    "file": "articles_first-year-five-plants-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 2968,
+    "heightAfter": 2968
+  },
+  {
+    "file": "articles_first-year-five-plants-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 2993,
+    "heightAfter": 2993
+  },
+  {
+    "file": "articles_first-year-five-plants-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 3994,
+    "heightAfter": 3994
+  },
+  {
+    "file": "articles_first-year-five-plants-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 3115,
+    "heightAfter": 3115
+  },
+  {
+    "file": "articles_mint-comeback-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 1988,
+    "heightAfter": 1988
+  },
+  {
+    "file": "articles_mint-comeback-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 2079,
+    "heightAfter": 2079
+  },
+  {
+    "file": "articles_mint-comeback-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 2612,
+    "heightAfter": 2612
+  },
+  {
+    "file": "articles_mint-comeback-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 2200,
+    "heightAfter": 2200
+  },
+  {
+    "file": "articles_one-notebook-plant-log-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 2855,
+    "heightAfter": 2855
+  },
+  {
+    "file": "articles_one-notebook-plant-log-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 2879,
+    "heightAfter": 2879
+  },
+  {
+    "file": "articles_one-notebook-plant-log-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 3347,
+    "heightAfter": 3347
+  },
+  {
+    "file": "articles_one-notebook-plant-log-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 3057,
+    "heightAfter": 3057
+  },
+  {
+    "file": "articles_typhoon-balcony-checklist-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 2228,
+    "heightAfter": 2228
+  },
+  {
+    "file": "articles_typhoon-balcony-checklist-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1417,
+    "heightBefore": 2252,
+    "heightAfter": 2252
+  },
+  {
+    "file": "articles_typhoon-balcony-checklist-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 3074,
+    "heightAfter": 3074
+  },
+  {
+    "file": "articles_typhoon-balcony-checklist-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 2440,
+    "heightAfter": 2440
+  },
+  {
+    "file": "home-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1389,
+    "heightBefore": 3239,
+    "heightAfter": 3239
+  },
+  {
+    "file": "home-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1389,
+    "heightBefore": 3365,
+    "heightAfter": 3365
+  },
+  {
+    "file": "home-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 3685,
+    "heightAfter": 3685
+  },
+  {
+    "file": "home-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 3371,
+    "heightAfter": 3371
+  },
+  {
+    "file": "start-here-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 77578,
+    "heightBefore": 2022,
+    "heightAfter": 2270
+  },
+  {
+    "file": "start-here-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 79909,
+    "heightBefore": 2064,
+    "heightAfter": 2312
+  },
+  {
+    "file": "start-here-390.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 57481,
+    "heightBefore": 2537,
+    "heightAfter": 2765
+  },
+  {
+    "file": "start-here-768.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 65610,
+    "heightBefore": 2125,
+    "heightAfter": 2356
+  },
+  {
+    "file": "topics-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1419,
+    "heightBefore": 1455,
+    "heightAfter": 1455
+  },
+  {
+    "file": "topics-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1419,
+    "heightBefore": 1489,
+    "heightAfter": 1489
+  },
+  {
+    "file": "topics-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 1767,
+    "heightAfter": 1767
+  },
+  {
+    "file": "topics-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 1354,
+    "heightAfter": 1354
+  },
+  {
+    "file": "topics_environment-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1419,
+    "heightBefore": 1080,
+    "heightAfter": 1080
+  },
+  {
+    "file": "topics_environment-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1419,
+    "heightBefore": 1112,
+    "heightAfter": 1112
+  },
+  {
+    "file": "topics_environment-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 1110,
+    "heightAfter": 1110
+  },
+  {
+    "file": "topics_environment-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 900,
+    "heightAfter": 900
+  },
+  {
+    "file": "topics_herbs-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1419,
+    "heightBefore": 1001,
+    "heightAfter": 1001
+  },
+  {
+    "file": "topics_herbs-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1419,
+    "heightBefore": 1033,
+    "heightAfter": 1033
+  },
+  {
+    "file": "topics_herbs-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 1004,
+    "heightAfter": 1004
+  },
+  {
+    "file": "topics_herbs-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 900,
+    "heightAfter": 900
+  },
+  {
+    "file": "topics_method-1280.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1419,
+    "heightBefore": 1080,
+    "heightAfter": 1080
+  },
+  {
+    "file": "topics_method-1440.png",
+    "status": "CHANGED (expected)",
+    "diffPixels": 1419,
+    "heightBefore": 1112,
+    "heightAfter": 1112
+  },
+  {
+    "file": "topics_method-390.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 1110,
+    "heightAfter": 1110
+  },
+  {
+    "file": "topics_method-768.png",
+    "status": "UNCHANGED",
+    "diffPixels": 0,
+    "heightBefore": 900,
+    "heightAfter": 900
+  }
+]

@@ -22,6 +22,13 @@
       "enabled": true
     },
     {
+      "id": "page-balcony-tools",
+      "label": "陽台工具",
+      "enabled": true,
+      "parentId": "start-here",
+      "path": "start-here/tools/"
+    },
+    {
       "id": "articles",
       "label": "觀察筆記",
       "enabled": true
