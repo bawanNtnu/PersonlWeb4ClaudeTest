@@ -101,7 +101,8 @@ a{color:inherit}
 .fn-featured .sp-next{border-bottom-color:var(--moss);font:400 13px/1 var(--mono);letter-spacing:.05em}
 
 /* 日期帳本 ledger（首頁、文章列表、分類頁共用） */
-.fn-ledger{max-width:1150px;margin:0 auto clamp(56px,7vw,96px);padding:0 clamp(16px,4vw,64px)}
+/* 維護任務 1 後的回歸修正：最近紀錄移到自我介紹之後，需要上方留白 */
+.fn-ledger{max-width:1150px;margin:clamp(40px,5vw,72px) auto clamp(56px,7vw,96px);padding:0 clamp(16px,4vw,64px)}
 .fn-ledger__inner{border-top:2px solid var(--ink);border-bottom:1px solid var(--line-strong);display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;padding:22px 0 30px}
 .fn-ledger h2{font:400 2rem/1.2 var(--serif);margin:6px 0 16px}
 .fn-ledger__more{font:400 12px/1 var(--mono);border-bottom:1px solid;padding-bottom:3px;text-decoration:none}
